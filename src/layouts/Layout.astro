@@ -1,0 +1,48 @@
+---
+import '../styles/global.css'
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Comparatifs et codes promo pour les meilleurs logiciels SaaS" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50 text-gray-900 min-h-screen">
+    <nav class="bg-white shadow-sm border-b">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" class="text-xl font-bold text-blue-600">SaaS Deals</a>
+        <div class="flex gap-6 text-sm">
+          <a href="/comparatif/email-marketing" class="hover:text-blue-600">Email Marketing</a>
+          <a href="/comparatif/crm" class="hover:text-blue-600">CRM</a>
+          <a href="/comparatif/outils-ia" class="hover:text-blue-600">Outils IA</a>
+          <a href="/codes-promo" class="text-blue-600 font-medium">Codes Promo</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 mt-16 py-8">
+      <div class="max-w-6xl mx-auto px-4 text-center text-sm">
+        <p>&copy; 2026 SaaS Deals - Comparatifs et codes promo</p>
+        <div class="mt-2 flex justify-center gap-4">
+          <a href="/a-propos" class="hover:text-white">À propos</a>
+          <a href="/mentions-legales" class="hover:text-white">Mentions légales</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

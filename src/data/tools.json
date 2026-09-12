@@ -1,0 +1,99 @@
+{
+  "email-marketing": [
+    {
+      "name": "GetResponse",
+      "description": "Email marketing + automation tout-en-un",
+      "price": "À partir de 13€/mois",
+      "commission": "40-60% récurrent",
+      "pros": ["Automation puissante", "Landing pages incluses", "Support FR"],
+      "cons": ["Interface complexe au début"],
+      "rating": 4.5,
+      "promoCode": "SAASDEALS30",
+      "promoText": "-30% première année",
+      "affiliateUrl": "https://www.getresponse.com/?a=VOTRE_ID",
+      "logo": "📧"
+    },
+    {
+      "name": "Brevo (ex-Sendinblue)",
+      "description": "Solution française, email + SMS + chat",
+      "price": "Gratuit puis 19€/mois",
+      "commission": "Commission variable",
+      "pros": ["Français", "Plan gratuit généreux", "Multi-canal"],
+      "cons": ["Limites envois plan gratuit"],
+      "rating": 4.3,
+      "promoCode": null,
+      "promoText": null,
+      "affiliateUrl": "https://www.brevo.com/",
+      "logo": "💌"
+    },
+    {
+      "name": "ActiveCampaign",
+      "description": "Automation avancée pour marketeurs",
+      "price": "À partir de 29$/mois",
+      "commission": "30% récurrent 12 mois",
+      "pros": ["Automation très poussée", "CRM intégré", "Segmentation avancée"],
+      "cons": ["Prix élevé", "Courbe apprentissage"],
+      "rating": 4.6,
+      "promoCode": "DEALS14",
+      "promoText": "14 jours d'essai gratuit",
+      "affiliateUrl": "https://www.activecampaign.com/?_r=VOTRE_ID",
+      "logo": "⚡"
+    }
+  ],
+  "crm": [
+    {
+      "name": "HubSpot CRM",
+      "description": "CRM gratuit + outils marketing/vente",
+      "price": "Gratuit (premium dès 45€/mois)",
+      "commission": "30% récurrent 12 mois",
+      "pros": ["Version gratuite complète", "Tout-en-un", "Écosystème riche"],
+      "cons": ["Cher en premium", "Complexe"],
+      "rating": 4.7,
+      "promoCode": null,
+      "promoText": "CRM gratuit à vie",
+      "affiliateUrl": "https://www.hubspot.com/",
+      "logo": "🧡"
+    },
+    {
+      "name": "Pipedrive",
+      "description": "CRM simple orienté ventes",
+      "price": "À partir de 14€/mois",
+      "commission": "20-33% récurrent",
+      "pros": ["Simple et visuel", "Pipeline intuitif", "Bon rapport qualité/prix"],
+      "cons": ["Moins de fonctions marketing"],
+      "rating": 4.4,
+      "promoCode": "SAAS14",
+      "promoText": "14 jours gratuits + -20%",
+      "affiliateUrl": "https://www.pipedrive.com/",
+      "logo": "🎯"
+    }
+  ],
+  "outils-ia": [
+    {
+      "name": "Jasper AI",
+      "description": "Rédaction IA pour marketeurs",
+      "price": "À partir de 49$/mois",
+      "commission": "25-30% récurrent",
+      "pros": ["Templates marketing", "Qualité texte", "Brand voice"],
+      "cons": ["Prix élevé", "EN principalement"],
+      "rating": 4.3,
+      "promoCode": null,
+      "promoText": "7 jours d'essai gratuit",
+      "affiliateUrl": "https://www.jasper.ai/",
+      "logo": "✨"
+    },
+    {
+      "name": "Copy.ai",
+      "description": "Assistant rédaction IA abordable",
+      "price": "Gratuit puis 49$/mois",
+      "commission": "45% récurrent 12 mois",
+      "pros": ["Plan gratuit", "Simple", "Bon pour débuter"],
+      "cons": ["Moins puissant que Jasper"],
+      "rating": 4.1,
+      "promoCode": null,
+      "promoText": "2000 mots/mois gratuits",
+      "affiliateUrl": "https://www.copy.ai/",
+      "logo": "📝"
+    }
+  ]
+}
