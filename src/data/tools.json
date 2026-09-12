@@ -102,5 +102,77 @@
       "affiliateUrl": "https://www.copy.ai/",
       "logo": "📝"
     }
+  ],
+  "compta-finance": [
+    {
+      "name": "Pennylane",
+      "shortDesc": "Comptabilité automatisée connectée à votre banque",
+      "description": "Compta + facturation + banque en un",
+      "price": "À partir de 14€/mois",
+      "commission": "50-100€ par client",
+      "pros": ["100% français", "Connexion bancaire auto", "Interface moderne"],
+      "cons": ["Fonctions avancées payantes"],
+      "rating": 4.6,
+      "promoCode": null,
+      "promoText": "1 mois offert",
+      "affiliateUrl": "https://www.pennylane.com/",
+      "logo": "🇫🇷"
+    },
+    {
+      "name": "QuickBooks",
+      "shortDesc": "Gérez vos factures, dépenses et TVA facilement",
+      "description": "Comptabilité simple pour indépendants",
+      "price": "À partir de 15€/mois",
+      "commission": "50-100€ par vente",
+      "pros": ["Simple", "Reconnu mondialement", "App mobile"],
+      "cons": ["Support parfois lent"],
+      "rating": 4.3,
+      "promoCode": "QBDEALS50",
+      "promoText": "-50% pendant 3 mois",
+      "affiliateUrl": "https://quickbooks.intuit.com/fr/",
+      "logo": "📊"
+    },
+    {
+      "name": "Qonto",
+      "shortDesc": "Compte pro en ligne avec cartes et comptabilité intégrée",
+      "description": "Néobanque pour entreprises",
+      "price": "À partir de 9€/mois",
+      "commission": "80-100€ par compte ouvert",
+      "pros": ["Ouverture rapide", "Cartes incluses", "Interface top"],
+      "cons": ["Pas une vraie banque (pas de crédit)"],
+      "rating": 4.7,
+      "promoCode": null,
+      "promoText": "1 mois offert",
+      "affiliateUrl": "https://qonto.com/",
+      "logo": "💳"
+    },
+    {
+      "name": "Shine",
+      "shortDesc": "Compte pro + assistant administratif pour indépendants",
+      "description": "Banque + compta + conseils pour freelances",
+      "price": "À partir de 7,90€/mois",
+      "commission": "50-80€ par compte",
+      "pros": ["Parfait freelances", "Conseils inclus", "Français"],
+      "cons": ["Limité pour grosses structures"],
+      "rating": 4.4,
+      "promoCode": null,
+      "promoText": "2 mois offerts",
+      "affiliateUrl": "https://www.shine.fr/",
+      "logo": "✨"
+    },
+    {
+      "name": "Indy (ex-Georges)",
+      "shortDesc": "Comptabilité automatique pour indépendants et libéraux",
+      "description": "Déclarations fiscales automatisées",
+      "price": "À partir de 12€/mois",
+      "commission": "30-50€ par client",
+      "pros": ["Déclarations auto", "Spécial libéraux", "Simple"],
+      "cons": ["Moins complet que Pennylane"],
+      "rating": 4.5,
+      "promoCode": null,
+      "promoText": "14 jours gratuits",
+      "affiliateUrl": "https://www.indy.fr/",
+      "logo": "🧮"
+    }
   ]
 }
