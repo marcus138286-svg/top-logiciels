@@ -2,6 +2,7 @@
   "email-marketing": [
     {
       "name": "GetResponse",
+      "shortDesc": "Envoyez des newsletters et emails automatiques à vos clients",
       "description": "Email marketing + automation tout-en-un",
       "price": "À partir de 13€/mois",
       "commission": "40-60% récurrent",
@@ -15,6 +16,7 @@
     },
     {
       "name": "Brevo (ex-Sendinblue)",
+      "shortDesc": "Envoyez des emails, SMS et gérez vos chats clients",
       "description": "Solution française, email + SMS + chat",
       "price": "Gratuit puis 19€/mois",
       "commission": "Commission variable",
@@ -28,6 +30,7 @@
     },
     {
       "name": "ActiveCampaign",
+      "shortDesc": "Automatisez vos emails selon le comportement de vos clients",
       "description": "Automation avancée pour marketeurs",
       "price": "À partir de 29$/mois",
       "commission": "30% récurrent 12 mois",
@@ -43,6 +46,7 @@
   "crm": [
     {
       "name": "HubSpot CRM",
+      "shortDesc": "Gérez vos contacts, prospects et clients au même endroit",
       "description": "CRM gratuit + outils marketing/vente",
       "price": "Gratuit (premium dès 45€/mois)",
       "commission": "30% récurrent 12 mois",
@@ -56,6 +60,7 @@
     },
     {
       "name": "Pipedrive",
+      "shortDesc": "Suivez vos ventes et ne perdez plus aucun prospect",
       "description": "CRM simple orienté ventes",
       "price": "À partir de 14€/mois",
       "commission": "20-33% récurrent",
@@ -71,6 +76,7 @@
   "outils-ia": [
     {
       "name": "Jasper AI",
+      "shortDesc": "L'IA écrit vos textes marketing à votre place",
       "description": "Rédaction IA pour marketeurs",
       "price": "À partir de 49$/mois",
       "commission": "25-30% récurrent",
@@ -84,6 +90,7 @@
     },
     {
       "name": "Copy.ai",
+      "shortDesc": "Générez des textes, emails et posts en quelques clics",
       "description": "Assistant rédaction IA abordable",
       "price": "Gratuit puis 49$/mois",
       "commission": "45% récurrent 12 mois",
