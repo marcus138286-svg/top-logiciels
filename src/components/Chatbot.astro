@@ -33,6 +33,10 @@
     <!-- Input -->
     <div class="border-t p-3">
       <form id="chat-form" class="flex gap-2">
+        <!-- Honeypot anti-bot (invisible) -->
+        <input type="text" name="website" id="hp-field" class="hidden" tabindex="-1" autocomplete="off" />
+        <input type="hidden" id="chat-ts" value="" />
+
         <input
           type="text"
           id="chat-input"
@@ -59,6 +63,8 @@
   const form = document.getElementById('chat-form');
   const input = document.getElementById('chat-input') as HTMLInputElement;
   const messages = document.getElementById('chat-messages');
+  const hpField = document.getElementById('hp-field') as HTMLInputElement;
+  const tsField = document.getElementById('chat-ts') as HTMLInputElement;
 
   let isOpen = false;
 
@@ -66,6 +72,10 @@
     isOpen = !isOpen;
     window?.classList.toggle('hidden', !isOpen);
     toggle.textContent = isOpen ? '✕' : '💬';
+    // Enregistrer timestamp à l'ouverture
+    if (isOpen && tsField) {
+      tsField.value = Date.now().toString();
+    }
   });
 
   close?.addEventListener('click', () => {
@@ -79,6 +89,10 @@
     const message = input.value.trim();
     if (!message) return;
 
+    // Anti-bot checks
+    const honeypot = hpField?.value || '';
+    const timestamp = parseInt(tsField?.value || '0');
+
     // Afficher message user
     addMessage(message, 'user');
     input.value = '';
@@ -90,7 +104,7 @@
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message })
+        body: JSON.stringify({ message, honeypot, timestamp })
       });
 
       const data = await response.json();

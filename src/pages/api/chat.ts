@@ -69,11 +69,26 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
 
   // Parse request
   let message: string;
+  let honeypot: string;
+  let timestamp: number;
+
   try {
     const body = await request.json();
-    message = body.message?.slice(0, 500) || ''; // Limite 500 caractères
+    message = body.message?.slice(0, 500) || '';
+    honeypot = body.honeypot || '';
+    timestamp = body.timestamp || 0;
   } catch {
     return new Response(JSON.stringify({ error: "Message invalide" }), { status: 400 });
+  }
+
+  // Anti-bot: honeypot doit être vide
+  if (honeypot) {
+    return new Response(JSON.stringify({ reply: "Une erreur est survenue." }), { status: 200 });
+  }
+
+  // Anti-bot: délai minimum 1 seconde entre ouverture et envoi
+  if (timestamp && (now - timestamp) < 1000) {
+    return new Response(JSON.stringify({ reply: "Trop rapide ! Réessaie." }), { status: 200 });
   }
 
   if (!message.trim()) {
