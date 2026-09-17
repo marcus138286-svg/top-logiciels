@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const avis = [
+  { slug: "getresponse", name: "GetResponse", category: "Email Marketing", rating: 4.5, logo: "📧", promo: "-30%" },
+  { slug: "brevo", name: "Brevo", category: "Email Marketing", rating: 4.3, logo: "💌", promo: "Gratuit" },
+  { slug: "hubspot", name: "HubSpot CRM", category: "CRM", rating: 4.7, logo: "🧡", promo: "Gratuit" },
+  { slug: "pipedrive", name: "Pipedrive", category: "CRM", rating: 4.4, logo: "🎯", promo: "-20%" },
+  { slug: "qonto", name: "Qonto", category: "Banque Pro", rating: 4.7, logo: "💳", promo: "1 mois offert" },
+  { slug: "pennylane", name: "Pennylane", category: "Comptabilité", rating: 4.6, logo: "🇫🇷", promo: "1 mois offert" },
+];
+---
+
+<Layout title="Tous nos Avis Logiciels SaaS 2026" description="Retrouvez tous nos tests et avis complets sur les meilleurs logiciels SaaS : CRM, email marketing, comptabilité, banque pro.">
+  <section class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-2">📝 Tous nos <span class="gradient-text">Avis</span></h1>
+    <p class="text-gray-400 mb-10">Tests complets et honnêtes de chaque logiciel</p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      {avis.map(tool => (
+        <a href={`/avis/${tool.slug}`} class="glass p-6 rounded-2xl card-hover group">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <span class="text-3xl">{tool.logo}</span>
+              <div>
+                <h2 class="font-bold text-lg group-hover:text-gold transition">{tool.name}</h2>
+                <p class="text-sm text-gray-500">{tool.category}</p>
+              </div>
+            </div>
+            <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded-lg text-sm">⭐ {tool.rating}/5</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="bg-gold/20 text-gold px-2 py-1 rounded text-sm">{tool.promo}</span>
+            <span class="text-gray-500 group-hover:text-gold transition">Lire l'avis →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>

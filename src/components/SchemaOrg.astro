@@ -1,0 +1,88 @@
+---
+interface Props {
+  type: 'website' | 'article' | 'product';
+  name?: string;
+  description?: string;
+  rating?: number;
+  price?: string;
+  image?: string;
+}
+
+const { type, name, description, rating, price, image } = Astro.props;
+const siteUrl = "https://saasdeals.fr";
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SaaSDeals",
+  "url": siteUrl,
+  "description": "Comparatifs et codes promo pour les meilleurs logiciels SaaS",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": `${siteUrl}/recherche?q={search_term_string}`,
+    "query-input": "required name=search_term_string"
+  }
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SaaSDeals",
+  "url": siteUrl,
+  "logo": `${siteUrl}/favicon.svg`,
+  "sameAs": []
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": name,
+  "description": description,
+  "author": {
+    "@type": "Organization",
+    "name": "SaaSDeals"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SaaSDeals",
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/favicon.svg`
+    }
+  },
+  "datePublished": new Date().toISOString(),
+  "dateModified": new Date().toISOString()
+};
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": name,
+  "description": description,
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": price?.replace(/[^0-9]/g, '') || "0",
+    "priceCurrency": "EUR"
+  },
+  "aggregateRating": rating ? {
+    "@type": "AggregateRating",
+    "ratingValue": rating,
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "127"
+  } : undefined
+};
+
+let schema;
+if (type === 'website') {
+  schema = [websiteSchema, organizationSchema];
+} else if (type === 'article') {
+  schema = articleSchema;
+} else if (type === 'product') {
+  schema = productSchema;
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

@@ -2,39 +2,113 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Mentions Légales - SaaS Deals">
+<Layout title="Mentions Légales - SaaS Deals" description="Mentions légales du site SaaSDeals.fr - Informations sur l'éditeur, l'hébergement et l'affiliation.">
   <section class="max-w-3xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold mb-6">Mentions Légales</h1>
+    <h1 class="text-3xl font-bold mb-2">Mentions <span class="gradient-text">Légales</span></h1>
+    <p class="text-gray-400 mb-10">Informations légales obligatoires</p>
 
-    <div class="prose prose-lg text-gray-600 space-y-6">
+    <div class="space-y-6">
 
-      <div>
-        <h2 class="text-xl font-bold text-gray-900 mb-2">Éditeur du site</h2>
-        <p>[Votre nom ou raison sociale]<br>
-        [Adresse]<br>
-        [Email de contact]</p>
+      <div class="glass p-6 rounded-2xl">
+        <h2 class="text-xl font-bold mb-3 flex items-center gap-2">
+          <span class="text-gold">§</span> Éditeur du site
+        </h2>
+        <div class="text-gray-300 space-y-1">
+          <p><strong class="text-white">Site :</strong> SaaSDeals.fr</p>
+          <p><strong class="text-white">Statut :</strong> [Auto-entrepreneur / SASU / etc.]</p>
+          <p><strong class="text-white">Responsable :</strong> [Votre nom]</p>
+          <p><strong class="text-white">Adresse :</strong> [Votre adresse]</p>
+          <p><strong class="text-white">Email :</strong> contact@saasdeals.fr</p>
+          <p><strong class="text-white">SIRET :</strong> [Votre numéro SIRET]</p>
+        </div>
       </div>
 
-      <div>
-        <h2 class="text-xl font-bold text-gray-900 mb-2">Hébergement</h2>
-        <p>Vercel Inc.<br>
-        340 S Lemon Ave #4133<br>
-        Walnut, CA 91789, USA</p>
+      <div class="glass p-6 rounded-2xl">
+        <h2 class="text-xl font-bold mb-3 flex items-center gap-2">
+          <span class="text-gold">§</span> Hébergement
+        </h2>
+        <div class="text-gray-300 space-y-1">
+          <p><strong class="text-white">Hébergeur :</strong> Vercel Inc.</p>
+          <p>340 S Lemon Ave #4133</p>
+          <p>Walnut, CA 91789, USA</p>
+          <p><a href="https://vercel.com" class="text-purple-400 hover:underline">vercel.com</a></p>
+        </div>
       </div>
 
-      <div>
-        <h2 class="text-xl font-bold text-gray-900 mb-2">Affiliation</h2>
-        <p>Ce site participe à des programmes d'affiliation. Lorsque vous cliquez sur certains liens et effectuez un achat, nous pouvons recevoir une commission, sans frais supplémentaires pour vous.</p>
+      <div class="glass p-6 rounded-2xl border border-gold/30">
+        <h2 class="text-xl font-bold mb-3 flex items-center gap-2">
+          <span class="text-gold">§</span> Affiliation & Rémunération
+        </h2>
+        <div class="text-gray-300 space-y-3">
+          <p>
+            <strong class="text-white">Ce site participe à des programmes d'affiliation.</strong>
+          </p>
+          <p>
+            Concrètement, certains liens présents sur ce site sont des liens affiliés. Si vous cliquez dessus et effectuez un achat, nous recevons une commission de la part de l'éditeur du logiciel.
+          </p>
+          <p class="text-gold">
+            Cette commission ne vous coûte rien de plus — le prix reste identique pour vous.
+          </p>
+          <p>
+            Nos recommandations restent indépendantes : nous ne recommandons que des outils que nous jugeons utiles, et nous affichons toujours les avantages comme les inconvénients.
+          </p>
+        </div>
       </div>
 
-      <div>
-        <h2 class="text-xl font-bold text-gray-900 mb-2">Données personnelles</h2>
-        <p>Ce site ne collecte pas de données personnelles. Aucun cookie de tracking n'est utilisé.</p>
+      <div class="glass p-6 rounded-2xl">
+        <h2 class="text-xl font-bold mb-3 flex items-center gap-2">
+          <span class="text-gold">§</span> Données personnelles & RGPD
+        </h2>
+        <div class="text-gray-300 space-y-3">
+          <p>
+            <strong class="text-white">Ce site respecte votre vie privée.</strong>
+          </p>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2">
+              <span class="text-green-400">✓</span>
+              <span>Pas de cookies publicitaires</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-400">✓</span>
+              <span>Analytics respectueux (Plausible - sans cookies, RGPD compliant)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-400">✓</span>
+              <span>Aucune revente de données</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-400">✓</span>
+              <span>Pas de tracking publicitaire</span>
+            </li>
+          </ul>
+          <p class="text-sm text-gray-500 mt-4">
+            Le chatbot IA peut traiter vos messages pour vous répondre, mais aucune donnée n'est conservée au-delà de la session.
+          </p>
+        </div>
       </div>
 
-      <div>
-        <h2 class="text-xl font-bold text-gray-900 mb-2">Propriété intellectuelle</h2>
-        <p>Tous les contenus de ce site sont protégés par le droit d'auteur. Les marques citées appartiennent à leurs propriétaires respectifs.</p>
+      <div class="glass p-6 rounded-2xl">
+        <h2 class="text-xl font-bold mb-3 flex items-center gap-2">
+          <span class="text-gold">§</span> Propriété intellectuelle
+        </h2>
+        <div class="text-gray-300 space-y-3">
+          <p>
+            Tous les contenus de ce site (textes, graphismes, logo) sont protégés par le droit d'auteur.
+          </p>
+          <p>
+            Les marques et logos des logiciels présentés (HubSpot, GetResponse, Qonto, etc.) appartiennent à leurs propriétaires respectifs.
+          </p>
+        </div>
+      </div>
+
+      <div class="glass p-6 rounded-2xl">
+        <h2 class="text-xl font-bold mb-3 flex items-center gap-2">
+          <span class="text-gold">§</span> Contact
+        </h2>
+        <p class="text-gray-300">
+          Pour toute question concernant ces mentions légales, contactez-nous à
+          <a href="mailto:contact@saasdeals.fr" class="text-gold hover:underline">contact@saasdeals.fr</a>
+        </p>
       </div>
 
     </div>

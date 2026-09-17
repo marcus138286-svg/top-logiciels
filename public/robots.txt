@@ -1,0 +1,9 @@
+# Robots.txt pour SaaSDeals
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://saasdeals.fr/sitemap.xml
+
+# Bloquer les pages techniques
+Disallow: /api/
