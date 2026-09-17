@@ -8,24 +8,23 @@ const category = tools["email-marketing"];
 <Layout title="Comparatif Email Marketing 2026 - Meilleurs Logiciels" description="Comparatif des meilleurs logiciels d'email marketing : GetResponse, Brevo, ActiveCampaign. Prix, fonctionnalités et codes promo.">
 
   <section class="max-w-5xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold mb-2">📧 Comparatif Email Marketing 2026</h1>
-    <p class="text-gray-600 mb-8">Les meilleurs logiciels pour vos newsletters et campagnes email</p>
+    <h1 class="text-3xl font-bold mb-2">📧 Comparatif <span class="gradient-text">Email Marketing</span> 2026</h1>
+    <p class="text-gray-400 mb-8">Les meilleurs logiciels pour vos newsletters et campagnes email</p>
 
-    <!-- Tableau comparatif -->
     <div class="overflow-x-auto mb-12">
-      <table class="w-full bg-white rounded-xl shadow-sm border">
-        <thead class="bg-gray-50">
+      <table class="w-full glass rounded-2xl overflow-hidden">
+        <thead class="border-b border-white/10">
           <tr>
-            <th class="px-4 py-3 text-left">Logiciel</th>
-            <th class="px-4 py-3 text-left">Prix</th>
-            <th class="px-4 py-3 text-center">Note</th>
-            <th class="px-4 py-3 text-center">Promo</th>
-            <th class="px-4 py-3 text-right">Action</th>
+            <th class="px-4 py-4 text-left text-gray-400 text-sm">Logiciel</th>
+            <th class="px-4 py-4 text-left text-gray-400 text-sm">Prix</th>
+            <th class="px-4 py-4 text-center text-gray-400 text-sm">Note</th>
+            <th class="px-4 py-4 text-center text-gray-400 text-sm">Promo</th>
+            <th class="px-4 py-4 text-right text-gray-400 text-sm">Action</th>
           </tr>
         </thead>
-        <tbody class="divide-y">
+        <tbody class="divide-y divide-white/10">
           {category.map(tool => (
-            <tr class="hover:bg-gray-50">
+            <tr class="hover:bg-white/5 transition">
               <td class="px-4 py-4">
                 <div class="flex items-center gap-3">
                   <span class="text-2xl">{tool.logo}</span>
@@ -35,19 +34,19 @@ const category = tools["email-marketing"];
                   </div>
                 </div>
               </td>
-              <td class="px-4 py-4 text-sm">{tool.price}</td>
+              <td class="px-4 py-4 text-sm text-gray-300">{tool.price}</td>
               <td class="px-4 py-4 text-center">
-                <span class="bg-green-100 text-green-800 px-2 py-1 rounded font-medium">{tool.rating}/5</span>
+                <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded-lg font-medium text-sm">{tool.rating}/5</span>
               </td>
               <td class="px-4 py-4 text-center">
                 {tool.promoText ? (
-                  <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">{tool.promoText}</span>
+                  <span class="bg-gold text-gray-900 px-2 py-1 rounded-lg text-sm font-medium">{tool.promoText}</span>
                 ) : (
-                  <span class="text-gray-400">-</span>
+                  <span class="text-gray-600">-</span>
                 )}
               </td>
               <td class="px-4 py-4 text-right">
-                <a href={tool.affiliateUrl} target="_blank" rel="noopener" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700">
+                <a href={tool.affiliateUrl} target="_blank" rel="noopener" class="bg-purple-600 text-white px-4 py-2 rounded-xl text-sm hover:bg-purple-700 transition">
                   Essayer →
                 </a>
               </td>
@@ -57,44 +56,43 @@ const category = tools["email-marketing"];
       </table>
     </div>
 
-    <!-- Détails par outil -->
     <h2 class="text-2xl font-bold mb-6">Analyse détaillée</h2>
-    <div class="space-y-8">
+    <div class="space-y-6">
       {category.map(tool => (
-        <div class="bg-white p-6 rounded-xl border shadow-sm">
+        <div class="glass p-6 rounded-2xl card-hover">
           <div class="flex items-start justify-between mb-4">
             <div class="flex items-center gap-3">
               <span class="text-3xl">{tool.logo}</span>
               <div>
                 <h3 class="text-xl font-bold">{tool.name}</h3>
-                <p class="text-gray-600">{tool.description}</p>
+                <p class="text-gray-400">{tool.description}</p>
               </div>
             </div>
-            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full font-medium">{tool.rating}/5</span>
+            <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full font-medium">{tool.rating}/5</span>
           </div>
 
           <div class="grid md:grid-cols-2 gap-6 mb-4">
             <div>
-              <h4 class="font-medium text-green-700 mb-2">✅ Avantages</h4>
-              <ul class="text-sm space-y-1">
+              <h4 class="font-medium text-green-400 mb-2">✅ Avantages</h4>
+              <ul class="text-sm space-y-1 text-gray-300">
                 {tool.pros.map(pro => <li>• {pro}</li>)}
               </ul>
             </div>
             <div>
-              <h4 class="font-medium text-red-700 mb-2">❌ Inconvénients</h4>
-              <ul class="text-sm space-y-1">
+              <h4 class="font-medium text-red-400 mb-2">❌ Inconvénients</h4>
+              <ul class="text-sm space-y-1 text-gray-300">
                 {tool.cons.map(con => <li>• {con}</li>)}
               </ul>
             </div>
           </div>
 
-          <div class="flex items-center justify-between pt-4 border-t">
+          <div class="flex items-center justify-between pt-4 border-t border-white/10">
             <div>
-              <span class="text-gray-600">Prix : </span>
-              <span class="font-medium">{tool.price}</span>
-              {tool.promoText && <span class="ml-2 text-green-600 text-sm">({tool.promoText})</span>}
+              <span class="text-gray-500">Prix : </span>
+              <span class="font-medium text-white">{tool.price}</span>
+              {tool.promoText && <span class="ml-2 text-gold text-sm">({tool.promoText})</span>}
             </div>
-            <a href={tool.affiliateUrl} target="_blank" rel="noopener" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700">
+            <a href={tool.affiliateUrl} target="_blank" rel="noopener" class="bg-gold text-gray-900 px-6 py-2 rounded-xl font-medium hover:opacity-90 transition">
               Essayer {tool.name} →
             </a>
           </div>

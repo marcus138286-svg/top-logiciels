@@ -2,31 +2,102 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="À propos - SaaS Deals">
+<Layout title="À propos - SaaS Deals" description="Découvrez qui nous sommes et pourquoi nous comparons les logiciels SaaS pour vous aider à faire le bon choix.">
   <section class="max-w-3xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold mb-6">À propos de SaaS Deals</h1>
+    <h1 class="text-3xl font-bold mb-2">À propos de <span class="gradient-text">SaaS</span><span class="text-gold">Deals</span></h1>
+    <p class="text-gray-400 mb-10">Votre guide indépendant pour choisir les bons outils</p>
 
-    <div class="prose prose-lg">
-      <p class="text-gray-600 mb-4">
-        SaaS Deals est un site de comparatifs et codes promo pour les logiciels professionnels.
-      </p>
+    <div class="space-y-8">
 
-      <h2 class="text-xl font-bold mt-8 mb-4">Notre mission</h2>
-      <p class="text-gray-600 mb-4">
-        Vous aider à choisir les meilleurs outils pour votre activité, au meilleur prix.
-      </p>
+      <!-- Qui sommes-nous -->
+      <div class="glass p-6 rounded-2xl">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+          <span class="text-2xl">👋</span> Qui sommes-nous ?
+        </h2>
+        <p class="text-gray-300 mb-3">
+          Nous sommes une équipe de passionnés du digital, freelances et entrepreneurs depuis plusieurs années.
+          On a testé des dizaines de logiciels, payé des abonnements inutiles, perdu du temps sur des outils mal adaptés.
+        </p>
+        <p class="text-gray-300">
+          <strong class="text-white">Résultat :</strong> on a décidé de partager notre expérience pour vous éviter les mêmes erreurs.
+        </p>
+      </div>
 
-      <h2 class="text-xl font-bold mt-8 mb-4">Comment ça marche ?</h2>
-      <ul class="list-disc pl-6 text-gray-600 space-y-2">
-        <li>Nous testons et comparons les logiciels</li>
-        <li>Nous négocions des codes promo exclusifs</li>
-        <li>Vous économisez sur vos abonnements</li>
-      </ul>
+      <!-- Notre mission -->
+      <div class="glass p-6 rounded-2xl">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+          <span class="text-2xl">🎯</span> Notre mission
+        </h2>
+        <p class="text-gray-300 mb-4">
+          Vous aider à trouver <span class="text-gold">le bon outil au bon prix</span>, sans passer des heures à comparer.
+        </p>
+        <ul class="space-y-2 text-gray-300">
+          <li class="flex items-start gap-2">
+            <span class="text-green-400">✓</span>
+            <span>Des comparatifs <strong class="text-white">honnêtes</strong> avec avantages ET inconvénients</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-green-400">✓</span>
+            <span>Des <strong class="text-white">codes promo exclusifs</strong> négociés pour vous</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-green-400">✓</span>
+            <span>Un <strong class="text-white">assistant IA</strong> pour vous guider selon vos besoins</span>
+          </li>
+        </ul>
+      </div>
 
-      <h2 class="text-xl font-bold mt-8 mb-4">Transparence</h2>
-      <p class="text-gray-600">
-        Ce site contient des liens d'affiliation. Si vous achetez via nos liens, nous touchons une commission sans surcoût pour vous. Cela nous permet de maintenir ce site gratuit.
-      </p>
+      <!-- Comment on choisit -->
+      <div class="glass p-6 rounded-2xl">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+          <span class="text-2xl">🔍</span> Comment on sélectionne les outils ?
+        </h2>
+        <div class="grid md:grid-cols-3 gap-4 text-center">
+          <div class="p-4">
+            <div class="text-3xl mb-2">1️⃣</div>
+            <p class="text-sm text-gray-300">On <strong class="text-white">teste</strong> chaque outil nous-mêmes</p>
+          </div>
+          <div class="p-4">
+            <div class="text-3xl mb-2">2️⃣</div>
+            <p class="text-sm text-gray-300">On compare les <strong class="text-white">fonctionnalités et prix</strong></p>
+          </div>
+          <div class="p-4">
+            <div class="text-3xl mb-2">3️⃣</div>
+            <p class="text-sm text-gray-300">On ne garde que les <strong class="text-white">meilleurs</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transparence -->
+      <div class="glass p-6 rounded-2xl border border-purple-500/30">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+          <span class="text-2xl">💎</span> Transparence totale
+        </h2>
+        <p class="text-gray-300 mb-3">
+          <strong class="text-white">Oui, ce site contient des liens d'affiliation.</strong>
+        </p>
+        <p class="text-gray-300 mb-3">
+          Si vous achetez via nos liens, on touche une commission.
+          <span class="text-gold">Mais ça ne vous coûte pas un centime de plus</span> — c'est l'éditeur qui nous rémunère.
+        </p>
+        <p class="text-gray-300">
+          Cette commission nous permet de maintenir le site gratuit, de tester de nouveaux outils,
+          et de continuer à vous dénicher des promos.
+          <strong class="text-white">On ne recommande que des outils qu'on utiliserait nous-mêmes.</strong>
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div class="glass p-6 rounded-2xl">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+          <span class="text-2xl">📬</span> Une question ?
+        </h2>
+        <p class="text-gray-300">
+          Utilisez notre <strong class="text-white">assistant IA</strong> en bas à droite,
+          ou contactez-nous à <a href="mailto:contact@saasdeals.fr" class="text-gold hover:underline">contact@saasdeals.fr</a>
+        </p>
+      </div>
+
     </div>
   </section>
 </Layout>
