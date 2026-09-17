@@ -3,6 +3,11 @@ import Layout from '../../layouts/Layout.astro';
 import tools from '../../data/tools.json';
 
 const category = tools["crm"];
+
+const slugMap: Record<string, string> = {
+  "HubSpot CRM": "hubspot",
+  "Pipedrive": "pipedrive"
+};
 ---
 
 <Layout title="Comparatif CRM 2026 - Logiciels Gestion Relation Client" description="Comparatif des meilleurs logiciels CRM (Gestion de la Relation Client) : HubSpot, Pipedrive. Prix, fonctionnalités et codes promo pour gérer vos clients.">
@@ -93,9 +98,16 @@ const category = tools["crm"];
               <span class="font-medium text-white">{tool.price}</span>
               {tool.promoText && <span class="ml-2 text-gold text-sm">({tool.promoText})</span>}
             </div>
-            <a href={tool.affiliateUrl} target="_blank" rel="noopener" class="bg-gold text-gray-900 px-6 py-2 rounded-xl font-medium hover:opacity-90 transition">
-              Essayer {tool.name} →
-            </a>
+            <div class="flex gap-3">
+              {slugMap[tool.name] && (
+                <a href={`/avis/${slugMap[tool.name]}`} class="border border-purple-500/50 text-purple-300 px-4 py-2 rounded-xl text-sm hover:bg-purple-500/20 transition">
+                  Lire l'avis
+                </a>
+              )}
+              <a href={tool.affiliateUrl} target="_blank" rel="noopener" class="bg-gold text-gray-900 px-6 py-2 rounded-xl font-medium hover:opacity-90 transition">
+                Essayer →
+              </a>
+            </div>
           </div>
         </div>
       ))}

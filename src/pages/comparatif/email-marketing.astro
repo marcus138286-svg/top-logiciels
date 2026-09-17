@@ -3,6 +3,13 @@ import Layout from '../../layouts/Layout.astro';
 import tools from '../../data/tools.json';
 
 const category = tools["email-marketing"];
+
+// Mapping des slugs pour les pages avis
+const slugMap: Record<string, string> = {
+  "GetResponse": "getresponse",
+  "Brevo (ex-Sendinblue)": "brevo",
+  "ActiveCampaign": "activecampaign"
+};
 ---
 
 <Layout title="Comparatif Email Marketing 2026 - Meilleurs Logiciels" description="Comparatif des meilleurs logiciels d'email marketing : GetResponse, Brevo, ActiveCampaign. Prix, fonctionnalités et codes promo.">
@@ -92,9 +99,16 @@ const category = tools["email-marketing"];
               <span class="font-medium text-white">{tool.price}</span>
               {tool.promoText && <span class="ml-2 text-gold text-sm">({tool.promoText})</span>}
             </div>
-            <a href={tool.affiliateUrl} target="_blank" rel="noopener" class="bg-gold text-gray-900 px-6 py-2 rounded-xl font-medium hover:opacity-90 transition">
-              Essayer {tool.name} →
-            </a>
+            <div class="flex gap-3">
+              {slugMap[tool.name] && (
+                <a href={`/avis/${slugMap[tool.name]}`} class="border border-purple-500/50 text-purple-300 px-4 py-2 rounded-xl text-sm hover:bg-purple-500/20 transition">
+                  Lire l'avis
+                </a>
+              )}
+              <a href={tool.affiliateUrl} target="_blank" rel="noopener" class="bg-gold text-gray-900 px-6 py-2 rounded-xl font-medium hover:opacity-90 transition">
+                Essayer →
+              </a>
+            </div>
           </div>
         </div>
       ))}
