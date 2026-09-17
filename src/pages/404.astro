@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Page non trouvée - SaaSDeals">
+  <section class="max-w-2xl mx-auto px-4 py-20 text-center">
+    <div class="text-8xl mb-6">🔍</div>
+    <h1 class="text-4xl font-bold mb-4">Oups ! Page introuvable</h1>
+    <p class="text-gray-400 text-lg mb-8">
+      La page que vous cherchez n'existe pas ou a été déplacée.
+    </p>
+
+    <div class="glass p-6 rounded-2xl mb-8">
+      <p class="text-gray-300 mb-4">Peut-être cherchiez-vous :</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/comparatif/email-marketing" class="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-lg hover:bg-purple-500/30 transition">Email Marketing</a>
+        <a href="/comparatif/crm" class="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-lg hover:bg-purple-500/30 transition">CRM</a>
+        <a href="/comparatif/outils-ia" class="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-lg hover:bg-purple-500/30 transition">Outils IA</a>
+        <a href="/codes-promo" class="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-lg hover:bg-purple-500/30 transition">Codes Promo</a>
+      </div>
+    </div>
+
+    <a href="/" class="inline-block bg-gold text-gray-900 px-8 py-3 rounded-xl font-bold hover:opacity-90 transition">
+      ← Retour à l'accueil
+    </a>
+  </section>
+</Layout>

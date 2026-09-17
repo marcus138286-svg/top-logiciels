@@ -13,12 +13,19 @@ const pages = [
   '/comparatif/crm',
   '/comparatif/outils-ia',
   '/comparatif/compta-finance',
+  '/avis',
   '/avis/getresponse',
   '/avis/brevo',
+  '/avis/activecampaign',
   '/avis/hubspot',
   '/avis/pipedrive',
+  '/avis/jasper',
+  '/avis/copyai',
   '/avis/qonto',
   '/avis/pennylane',
+  '/avis/shine',
+  '/avis/indy',
+  '/avis/quickbooks',
 ];
 
 const siteUrl = 'https://saasdeals.fr';
