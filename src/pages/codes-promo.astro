@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ToolLogo from '../components/ToolLogo.astro';
 import tools from '../data/tools.json';
 
 const allTools = [...tools["email-marketing"], ...tools["crm"], ...tools["outils-ia"], ...tools["compta-finance"]];
@@ -16,7 +17,7 @@ const toolsWithPromo = allTools.filter(t => t.promoCode || t.promoText);
       {toolsWithPromo.map(tool => (
         <div class="glass p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 card-hover border border-gold/20">
           <div class="flex items-center gap-4">
-            <span class="text-3xl">{tool.logo}</span>
+            <ToolLogo name={tool.name} image={tool.image} logo={tool.logo} size="lg" />
             <div>
               <h3 class="font-bold text-lg">{tool.name}</h3>
               <p class="text-sm text-gray-400">{tool.shortDesc}</p>

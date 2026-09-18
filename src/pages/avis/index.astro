@@ -1,23 +1,25 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ToolLogo from '../../components/ToolLogo.astro';
+import tools from '../../data/tools.json';
 
 const avis = [
   // Email Marketing
-  { slug: "getresponse", name: "GetResponse", category: "Email Marketing", rating: 4.5, logo: "📧", promo: "-30%" },
-  { slug: "brevo", name: "Brevo", category: "Email Marketing", rating: 4.3, logo: "💌", promo: "Gratuit" },
-  { slug: "activecampaign", name: "ActiveCampaign", category: "Email Marketing", rating: 4.6, logo: "⚡", promo: "14j gratuits" },
+  { slug: "getresponse", name: "GetResponse", category: "Email Marketing", rating: 4.5, logo: "📧", image: tools["email-marketing"][0].image, promo: "-30%" },
+  { slug: "brevo", name: "Brevo", category: "Email Marketing", rating: 4.3, logo: "💌", image: tools["email-marketing"][1].image, promo: "Gratuit" },
+  { slug: "activecampaign", name: "ActiveCampaign", category: "Email Marketing", rating: 4.6, logo: "⚡", image: tools["email-marketing"][2].image, promo: "14j gratuits" },
   // CRM
-  { slug: "hubspot", name: "HubSpot CRM", category: "CRM", rating: 4.7, logo: "🧡", promo: "Gratuit" },
-  { slug: "pipedrive", name: "Pipedrive", category: "CRM", rating: 4.4, logo: "🎯", promo: "-20%" },
+  { slug: "hubspot", name: "HubSpot CRM", category: "CRM", rating: 4.7, logo: "🧡", image: tools["crm"][0].image, promo: "Gratuit" },
+  { slug: "pipedrive", name: "Pipedrive", category: "CRM", rating: 4.4, logo: "🎯", image: tools["crm"][1].image, promo: "-20%" },
   // Outils IA
-  { slug: "jasper", name: "Jasper AI", category: "Outils IA", rating: 4.3, logo: "✨", promo: "7j gratuits" },
-  { slug: "copyai", name: "Copy.ai", category: "Outils IA", rating: 4.1, logo: "📝", promo: "Gratuit" },
+  { slug: "jasper", name: "Jasper AI", category: "Outils IA", rating: 4.3, logo: "✨", image: tools["outils-ia"][0].image, promo: "7j gratuits" },
+  { slug: "copyai", name: "Copy.ai", category: "Outils IA", rating: 4.1, logo: "📝", image: tools["outils-ia"][1].image, promo: "Gratuit" },
   // Compta & Finance
-  { slug: "qonto", name: "Qonto", category: "Banque Pro", rating: 4.7, logo: "💳", promo: "1 mois offert" },
-  { slug: "pennylane", name: "Pennylane", category: "Comptabilité", rating: 4.6, logo: "🇫🇷", promo: "1 mois offert" },
-  { slug: "shine", name: "Shine", category: "Banque Freelance", rating: 4.4, logo: "✨", promo: "2 mois offerts" },
-  { slug: "indy", name: "Indy", category: "Comptabilité", rating: 4.5, logo: "🧮", promo: "14j gratuits" },
-  { slug: "quickbooks", name: "QuickBooks", category: "Comptabilité", rating: 4.3, logo: "📊", promo: "-50%" },
+  { slug: "qonto", name: "Qonto", category: "Banque Pro", rating: 4.7, logo: "💳", image: tools["compta-finance"][2].image, promo: "1 mois offert" },
+  { slug: "pennylane", name: "Pennylane", category: "Comptabilité", rating: 4.6, logo: "🇫🇷", image: tools["compta-finance"][0].image, promo: "1 mois offert" },
+  { slug: "shine", name: "Shine", category: "Banque Freelance", rating: 4.4, logo: "✨", image: tools["compta-finance"][3].image, promo: "2 mois offerts" },
+  { slug: "indy", name: "Indy", category: "Comptabilité", rating: 4.5, logo: "🧮", image: tools["compta-finance"][4].image, promo: "14j gratuits" },
+  { slug: "quickbooks", name: "QuickBooks", category: "Comptabilité", rating: 4.3, logo: "📊", image: tools["compta-finance"][1].image, promo: "-50%" },
 ];
 ---
 
@@ -31,7 +33,7 @@ const avis = [
         <a href={`/avis/${tool.slug}`} class="glass p-6 rounded-2xl card-hover group">
           <div class="flex items-center justify-between mb-3">
             <div class="flex items-center gap-3">
-              <span class="text-3xl">{tool.logo}</span>
+              <ToolLogo name={tool.name} image={tool.image} logo={tool.logo} size="lg" />
               <div>
                 <h2 class="font-bold text-lg group-hover:text-gold transition">{tool.name}</h2>
                 <p class="text-sm text-gray-500">{tool.category}</p>
