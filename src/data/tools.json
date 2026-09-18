@@ -85,22 +85,6 @@
   ],
   "outils-ia": [
     {
-      "name": "Jasper AI",
-      "slug": "jasper",
-      "shortDesc": "L'IA écrit vos textes marketing à votre place",
-      "description": "Rédaction IA pour marketeurs",
-      "price": "À partir de 49$/mois",
-      "commission": "25-30% récurrent",
-      "pros": ["Templates marketing", "Qualité texte", "Brand voice"],
-      "cons": ["Prix élevé", "EN principalement"],
-      "rating": 4.3,
-      "promoCode": null,
-      "promoText": "7 jours d'essai gratuit",
-      "affiliateUrl": "https://www.jasper.ai/",
-      "logo": "✨",
-      "image": "https://www.google.com/s2/favicons?domain=jasper.ai&sz=128"
-    },
-    {
       "name": "Copy.ai",
       "slug": "copyai",
       "shortDesc": "Générez des textes, emails et posts en quelques clics",
