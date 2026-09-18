@@ -2,6 +2,7 @@
   "email-marketing": [
     {
       "name": "GetResponse",
+      "slug": "getresponse",
       "shortDesc": "Envoyez des newsletters et emails automatiques à vos clients",
       "description": "Email marketing + automation tout-en-un",
       "price": "À partir de 13€/mois",
@@ -12,10 +13,13 @@
       "promoCode": "SAASDEALS30",
       "promoText": "-30% première année",
       "affiliateUrl": "https://www.getresponse.com/?a=VOTRE_ID",
-      "logo": "📧"
+      "logo": "📧",
+      "image": "/images/logos/getresponse.webp",
+      "screenshot": "/images/screenshots/getresponse-dashboard.webp"
     },
     {
       "name": "Brevo (ex-Sendinblue)",
+      "slug": "brevo",
       "shortDesc": "Envoyez des emails, SMS et gérez vos chats clients",
       "description": "Solution française, email + SMS + chat",
       "price": "Gratuit puis 19€/mois",
@@ -26,10 +30,13 @@
       "promoCode": null,
       "promoText": null,
       "affiliateUrl": "https://www.brevo.com/",
-      "logo": "💌"
+      "logo": "💌",
+      "image": "/images/logos/brevo.webp",
+      "screenshot": "/images/screenshots/brevo-dashboard.webp"
     },
     {
       "name": "ActiveCampaign",
+      "slug": "activecampaign",
       "shortDesc": "Automatisez vos emails selon le comportement de vos clients",
       "description": "Automation avancée pour marketeurs",
       "price": "À partir de 29$/mois",
@@ -40,12 +47,15 @@
       "promoCode": "DEALS14",
       "promoText": "14 jours d'essai gratuit",
       "affiliateUrl": "https://www.activecampaign.com/?_r=VOTRE_ID",
-      "logo": "⚡"
+      "logo": "⚡",
+      "image": "/images/logos/activecampaign.webp",
+      "screenshot": "/images/screenshots/activecampaign-dashboard.webp"
     }
   ],
   "crm": [
     {
       "name": "HubSpot CRM",
+      "slug": "hubspot",
       "shortDesc": "Gestion de la Relation Client : centralisez contacts et prospects",
       "description": "Logiciel CRM gratuit pour la gestion de la relation client + outils marketing/vente",
       "price": "Gratuit (premium dès 45€/mois)",
@@ -56,10 +66,13 @@
       "promoCode": null,
       "promoText": "CRM gratuit à vie",
       "affiliateUrl": "https://www.hubspot.com/",
-      "logo": "🧡"
+      "logo": "🧡",
+      "image": "/images/logos/hubspot.webp",
+      "screenshot": "/images/screenshots/hubspot-pipeline.webp"
     },
     {
       "name": "Pipedrive",
+      "slug": "pipedrive",
       "shortDesc": "Gestion de la Relation Client : suivez vos ventes et prospects",
       "description": "Logiciel CRM simple pour la gestion de la relation client, orienté ventes",
       "price": "À partir de 14€/mois",
@@ -70,12 +83,15 @@
       "promoCode": "SAAS14",
       "promoText": "14 jours gratuits + -20%",
       "affiliateUrl": "https://www.pipedrive.com/",
-      "logo": "🎯"
+      "logo": "🎯",
+      "image": "/images/logos/pipedrive.webp",
+      "screenshot": "/images/screenshots/pipedrive-pipeline.webp"
     }
   ],
   "outils-ia": [
     {
       "name": "Jasper AI",
+      "slug": "jasper",
       "shortDesc": "L'IA écrit vos textes marketing à votre place",
       "description": "Rédaction IA pour marketeurs",
       "price": "À partir de 49$/mois",
@@ -86,10 +102,13 @@
       "promoCode": null,
       "promoText": "7 jours d'essai gratuit",
       "affiliateUrl": "https://www.jasper.ai/",
-      "logo": "✨"
+      "logo": "✨",
+      "image": "/images/logos/jasper.webp",
+      "screenshot": "/images/screenshots/jasper-editor.webp"
     },
     {
       "name": "Copy.ai",
+      "slug": "copyai",
       "shortDesc": "Générez des textes, emails et posts en quelques clics",
       "description": "Assistant rédaction IA abordable",
       "price": "Gratuit puis 49$/mois",
@@ -100,12 +119,15 @@
       "promoCode": null,
       "promoText": "2000 mots/mois gratuits",
       "affiliateUrl": "https://www.copy.ai/",
-      "logo": "📝"
+      "logo": "📝",
+      "image": "/images/logos/copyai.webp",
+      "screenshot": "/images/screenshots/copyai-editor.webp"
     }
   ],
   "compta-finance": [
     {
       "name": "Pennylane",
+      "slug": "pennylane",
       "shortDesc": "Comptabilité automatisée connectée à votre banque",
       "description": "Compta + facturation + banque en un",
       "price": "À partir de 14€/mois",
@@ -116,10 +138,13 @@
       "promoCode": null,
       "promoText": "1 mois offert",
       "affiliateUrl": "https://www.pennylane.com/",
-      "logo": "🇫🇷"
+      "logo": "🇫🇷",
+      "image": "/images/logos/pennylane.webp",
+      "screenshot": "/images/screenshots/pennylane-dashboard.webp"
     },
     {
       "name": "QuickBooks",
+      "slug": "quickbooks",
       "shortDesc": "Gérez vos factures, dépenses et TVA facilement",
       "description": "Comptabilité simple pour indépendants",
       "price": "À partir de 15€/mois",
@@ -130,10 +155,13 @@
       "promoCode": "QBDEALS50",
       "promoText": "-50% pendant 3 mois",
       "affiliateUrl": "https://quickbooks.intuit.com/fr/",
-      "logo": "📊"
+      "logo": "📊",
+      "image": "/images/logos/quickbooks.webp",
+      "screenshot": "/images/screenshots/quickbooks-dashboard.webp"
     },
     {
       "name": "Qonto",
+      "slug": "qonto",
       "shortDesc": "Compte pro en ligne avec cartes et comptabilité intégrée",
       "description": "Néobanque pour entreprises",
       "price": "À partir de 9€/mois",
@@ -144,10 +172,13 @@
       "promoCode": null,
       "promoText": "1 mois offert",
       "affiliateUrl": "https://qonto.com/",
-      "logo": "💳"
+      "logo": "💳",
+      "image": "/images/logos/qonto.webp",
+      "screenshot": "/images/screenshots/qonto-dashboard.webp"
     },
     {
       "name": "Shine",
+      "slug": "shine",
       "shortDesc": "Compte pro + assistant administratif pour indépendants",
       "description": "Banque + compta + conseils pour freelances",
       "price": "À partir de 7,90€/mois",
@@ -158,10 +189,13 @@
       "promoCode": null,
       "promoText": "2 mois offerts",
       "affiliateUrl": "https://www.shine.fr/",
-      "logo": "✨"
+      "logo": "✨",
+      "image": "/images/logos/shine.webp",
+      "screenshot": "/images/screenshots/shine-dashboard.webp"
     },
     {
       "name": "Indy (ex-Georges)",
+      "slug": "indy",
       "shortDesc": "Comptabilité automatique pour indépendants et libéraux",
       "description": "Déclarations fiscales automatisées",
       "price": "À partir de 12€/mois",
@@ -172,7 +206,9 @@
       "promoCode": null,
       "promoText": "14 jours gratuits",
       "affiliateUrl": "https://www.indy.fr/",
-      "logo": "🧮"
+      "logo": "🧮",
+      "image": "/images/logos/indy.webp",
+      "screenshot": "/images/screenshots/indy-dashboard.webp"
     }
   ]
 }
