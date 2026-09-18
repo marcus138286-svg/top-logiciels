@@ -14,8 +14,7 @@
       "promoText": "-30% première année",
       "affiliateUrl": "https://www.getresponse.com/?a=VOTRE_ID",
       "logo": "📧",
-      "image": "https://logo.clearbit.com/getresponse.com",
-      "screenshot": "/images/screenshots/getresponse-dashboard.webp"
+      "image": "https://www.google.com/s2/favicons?domain=getresponse.com&sz=128"
     },
     {
       "name": "Brevo (ex-Sendinblue)",
@@ -31,8 +30,7 @@
       "promoText": null,
       "affiliateUrl": "https://www.brevo.com/",
       "logo": "💌",
-      "image": "https://logo.clearbit.com/brevo.com",
-      "screenshot": "/images/screenshots/brevo-dashboard.webp"
+      "image": "https://www.google.com/s2/favicons?domain=brevo.com&sz=128"
     },
     {
       "name": "ActiveCampaign",
@@ -48,8 +46,7 @@
       "promoText": "14 jours d'essai gratuit",
       "affiliateUrl": "https://www.activecampaign.com/?_r=VOTRE_ID",
       "logo": "⚡",
-      "image": "https://logo.clearbit.com/activecampaign.com",
-      "screenshot": "/images/screenshots/activecampaign-dashboard.webp"
+      "image": "https://www.google.com/s2/favicons?domain=activecampaign.com&sz=128"
     }
   ],
   "crm": [
@@ -67,8 +64,7 @@
       "promoText": "CRM gratuit à vie",
       "affiliateUrl": "https://www.hubspot.com/",
       "logo": "🧡",
-      "image": "https://logo.clearbit.com/hubspot.com",
-      "screenshot": "/images/screenshots/hubspot-pipeline.webp"
+      "image": "https://www.google.com/s2/favicons?domain=hubspot.com&sz=128"
     },
     {
       "name": "Pipedrive",
@@ -84,8 +80,7 @@
       "promoText": "14 jours gratuits + -20%",
       "affiliateUrl": "https://www.pipedrive.com/",
       "logo": "🎯",
-      "image": "https://logo.clearbit.com/pipedrive.com",
-      "screenshot": "/images/screenshots/pipedrive-pipeline.webp"
+      "image": "https://www.google.com/s2/favicons?domain=pipedrive.com&sz=128"
     }
   ],
   "outils-ia": [
@@ -103,8 +98,7 @@
       "promoText": "7 jours d'essai gratuit",
       "affiliateUrl": "https://www.jasper.ai/",
       "logo": "✨",
-      "image": "https://logo.clearbit.com/jasper.ai",
-      "screenshot": "/images/screenshots/jasper-editor.webp"
+      "image": "https://www.google.com/s2/favicons?domain=jasper.ai&sz=128"
     },
     {
       "name": "Copy.ai",
@@ -120,8 +114,7 @@
       "promoText": "2000 mots/mois gratuits",
       "affiliateUrl": "https://www.copy.ai/",
       "logo": "📝",
-      "image": "https://logo.clearbit.com/copy.ai",
-      "screenshot": "/images/screenshots/copyai-editor.webp"
+      "image": "https://www.google.com/s2/favicons?domain=copy.ai&sz=128"
     }
   ],
   "compta-finance": [
@@ -139,8 +132,7 @@
       "promoText": "1 mois offert",
       "affiliateUrl": "https://www.pennylane.com/",
       "logo": "🇫🇷",
-      "image": "https://logo.clearbit.com/pennylane.com",
-      "screenshot": "/images/screenshots/pennylane-dashboard.webp"
+      "image": "https://www.google.com/s2/favicons?domain=pennylane.com&sz=128"
     },
     {
       "name": "QuickBooks",
@@ -156,8 +148,7 @@
       "promoText": "-50% pendant 3 mois",
       "affiliateUrl": "https://quickbooks.intuit.com/fr/",
       "logo": "📊",
-      "image": "https://logo.clearbit.com/quickbooks.intuit.com",
-      "screenshot": "/images/screenshots/quickbooks-dashboard.webp"
+      "image": "https://www.google.com/s2/favicons?domain=quickbooks.intuit.com&sz=128"
     },
     {
       "name": "Qonto",
@@ -173,8 +164,7 @@
       "promoText": "1 mois offert",
       "affiliateUrl": "https://qonto.com/",
       "logo": "💳",
-      "image": "https://logo.clearbit.com/qonto.com",
-      "screenshot": "/images/screenshots/qonto-dashboard.webp"
+      "image": "https://www.google.com/s2/favicons?domain=qonto.com&sz=128"
     },
     {
       "name": "Shine",
@@ -190,8 +180,7 @@
       "promoText": "2 mois offerts",
       "affiliateUrl": "https://www.shine.fr/",
       "logo": "✨",
-      "image": "https://logo.clearbit.com/shine.fr",
-      "screenshot": "/images/screenshots/shine-dashboard.webp"
+      "image": "https://www.google.com/s2/favicons?domain=shine.fr&sz=128"
     },
     {
       "name": "Indy (ex-Georges)",
@@ -207,8 +196,7 @@
       "promoText": "14 jours gratuits",
       "affiliateUrl": "https://www.indy.fr/",
       "logo": "🧮",
-      "image": "https://logo.clearbit.com/indy.fr",
-      "screenshot": "/images/screenshots/indy-dashboard.webp"
+      "image": "https://www.google.com/s2/favicons?domain=indy.fr&sz=128"
     }
   ]
 }
