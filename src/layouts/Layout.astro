@@ -2,6 +2,8 @@
 import '../styles/global.css'
 import Chatbot from '../components/Chatbot.astro'
 import SchemaOrg from '../components/SchemaOrg.astro'
+import CookieBanner from '../components/CookieBanner.astro'
+import AffiliateTracker from '../components/AffiliateTracker.astro'
 
 interface Props {
   title: string;
@@ -39,7 +41,9 @@ const siteUrl = "https://saasdeals.fr";
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <title>{title}</title>
-    <!-- Analytics : à configurer plus tard (Vercel Analytics ou autre) -->
+    <!-- Umami Analytics (RGPD-compliant, sans cookies) -->
+    <!-- À configurer : créer un compte sur https://cloud.umami.is et remplacer data-website-id -->
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR_WEBSITE_ID"></script>
     <!-- Schema.org -->
     <SchemaOrg type="website" />
   </head>
@@ -96,15 +100,18 @@ const siteUrl = "https://saasdeals.fr";
     <footer class="relative z-10 border-t border-white/10 mt-20 py-10">
       <div class="max-w-6xl mx-auto px-4 text-center text-sm text-gray-500">
         <p>&copy; 2026 <span class="text-gold">SaaSDeals</span> - Comparatifs et codes promo</p>
-        <div class="mt-3 flex justify-center gap-6">
+        <div class="mt-3 flex justify-center gap-6 flex-wrap">
           <a href="/a-propos" class="hover:text-white transition">À propos</a>
           <a href="/mentions-legales" class="hover:text-white transition">Mentions légales</a>
+          <a href="/politique-confidentialite" class="hover:text-white transition">Confidentialité</a>
           <a href="/blog" class="hover:text-white transition">Blog</a>
         </div>
       </div>
     </footer>
 
     <Chatbot />
+    <CookieBanner />
+    <AffiliateTracker />
 
     <!-- Mobile menu script -->
     <script>

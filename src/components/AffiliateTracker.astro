@@ -1,0 +1,46 @@
+---
+// Script de tracking des clics affiliés
+---
+
+<script>
+  // Tracker les clics sur les liens affiliés (liens externes avec target="_blank")
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    const link = target.closest('a[target="_blank"]') as HTMLAnchorElement | null;
+
+    if (!link) return;
+
+    const href = link.getAttribute('href') || '';
+
+    // Ne tracker que les liens externes (pas les liens internes)
+    if (!href.startsWith('http') || href.includes('saasdeals.fr')) return;
+
+    // Extraire le nom du domaine comme identifiant
+    let toolName = 'unknown';
+    try {
+      const url = new URL(href);
+      toolName = url.hostname.replace('www.', '').split('.')[0];
+    } catch {
+      toolName = link.textContent?.trim().slice(0, 30) || 'unknown';
+    }
+
+    // Envoyer le tracking de manière asynchrone (non-bloquant)
+    const data = JSON.stringify({
+      tool: toolName,
+      url: href,
+      timestamp: Date.now()
+    });
+
+    // Utiliser sendBeacon pour un tracking fiable même si l'utilisateur quitte la page
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon('/api/track-click', data);
+    } else {
+      fetch('/api/track-click', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: data,
+        keepalive: true
+      }).catch(() => {});
+    }
+  });
+</script>

@@ -1,0 +1,43 @@
+---
+// Bannière cookies RGPD - informative uniquement
+// Umami est sans cookies donc pas besoin de consentement pour l'analytics
+---
+
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 p-4 hidden">
+  <div class="max-w-4xl mx-auto glass rounded-2xl p-6 border border-purple-500/30">
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-4">
+      <div class="flex-1">
+        <p class="text-sm text-gray-300">
+          <span class="text-gold font-medium">🍪 Cookies</span> —
+          Ce site utilise uniquement des cookies essentiels (préférences). Nos analytics sont sans cookies et respectent votre vie privée.
+          <a href="/politique-confidentialite" class="text-purple-400 hover:text-purple-300 underline">En savoir plus</a>
+        </p>
+      </div>
+      <div class="flex gap-3">
+        <button id="cookie-accept" class="bg-gold text-gray-900 px-6 py-2 rounded-xl text-sm font-medium hover:opacity-90 transition">
+          Compris
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+
+  // Vérifier si l'utilisateur a déjà vu la bannière
+  const cookieSeen = localStorage.getItem('cookie-seen');
+
+  if (!cookieSeen) {
+    // Afficher la bannière après 1.5 secondes
+    setTimeout(() => {
+      banner?.classList.remove('hidden');
+    }, 1500);
+  }
+
+  acceptBtn?.addEventListener('click', () => {
+    localStorage.setItem('cookie-seen', 'true');
+    banner?.classList.add('hidden');
+  });
+</script>
