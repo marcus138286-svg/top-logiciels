@@ -9,12 +9,12 @@ interface Props {
 }
 
 const { type, name, description, rating, price, image } = Astro.props;
-const siteUrl = "https://saasdeals.fr";
+const siteUrl = "https://top-logiciels.fr";
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "SaaSDeals",
+  "name": "Top-Logiciels",
   "url": siteUrl,
   "description": "Comparatifs et codes promo pour les meilleurs logiciels SaaS",
   "potentialAction": {
@@ -27,7 +27,7 @@ const websiteSchema = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "SaaSDeals",
+  "name": "Top-Logiciels",
   "url": siteUrl,
   "logo": `${siteUrl}/favicon.svg`,
   "sameAs": []
@@ -40,11 +40,11 @@ const articleSchema = {
   "description": description,
   "author": {
     "@type": "Organization",
-    "name": "SaaSDeals"
+    "name": "Top-Logiciels"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "SaaSDeals",
+    "name": "Top-Logiciels",
     "logo": {
       "@type": "ImageObject",
       "url": `${siteUrl}/favicon.svg`

@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://saasdeals.fr', // À remplacer par ton vrai domaine
+  site: 'https://top-logiciels.fr',
   output: 'server',
   integrations: [sitemap()],
   adapter: vercel({
