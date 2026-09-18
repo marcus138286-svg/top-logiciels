@@ -13,19 +13,20 @@ const allLogos = [
 <Layout title="SaaS Deals - Comparatifs et Codes Promo Logiciels">
 
   <!-- Logos flottants en arrière-plan -->
-  <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+  <div class="fixed inset-0 overflow-hidden pointer-events-none" style="z-index: 1;">
     {allLogos.map((logo, i) => (
       <img
         src={logo}
         alt=""
-        class="floating-logo absolute opacity-10 rounded-lg"
+        class="floating-logo absolute rounded-xl"
         style={`
-          width: ${30 + (i % 3) * 10}px;
-          height: ${30 + (i % 3) * 10}px;
-          left: ${5 + (i * 7) % 90}%;
-          top: ${10 + (i * 13) % 80}%;
-          animation: float-random ${8 + (i % 5) * 2}s ease-in-out infinite;
-          animation-delay: ${i * 0.5}s;
+          width: ${60 + (i % 3) * 20}px;
+          height: ${60 + (i % 3) * 20}px;
+          left: ${3 + (i * 8) % 90}%;
+          top: ${3 + (i * 9) % 90}%;
+          opacity: 0.5;
+          animation: float-random ${5 + (i % 4) * 2}s ease-in-out infinite;
+          animation-delay: ${i * 0.2}s;
         `}
       />
     ))}

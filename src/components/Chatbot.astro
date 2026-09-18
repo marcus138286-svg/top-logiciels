@@ -3,10 +3,16 @@
 ---
 
 <div id="chatbot-container">
+  <!-- Bulle d'aide -->
+  <div id="chat-hint" class="fixed bottom-24 right-6 glass px-4 py-2 rounded-xl text-sm text-white z-50 animate-bounce-hint">
+    <span class="text-gold">Besoin d'aide ?</span> Demande-moi !
+    <div class="absolute -bottom-2 right-6 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white/10"></div>
+  </div>
+
   <!-- Bouton flottant -->
   <button
     id="chat-toggle"
-    class="fixed bottom-6 right-6 w-14 h-14 rounded-full shadow-lg transition flex items-center justify-center text-2xl z-50 animate-pulse-glow"
+    class="fixed bottom-6 right-6 w-16 h-16 rounded-full shadow-2xl transition-all flex items-center justify-center text-3xl z-50 chat-button-glow hover:scale-110"
     style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"
   >
     💬
@@ -59,22 +65,64 @@
   </div>
 </div>
 
+<style>
+  @keyframes bounce-hint {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  .animate-bounce-hint {
+    animation: bounce-hint 2s ease-in-out infinite;
+  }
+
+  .chat-button-glow {
+    box-shadow:
+      0 0 20px rgba(102, 126, 234, 0.5),
+      0 0 40px rgba(118, 75, 162, 0.3),
+      0 0 60px rgba(102, 126, 234, 0.2);
+    animation: chat-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes chat-glow {
+    0%, 100% {
+      box-shadow:
+        0 0 20px rgba(102, 126, 234, 0.5),
+        0 0 40px rgba(118, 75, 162, 0.3),
+        0 0 60px rgba(102, 126, 234, 0.2);
+    }
+    50% {
+      box-shadow:
+        0 0 30px rgba(102, 126, 234, 0.7),
+        0 0 60px rgba(118, 75, 162, 0.5),
+        0 0 90px rgba(102, 126, 234, 0.3);
+    }
+  }
+</style>
+
 <script>
   const toggle = document.getElementById('chat-toggle');
-  const window = document.getElementById('chat-window');
+  const chatWindow = document.getElementById('chat-window');
   const close = document.getElementById('chat-close');
   const form = document.getElementById('chat-form');
   const input = document.getElementById('chat-input') as HTMLInputElement;
   const messages = document.getElementById('chat-messages');
   const hpField = document.getElementById('hp-field') as HTMLInputElement;
   const tsField = document.getElementById('chat-ts') as HTMLInputElement;
+  const hint = document.getElementById('chat-hint');
 
   let isOpen = false;
 
+  // Cacher la bulle après 5 secondes
+  setTimeout(() => {
+    hint?.classList.add('opacity-0', 'transition-opacity', 'duration-500');
+    setTimeout(() => hint?.remove(), 500);
+  }, 5000);
+
   toggle?.addEventListener('click', () => {
     isOpen = !isOpen;
-    window?.classList.toggle('hidden', !isOpen);
+    chatWindow?.classList.toggle('hidden', !isOpen);
     toggle.textContent = isOpen ? '✕' : '💬';
+    hint?.remove();
     // Enregistrer timestamp à l'ouverture
     if (isOpen && tsField) {
       tsField.value = Date.now().toString();
@@ -83,7 +131,7 @@
 
   close?.addEventListener('click', () => {
     isOpen = false;
-    window?.classList.add('hidden');
+    chatWindow?.classList.add('hidden');
     toggle!.textContent = '💬';
   });
 

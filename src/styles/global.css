@@ -33,7 +33,7 @@
 }
 
 .floating-logo {
-  filter: grayscale(50%);
+  filter: grayscale(30%) drop-shadow(0 0 10px rgba(139, 92, 246, 0.3));
   transition: opacity 0.3s;
 }
 
