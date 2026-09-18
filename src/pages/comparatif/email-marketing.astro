@@ -113,5 +113,50 @@ const slugMap: Record<string, string> = {
         </div>
       ))}
     </div>
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-bold mb-6">❓ Questions Fréquentes</h2>
+      <div class="space-y-4">
+        <details class="glass rounded-xl group">
+          <summary class="px-6 py-4 cursor-pointer font-medium hover:text-gold transition flex justify-between items-center">
+            Quel logiciel email marketing choisir pour débuter ?
+            <span class="text-gray-500 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="px-6 pb-4 text-gray-300">
+            Pour débuter, nous recommandons <a href="/avis/brevo" class="text-gold hover:underline">Brevo</a> (ex-Sendinblue) qui propose un plan gratuit généreux (300 emails/jour) et une interface en français. C'est idéal pour tester l'email marketing sans investissement initial.
+          </div>
+        </details>
+
+        <details class="glass rounded-xl group">
+          <summary class="px-6 py-4 cursor-pointer font-medium hover:text-gold transition flex justify-between items-center">
+            Quelle est la différence entre newsletter et marketing automation ?
+            <span class="text-gray-500 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="px-6 pb-4 text-gray-300">
+            La newsletter est un email envoyé manuellement à toute votre liste. Le marketing automation envoie des emails automatiquement selon des déclencheurs (inscription, achat, anniversaire...). Pour l'automation avancée, <a href="/avis/activecampaign" class="text-gold hover:underline">ActiveCampaign</a> est le plus puissant.
+          </div>
+        </details>
+
+        <details class="glass rounded-xl group">
+          <summary class="px-6 py-4 cursor-pointer font-medium hover:text-gold transition flex justify-between items-center">
+            Combien coûte un logiciel d'email marketing ?
+            <span class="text-gray-500 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="px-6 pb-4 text-gray-300">
+            Les prix varient selon le nombre de contacts : gratuit pour débuter (Brevo), puis entre 15€ et 50€/mois pour 1000-5000 contacts. <a href="/avis/getresponse" class="text-gold hover:underline">GetResponse</a> offre un bon rapport qualité/prix dès 15,60€/mois.
+          </div>
+        </details>
+
+        <details class="glass rounded-xl group">
+          <summary class="px-6 py-4 cursor-pointer font-medium hover:text-gold transition flex justify-between items-center">
+            Faut-il un logiciel RGPD compliant ?
+            <span class="text-gray-500 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="px-6 pb-4 text-gray-300">
+            Oui, c'est obligatoire en Europe. Tous les logiciels de notre comparatif sont conformes au RGPD avec gestion du consentement, désabonnement facile et hébergement des données approprié. Brevo est particulièrement bien positionné car c'est une entreprise française.
+          </div>
+        </details>
+      </div>
+    </section>
   </section>
 </Layout>
