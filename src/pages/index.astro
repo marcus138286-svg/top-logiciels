@@ -1,11 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import tools from '../data/tools.json';
+
+const allLogos = [
+  ...tools["email-marketing"],
+  ...tools["crm"],
+  ...tools["outils-ia"],
+  ...tools["compta-finance"]
+].map(t => t.image);
 ---
 
 <Layout title="SaaS Deals - Comparatifs et Codes Promo Logiciels">
 
+  <!-- Logos flottants en arrière-plan -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    {allLogos.map((logo, i) => (
+      <img
+        src={logo}
+        alt=""
+        class="floating-logo absolute opacity-10 rounded-lg"
+        style={`
+          width: ${30 + (i % 3) * 10}px;
+          height: ${30 + (i % 3) * 10}px;
+          left: ${5 + (i * 7) % 90}%;
+          top: ${10 + (i * 13) % 80}%;
+          animation: float-random ${8 + (i % 5) * 2}s ease-in-out infinite;
+          animation-delay: ${i * 0.5}s;
+        `}
+      />
+    ))}
+  </div>
+
   <!-- Hero -->
-  <section class="py-20 px-4">
+  <section class="py-20 px-4 relative z-10">
     <div class="max-w-4xl mx-auto text-center">
       <div class="inline-block mb-6 px-4 py-2 rounded-full glass text-sm text-gray-400">
         ✨ +50 logiciels comparés • Codes promo exclusifs
