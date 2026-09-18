@@ -14,7 +14,7 @@
       "promoText": "-30% première année",
       "affiliateUrl": "https://www.getresponse.com/?a=VOTRE_ID",
       "logo": "📧",
-      "image": "/images/logos/getresponse.webp",
+      "image": "https://logo.clearbit.com/getresponse.com",
       "screenshot": "/images/screenshots/getresponse-dashboard.webp"
     },
     {
@@ -31,7 +31,7 @@
       "promoText": null,
       "affiliateUrl": "https://www.brevo.com/",
       "logo": "💌",
-      "image": "/images/logos/brevo.webp",
+      "image": "https://logo.clearbit.com/brevo.com",
       "screenshot": "/images/screenshots/brevo-dashboard.webp"
     },
     {
@@ -48,7 +48,7 @@
       "promoText": "14 jours d'essai gratuit",
       "affiliateUrl": "https://www.activecampaign.com/?_r=VOTRE_ID",
       "logo": "⚡",
-      "image": "/images/logos/activecampaign.webp",
+      "image": "https://logo.clearbit.com/activecampaign.com",
       "screenshot": "/images/screenshots/activecampaign-dashboard.webp"
     }
   ],
@@ -67,7 +67,7 @@
       "promoText": "CRM gratuit à vie",
       "affiliateUrl": "https://www.hubspot.com/",
       "logo": "🧡",
-      "image": "/images/logos/hubspot.webp",
+      "image": "https://logo.clearbit.com/hubspot.com",
       "screenshot": "/images/screenshots/hubspot-pipeline.webp"
     },
     {
@@ -84,7 +84,7 @@
       "promoText": "14 jours gratuits + -20%",
       "affiliateUrl": "https://www.pipedrive.com/",
       "logo": "🎯",
-      "image": "/images/logos/pipedrive.webp",
+      "image": "https://logo.clearbit.com/pipedrive.com",
       "screenshot": "/images/screenshots/pipedrive-pipeline.webp"
     }
   ],
@@ -103,7 +103,7 @@
       "promoText": "7 jours d'essai gratuit",
       "affiliateUrl": "https://www.jasper.ai/",
       "logo": "✨",
-      "image": "/images/logos/jasper.webp",
+      "image": "https://logo.clearbit.com/jasper.ai",
       "screenshot": "/images/screenshots/jasper-editor.webp"
     },
     {
@@ -120,7 +120,7 @@
       "promoText": "2000 mots/mois gratuits",
       "affiliateUrl": "https://www.copy.ai/",
       "logo": "📝",
-      "image": "/images/logos/copyai.webp",
+      "image": "https://logo.clearbit.com/copy.ai",
       "screenshot": "/images/screenshots/copyai-editor.webp"
     }
   ],
@@ -139,7 +139,7 @@
       "promoText": "1 mois offert",
       "affiliateUrl": "https://www.pennylane.com/",
       "logo": "🇫🇷",
-      "image": "/images/logos/pennylane.webp",
+      "image": "https://logo.clearbit.com/pennylane.com",
       "screenshot": "/images/screenshots/pennylane-dashboard.webp"
     },
     {
@@ -156,7 +156,7 @@
       "promoText": "-50% pendant 3 mois",
       "affiliateUrl": "https://quickbooks.intuit.com/fr/",
       "logo": "📊",
-      "image": "/images/logos/quickbooks.webp",
+      "image": "https://logo.clearbit.com/quickbooks.intuit.com",
       "screenshot": "/images/screenshots/quickbooks-dashboard.webp"
     },
     {
@@ -173,7 +173,7 @@
       "promoText": "1 mois offert",
       "affiliateUrl": "https://qonto.com/",
       "logo": "💳",
-      "image": "/images/logos/qonto.webp",
+      "image": "https://logo.clearbit.com/qonto.com",
       "screenshot": "/images/screenshots/qonto-dashboard.webp"
     },
     {
@@ -190,7 +190,7 @@
       "promoText": "2 mois offerts",
       "affiliateUrl": "https://www.shine.fr/",
       "logo": "✨",
-      "image": "/images/logos/shine.webp",
+      "image": "https://logo.clearbit.com/shine.fr",
       "screenshot": "/images/screenshots/shine-dashboard.webp"
     },
     {
@@ -207,7 +207,7 @@
       "promoText": "14 jours gratuits",
       "affiliateUrl": "https://www.indy.fr/",
       "logo": "🧮",
-      "image": "/images/logos/indy.webp",
+      "image": "https://logo.clearbit.com/indy.fr",
       "screenshot": "/images/screenshots/indy-dashboard.webp"
     }
   ]
