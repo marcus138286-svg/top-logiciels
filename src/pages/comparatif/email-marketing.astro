@@ -159,4 +159,43 @@ const slugMap: Record<string, string> = {
       </div>
     </section>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quel logiciel email marketing choisir pour débuter ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pour débuter, nous recommandons Brevo (ex-Sendinblue) qui propose un plan gratuit généreux (300 emails/jour) et une interface en français. C'est idéal pour tester l'email marketing sans investissement initial."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelle est la différence entre newsletter et marketing automation ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La newsletter est un email envoyé manuellement à toute votre liste. Le marketing automation envoie des emails automatiquement selon des déclencheurs (inscription, achat, anniversaire...). Pour l'automation avancée, ActiveCampaign est le plus puissant."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien coûte un logiciel d'email marketing ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les prix varient selon le nombre de contacts : gratuit pour débuter (Brevo), puis entre 15€ et 50€/mois pour 1000-5000 contacts. GetResponse offre un bon rapport qualité/prix dès 15,60€/mois."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Faut-il un logiciel RGPD compliant ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, c'est obligatoire en Europe. Tous les logiciels de notre comparatif sont conformes au RGPD avec gestion du consentement, désabonnement facile et hébergement des données approprié. Brevo est particulièrement bien positionné car c'est une entreprise française."
+        }
+      }
+    ]
+  })} />
 </Layout>

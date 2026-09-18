@@ -157,4 +157,43 @@ const slugMap: Record<string, string> = {
       </div>
     </section>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "L'IA peut-elle vraiment écrire mes contenus ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui et non. L'IA produit d'excellents premiers jets et aide à surmonter le syndrome de la page blanche. Mais il faut toujours relire et personnaliser. Comptez 70% du travail fait par l'IA, 30% par vous pour un résultat optimal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jasper ou Copy.ai : lequel choisir ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Copy.ai pour débuter (plan gratuit généreux). Jasper pour les professionnels qui veulent plus de templates et une meilleure qualité, surtout pour les longs contenus."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ChatGPT vs outils spécialisés : quelle différence ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ChatGPT est polyvalent mais générique. Les outils comme Jasper ou Copy.ai offrent des templates métier (emails, pubs, landing pages...), un historique de projets, et sont optimisés pour le marketing. Plus chers mais plus efficaces pour un usage pro."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Le contenu IA est-il détecté par Google ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Google ne pénalise pas le contenu IA en soi, mais le contenu de mauvaise qualité. Personnalisez vos textes, ajoutez votre expertise, et le contenu sera bien référencé. L'IA est un outil, pas un remplacement de votre valeur ajoutée."
+        }
+      }
+    ]
+  })} />
 </Layout>

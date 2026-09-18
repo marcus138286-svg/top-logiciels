@@ -160,4 +160,43 @@ const slugMap: Record<string, string> = {
       </div>
     </section>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Faut-il un compte bancaire pro quand on est freelance ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "C'est obligatoire dès que votre CA dépasse 10 000€/an pendant 2 années consécutives (micro-entreprise). Mais même avant, c'est fortement recommandé pour séparer vos finances perso et pro. Shine et Qonto sont les meilleures options."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Logiciel compta vs expert-comptable : que choisir ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En micro-entreprise, un logiciel comme Indy suffit amplement. En société (SASU, EURL...), combinez un logiciel avec un expert-comptable. Pennylane facilite justement cette collaboration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Shine ou Qonto : lequel est le mieux ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Shine est parfait pour les freelances solo (conseils admin inclus, interface simple). Qonto convient mieux aux TPE/PME (multi-utilisateurs, cartes équipe, intégrations)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment automatiser ma déclaration URSSAF ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Indy (ex-Georges) pré-remplit automatiquement votre déclaration URSSAF en analysant vos transactions. Vous n'avez qu'à valider. C'est le meilleur outil pour les indépendants qui veulent gagner du temps sur l'administratif."
+        }
+      }
+    ]
+  })} />
 </Layout>

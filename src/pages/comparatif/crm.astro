@@ -158,4 +158,43 @@ const slugMap: Record<string, string> = {
       </div>
     </section>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "C'est quoi un CRM exactement ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CRM signifie Customer Relationship Management ou Gestion de la Relation Client en français. C'est un logiciel qui centralise toutes les informations sur vos clients et prospects : coordonnées, historique des échanges, devis, ventes. Ça permet de ne rien oublier et de mieux vendre."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quel CRM gratuit choisir ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HubSpot CRM est le meilleur CRM gratuit du marché. Il est gratuit à vie (pas juste un essai), sans limite de contacts, et très complet. C'est notre recommandation pour débuter sans budget."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "CRM vs Excel : pourquoi changer ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Excel fonctionne pour 10 contacts, mais au-delà c'est ingérable : pas de rappels automatiques, pas d'historique des échanges, pas de pipeline visuel, risque d'erreurs... Un CRM automatise tout ça et vous fait gagner des heures chaque semaine."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "HubSpot ou Pipedrive : lequel choisir ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HubSpot si vous débutez ou voulez un outil gratuit avec marketing intégré. Pipedrive si vous êtes une équipe commerciale qui veut un outil 100% focalisé sur la vente avec un excellent pipeline visuel."
+        }
+      }
+    ]
+  })} />
 </Layout>
