@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://saasdeals.fr/sitemap.xml
+Sitemap: https://saasdeals.fr/sitemap-index.xml
 
 # Bloquer les pages techniques
 Disallow: /api/

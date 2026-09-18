@@ -2,10 +2,13 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import vercel from '@astrojs/vercel';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://saasdeals.fr', // À remplacer par ton vrai domaine
   output: 'server',
+  integrations: [sitemap()],
   adapter: vercel({
     imageService: true, // Optimisation images Vercel
   }),

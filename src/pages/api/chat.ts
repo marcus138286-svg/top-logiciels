@@ -1,15 +1,9 @@
 import type { APIRoute } from 'astro';
-import OpenAI from 'openai';
 
 // Rate limiting simple (en mémoire - reset au redémarrage)
 const rateLimits = new Map<string, { count: number; resetTime: number }>();
 const MAX_REQUESTS_PER_HOUR = 15;
 const MAX_TOKENS_RESPONSE = 300;
-
-// Budget journalier (en dollars)
-const DAILY_BUDGET = 1;
-let dailySpent = 0;
-let dailyResetTime = Date.now() + 24 * 60 * 60 * 1000;
 
 const SYSTEM_PROMPT = `Tu es l'assistant du site de comparatifs de logiciels professionnels.
 
@@ -37,18 +31,6 @@ User: "Je veux envoyer des newsletters"
 Toi: "Pour les newsletters, je te recommande GetResponse (complet, 13€/mois) ou Brevo (gratuit pour débuter). Tu veux que je t'explique les différences ?"`;
 
 export const POST: APIRoute = async ({ request, clientAddress }) => {
-  // Check daily budget
-  if (Date.now() > dailyResetTime) {
-    dailySpent = 0;
-    dailyResetTime = Date.now() + 24 * 60 * 60 * 1000;
-  }
-
-  if (dailySpent >= DAILY_BUDGET) {
-    return new Response(JSON.stringify({
-      error: "Service temporairement indisponible. Réessaie demain."
-    }), { status: 429 });
-  }
-
   // Rate limiting par IP
   const ip = clientAddress || 'unknown';
   const now = Date.now();
@@ -97,7 +79,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
   }
 
   // Check API key
-  const apiKey = import.meta.env.OPENAI_API_KEY;
+  const apiKey = import.meta.env.GROQ_API_KEY;
   if (!apiKey) {
     return new Response(JSON.stringify({
       reply: "Le chat est en cours de configuration. En attendant, consulte nos comparatifs !"
@@ -105,23 +87,30 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
   }
 
   try {
-    const openai = new OpenAI({ apiKey });
-
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [
-        { role: "system", content: SYSTEM_PROMPT },
-        { role: "user", content: message }
-      ],
-      max_tokens: MAX_TOKENS_RESPONSE,
-      temperature: 0.7,
+    // Appel à l'API Groq (compatible OpenAI)
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'openai/gpt-oss-120b', // Plus performant, gratuit via Groq
+        messages: [
+          { role: 'system', content: SYSTEM_PROMPT },
+          { role: 'user', content: message }
+        ],
+        max_tokens: MAX_TOKENS_RESPONSE,
+        temperature: 0.7,
+      }),
     });
 
-    const reply = completion.choices[0]?.message?.content || "Désolé, je n'ai pas compris. Peux-tu reformuler ?";
+    if (!response.ok) {
+      throw new Error(`Groq API error: ${response.status}`);
+    }
 
-    // Track spending (approximatif)
-    const tokensUsed = completion.usage?.total_tokens || 0;
-    dailySpent += (tokensUsed / 1000000) * 0.15; // Prix GPT-4o-mini approximatif
+    const data = await response.json();
+    const reply = data.choices?.[0]?.message?.content || "Désolé, je n'ai pas compris. Peux-tu reformuler ?";
 
     return new Response(JSON.stringify({ reply }), {
       status: 200,
@@ -129,7 +118,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     });
 
   } catch (error) {
-    console.error('OpenAI error:', error);
+    console.error('Groq error:', error);
     return new Response(JSON.stringify({
       reply: "Une erreur est survenue. Consulte directement nos comparatifs !"
     }), { status: 200 });
