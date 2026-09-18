@@ -46,7 +46,7 @@
   "crm": [
     {
       "name": "HubSpot CRM",
-      "shortDesc": "Gestion Relation Client : centralisez contacts et prospects",
+      "shortDesc": "Gestion de la Relation Client : centralisez contacts et prospects",
       "description": "Logiciel CRM gratuit pour la gestion de la relation client + outils marketing/vente",
       "price": "Gratuit (premium dès 45€/mois)",
       "commission": "30% récurrent 12 mois",
@@ -60,7 +60,7 @@
     },
     {
       "name": "Pipedrive",
-      "shortDesc": "Gestion Relation Client : suivez vos ventes et prospects",
+      "shortDesc": "Gestion de la Relation Client : suivez vos ventes et prospects",
       "description": "Logiciel CRM simple pour la gestion de la relation client, orienté ventes",
       "price": "À partir de 14€/mois",
       "commission": "20-33% récurrent",
