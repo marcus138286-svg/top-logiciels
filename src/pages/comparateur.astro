@@ -1,0 +1,256 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ToolLogo from '../components/ToolLogo.astro';
+import tools from '../data/tools.json';
+
+// Flatten all tools into one array with category info
+const allTools = [
+  ...tools["email-marketing"].map(t => ({...t, category: "Email Marketing"})),
+  ...tools["crm"].map(t => ({...t, category: "CRM"})),
+  ...tools["outils-ia"].map(t => ({...t, category: "Outils IA"})),
+  ...tools["compta-finance"].map(t => ({...t, category: "Compta & Finance"})),
+  ...tools["vpn"].map(t => ({...t, category: "VPN"}))
+];
+---
+
+<Layout title="Comparateur Logiciels SaaS : Comparez Prix et Fonctionnalités" description="Outil gratuit pour comparer les logiciels côte à côte. Comparez jusqu'à 3 outils : VPN, CRM, email marketing, comptabilité. Trouvez le meilleur rapport qualité-prix.">
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-2">⚖️ <span class="gradient-text">Comparateur</span> de Logiciels</h1>
+    <p class="text-gray-400 mb-8">Sélectionnez jusqu'à 3 outils pour les comparer côte à côte</p>
+
+    <!-- Sélecteurs -->
+    <div class="grid md:grid-cols-3 gap-4 mb-8">
+      <div class="glass p-4 rounded-xl">
+        <label class="text-sm text-gray-400 mb-2 block">Logiciel 1</label>
+        <select id="tool1" class="w-full bg-gray-800 border border-white/20 rounded-lg px-3 py-2 text-white">
+          <option value="">-- Choisir --</option>
+          {allTools.map(tool => (
+            <option value={tool.slug}>{tool.name} ({tool.category})</option>
+          ))}
+        </select>
+      </div>
+      <div class="glass p-4 rounded-xl">
+        <label class="text-sm text-gray-400 mb-2 block">Logiciel 2</label>
+        <select id="tool2" class="w-full bg-gray-800 border border-white/20 rounded-lg px-3 py-2 text-white">
+          <option value="">-- Choisir --</option>
+          {allTools.map(tool => (
+            <option value={tool.slug}>{tool.name} ({tool.category})</option>
+          ))}
+        </select>
+      </div>
+      <div class="glass p-4 rounded-xl">
+        <label class="text-sm text-gray-400 mb-2 block">Logiciel 3 (optionnel)</label>
+        <select id="tool3" class="w-full bg-gray-800 border border-white/20 rounded-lg px-3 py-2 text-white">
+          <option value="">-- Choisir --</option>
+          {allTools.map(tool => (
+            <option value={tool.slug}>{tool.name} ({tool.category})</option>
+          ))}
+        </select>
+      </div>
+    </div>
+
+    <!-- Tableau de comparaison -->
+    <div id="comparison-table" class="hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full glass rounded-2xl overflow-hidden">
+          <thead class="border-b border-white/10">
+            <tr>
+              <th class="px-4 py-4 text-left text-gray-400 text-sm w-1/4">Critère</th>
+              <th id="th1" class="px-4 py-4 text-center text-white font-bold"></th>
+              <th id="th2" class="px-4 py-4 text-center text-white font-bold"></th>
+              <th id="th3" class="px-4 py-4 text-center text-white font-bold hidden"></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/10">
+            <tr>
+              <td class="px-4 py-4 text-gray-400">Logo</td>
+              <td id="logo1" class="px-4 py-4 text-center"></td>
+              <td id="logo2" class="px-4 py-4 text-center"></td>
+              <td id="logo3" class="px-4 py-4 text-center hidden"></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-4 text-gray-400">Catégorie</td>
+              <td id="cat1" class="px-4 py-4 text-center"></td>
+              <td id="cat2" class="px-4 py-4 text-center"></td>
+              <td id="cat3" class="px-4 py-4 text-center hidden"></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-4 text-gray-400">Prix</td>
+              <td id="price1" class="px-4 py-4 text-center"></td>
+              <td id="price2" class="px-4 py-4 text-center"></td>
+              <td id="price3" class="px-4 py-4 text-center hidden"></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-4 text-gray-400">Réduction</td>
+              <td id="discount1" class="px-4 py-4 text-center"></td>
+              <td id="discount2" class="px-4 py-4 text-center"></td>
+              <td id="discount3" class="px-4 py-4 text-center hidden"></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-4 text-gray-400">Note</td>
+              <td id="rating1" class="px-4 py-4 text-center"></td>
+              <td id="rating2" class="px-4 py-4 text-center"></td>
+              <td id="rating3" class="px-4 py-4 text-center hidden"></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-4 text-gray-400">Avantages</td>
+              <td id="pros1" class="px-4 py-4 text-left text-sm"></td>
+              <td id="pros2" class="px-4 py-4 text-left text-sm"></td>
+              <td id="pros3" class="px-4 py-4 text-left text-sm hidden"></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-4 text-gray-400">Inconvénients</td>
+              <td id="cons1" class="px-4 py-4 text-left text-sm"></td>
+              <td id="cons2" class="px-4 py-4 text-left text-sm"></td>
+              <td id="cons3" class="px-4 py-4 text-left text-sm hidden"></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-4 text-gray-400">Promo</td>
+              <td id="promo1" class="px-4 py-4 text-center"></td>
+              <td id="promo2" class="px-4 py-4 text-center"></td>
+              <td id="promo3" class="px-4 py-4 text-center hidden"></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-4 text-gray-400">Action</td>
+              <td id="action1" class="px-4 py-4 text-center"></td>
+              <td id="action2" class="px-4 py-4 text-center"></td>
+              <td id="action3" class="px-4 py-4 text-center hidden"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Message quand rien n'est sélectionné -->
+    <div id="empty-state" class="glass p-12 rounded-2xl text-center">
+      <div class="text-5xl mb-4">🔍</div>
+      <h2 class="text-xl font-bold mb-2">Sélectionnez des logiciels à comparer</h2>
+      <p class="text-gray-400">Choisissez au moins 2 logiciels dans les menus ci-dessus</p>
+    </div>
+
+    <!-- Suggestions rapides -->
+    <div class="mt-12">
+      <h2 class="text-xl font-bold mb-4">💡 Comparaisons populaires</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <button class="quick-compare glass p-4 rounded-xl text-left hover:border-gold/50 border border-transparent transition" data-tools="nordvpn,surfshark">
+          <div class="font-medium mb-1">NordVPN vs Surfshark</div>
+          <div class="text-sm text-gray-400">Les 2 meilleurs VPN du marché</div>
+        </button>
+        <button class="quick-compare glass p-4 rounded-xl text-left hover:border-gold/50 border border-transparent transition" data-tools="hubspot,pipedrive">
+          <div class="font-medium mb-1">HubSpot vs Pipedrive</div>
+          <div class="text-sm text-gray-400">CRM gratuit vs CRM simple</div>
+        </button>
+        <button class="quick-compare glass p-4 rounded-xl text-left hover:border-gold/50 border border-transparent transition" data-tools="getresponse,brevo,activecampaign">
+          <div class="font-medium mb-1">GetResponse vs Brevo vs ActiveCampaign</div>
+          <div class="text-sm text-gray-400">Email marketing complet</div>
+        </button>
+        <button class="quick-compare glass p-4 rounded-xl text-left hover:border-gold/50 border border-transparent transition" data-tools="pennylane,quickbooks,indy">
+          <div class="font-medium mb-1">Pennylane vs QuickBooks vs Indy</div>
+          <div class="text-sm text-gray-400">Comptabilité pour indépendants</div>
+        </button>
+        <button class="quick-compare glass p-4 rounded-xl text-left hover:border-gold/50 border border-transparent transition" data-tools="qonto,shine">
+          <div class="font-medium mb-1">Qonto vs Shine</div>
+          <div class="text-sm text-gray-400">Banques pro françaises</div>
+        </button>
+        <button class="quick-compare glass p-4 rounded-xl text-left hover:border-gold/50 border border-transparent transition" data-tools="copyai,writesonic,grammarly">
+          <div class="font-medium mb-1">Copy.ai vs Writesonic vs Grammarly</div>
+          <div class="text-sm text-gray-400">Outils IA rédaction</div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script define:vars={{ allTools }}>
+    const toolsData = allTools;
+
+    function getToolBySlug(slug) {
+      return toolsData.find(t => t.slug === slug);
+    }
+
+    function updateComparison() {
+      const tool1 = document.getElementById('tool1').value;
+      const tool2 = document.getElementById('tool2').value;
+      const tool3 = document.getElementById('tool3').value;
+
+      const selectedTools = [tool1, tool2, tool3].filter(Boolean);
+
+      const table = document.getElementById('comparison-table');
+      const emptyState = document.getElementById('empty-state');
+
+      if (selectedTools.length < 2) {
+        table.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      table.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+
+      // Show/hide third column
+      const show3 = selectedTools.length === 3;
+      document.querySelectorAll('#th3, #logo3, #cat3, #price3, #discount3, #rating3, #pros3, #cons3, #promo3, #action3').forEach(el => {
+        el.classList.toggle('hidden', !show3);
+      });
+
+      // Fill data
+      selectedTools.forEach((slug, i) => {
+        const tool = getToolBySlug(slug);
+        const n = i + 1;
+
+        document.getElementById(`th${n}`).textContent = tool.name;
+        document.getElementById(`logo${n}`).innerHTML = `<img src="${tool.image}" alt="${tool.name}" class="w-12 h-12 rounded-lg mx-auto">`;
+        document.getElementById(`cat${n}`).innerHTML = `<span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded text-sm">${tool.category}</span>`;
+
+        // Prix
+        if (tool.originalPrice) {
+          document.getElementById(`price${n}`).innerHTML = `<span class="line-through text-gray-500">${tool.originalPrice}</span><br><span class="text-green-400 font-bold">${tool.price}</span>`;
+        } else {
+          document.getElementById(`price${n}`).innerHTML = `<span class="text-white">${tool.price}</span>`;
+        }
+
+        // Discount
+        if (tool.discount) {
+          document.getElementById(`discount${n}`).innerHTML = `<span class="bg-red-500 text-white px-2 py-1 rounded font-bold">${tool.discount}</span>`;
+        } else {
+          document.getElementById(`discount${n}`).innerHTML = `<span class="text-gray-500">-</span>`;
+        }
+
+        document.getElementById(`rating${n}`).innerHTML = `<span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-lg font-bold">${tool.rating}/5</span>`;
+
+        document.getElementById(`pros${n}`).innerHTML = tool.pros.map(p => `<div class="text-green-400">✓ ${p}</div>`).join('');
+        document.getElementById(`cons${n}`).innerHTML = tool.cons.map(c => `<div class="text-red-400">✗ ${c}</div>`).join('');
+
+        if (tool.promoText) {
+          document.getElementById(`promo${n}`).innerHTML = `<span class="bg-gold/20 text-gold px-2 py-1 rounded text-sm">${tool.promoText}</span>`;
+        } else {
+          document.getElementById(`promo${n}`).innerHTML = `<span class="text-gray-500">-</span>`;
+        }
+
+        document.getElementById(`action${n}`).innerHTML = `
+          <a href="${tool.affiliateUrl}" target="_blank" rel="noopener" class="inline-block bg-gold text-gray-900 px-4 py-2 rounded-xl font-medium hover:opacity-90 transition text-sm">
+            Essayer →
+          </a>
+        `;
+      });
+    }
+
+    // Event listeners
+    document.getElementById('tool1').addEventListener('change', updateComparison);
+    document.getElementById('tool2').addEventListener('change', updateComparison);
+    document.getElementById('tool3').addEventListener('change', updateComparison);
+
+    // Quick compare buttons
+    document.querySelectorAll('.quick-compare').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tools = btn.dataset.tools.split(',');
+        document.getElementById('tool1').value = tools[0] || '';
+        document.getElementById('tool2').value = tools[1] || '';
+        document.getElementById('tool3').value = tools[2] || '';
+        updateComparison();
+
+        // Scroll to table
+        document.getElementById('comparison-table').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+</Layout>

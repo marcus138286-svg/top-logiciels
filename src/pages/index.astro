@@ -6,11 +6,13 @@ const allLogos = [
   ...tools["email-marketing"],
   ...tools["crm"],
   ...tools["outils-ia"],
-  ...tools["compta-finance"]
+  ...tools["compta-finance"],
+  ...tools["vpn"],
+  ...tools["facturation"]
 ].map(t => t.image);
 ---
 
-<Layout title="SaaS Deals - Comparatifs et Codes Promo Logiciels">
+<Layout title="Comparatif Logiciels SaaS 2026 | Codes Promo jusqu'à -83%" description="Comparez les meilleurs logiciels professionnels : VPN, CRM, comptabilité, email marketing. Codes promo exclusifs et avis vérifiés. Économisez jusqu'à 83%.">
 
   <!-- Logos flottants en arrière-plan -->
   <div class="fixed inset-0 overflow-hidden pointer-events-none" style="z-index: 1;">
@@ -24,7 +26,7 @@ const allLogos = [
           height: ${60 + (i % 3) * 20}px;
           left: ${3 + (i * 8) % 90}%;
           top: ${3 + (i * 9) % 90}%;
-          opacity: 0.5;
+          opacity: 0.2;
           animation: float-random ${5 + (i % 4) * 2}s ease-in-out infinite;
           animation-delay: ${i * 0.2}s;
         `}
@@ -45,12 +47,25 @@ const allLogos = [
       <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
         Comparatifs honnêtes, codes promo exclusifs et conseils personnalisés par notre assistant IA
       </p>
-      <div class="flex gap-4 justify-center">
-        <a href="/codes-promo" class="bg-gold text-gray-900 px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition animate-pulse-glow">
-          Voir les promos 🎁
+      <div class="flex flex-wrap gap-4 justify-center mb-8">
+        <a href="#promos" class="bg-gold text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-gold/20">
+          🔥 Promos du moment
         </a>
-        <a href="#categories" class="glass px-8 py-4 rounded-xl font-medium hover:bg-white/10 transition">
-          Explorer →
+        <a href="#categories" class="glass px-8 py-4 rounded-xl font-medium hover:bg-white/10 transition border border-white/20">
+          Voir les comparatifs
+        </a>
+      </div>
+
+      <!-- Quick promo badges -->
+      <div class="flex flex-wrap gap-3 justify-center text-sm">
+        <a href="/avis/surfshark" class="glass px-4 py-2 rounded-full hover:bg-white/10 transition">
+          <span class="text-green-400 font-bold">-82%</span> Surfshark
+        </a>
+        <a href="/avis/cyberghost" class="glass px-4 py-2 rounded-full hover:bg-white/10 transition">
+          <span class="text-green-400 font-bold">-83%</span> CyberGhost
+        </a>
+        <a href="/avis/nordvpn" class="glass px-4 py-2 rounded-full hover:bg-white/10 transition">
+          <span class="text-green-400 font-bold">-70%</span> NordVPN
         </a>
       </div>
     </div>
@@ -60,12 +75,12 @@ const allLogos = [
   <section class="py-10 border-y border-white/10">
     <div class="max-w-4xl mx-auto px-4 grid grid-cols-3 gap-8 text-center">
       <div>
-        <div class="text-3xl font-bold text-gold">12+</div>
+        <div class="text-3xl font-bold text-gold">24+</div>
         <div class="text-gray-500 text-sm">Logiciels testés</div>
       </div>
       <div>
-        <div class="text-3xl font-bold text-gold">-30%</div>
-        <div class="text-gray-500 text-sm">Économies moyennes</div>
+        <div class="text-3xl font-bold text-gold">-83%</div>
+        <div class="text-gray-500 text-sm">Jusqu'à d'économies</div>
       </div>
       <div>
         <div class="text-3xl font-bold text-gold">100%</div>
@@ -79,11 +94,27 @@ const allLogos = [
     <h2 class="text-3xl font-bold mb-4 text-center">Nos comparatifs</h2>
     <p class="text-gray-500 text-center mb-12">Choisissez une catégorie pour trouver l'outil idéal</p>
 
-    <div class="grid md:grid-cols-4 gap-6">
+    <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-5">
+
+      <a href="/comparatif/vpn" class="glass p-6 rounded-2xl card-hover group border border-gold/30 relative overflow-hidden">
+        <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded font-bold">-83%</span>
+        <div class="text-4xl mb-4 animate-float">🛡️</div>
+        <h3 class="font-bold text-lg mb-2 group-hover:text-gold transition">VPN</h3>
+        <p class="text-gray-500 text-sm">NordVPN, Surfshark...</p>
+        <div class="mt-4 text-gold text-sm font-medium">4 outils →</div>
+      </a>
+
+      <a href="/comparatif/facturation" class="glass p-6 rounded-2xl card-hover group border border-green-500/30 relative overflow-hidden">
+        <span class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded font-bold">NEW</span>
+        <div class="text-4xl mb-4 animate-float">🧾</div>
+        <h3 class="font-bold text-lg mb-2 group-hover:text-gold transition">E-Facturation</h3>
+        <p class="text-gray-500 text-sm">Réforme 2026</p>
+        <div class="mt-4 text-green-400 text-sm font-medium">5 outils →</div>
+      </a>
 
       <a href="/comparatif/email-marketing" class="glass p-6 rounded-2xl card-hover group">
         <div class="text-4xl mb-4 animate-float">📧</div>
-        <h3 class="font-bold text-lg mb-2 group-hover:text-gold transition">Email Marketing</h3>
+        <h3 class="font-bold text-lg mb-2 group-hover:text-gold transition">Email</h3>
         <p class="text-gray-500 text-sm">GetResponse, Brevo...</p>
         <div class="mt-4 text-purple-400 text-sm font-medium">3 outils →</div>
       </a>
@@ -91,68 +122,144 @@ const allLogos = [
       <a href="/comparatif/crm" class="glass p-6 rounded-2xl card-hover group">
         <div class="text-4xl mb-4 animate-float" style="animation-delay: 0.5s">👥</div>
         <h3 class="font-bold text-lg mb-2 group-hover:text-gold transition">CRM</h3>
-        <p class="text-gray-500 text-sm">Gestion de la Relation Client</p>
-        <p class="text-gray-600 text-xs">HubSpot, Pipedrive...</p>
+        <p class="text-gray-500 text-sm">HubSpot, Pipedrive...</p>
         <div class="mt-4 text-purple-400 text-sm font-medium">2 outils →</div>
       </a>
 
       <a href="/comparatif/outils-ia" class="glass p-6 rounded-2xl card-hover group">
         <div class="text-4xl mb-4 animate-float" style="animation-delay: 1s">🤖</div>
         <h3 class="font-bold text-lg mb-2 group-hover:text-gold transition">Outils IA</h3>
-        <p class="text-gray-500 text-sm">Jasper, Copy.ai...</p>
-        <div class="mt-4 text-purple-400 text-sm font-medium">2 outils →</div>
+        <p class="text-gray-500 text-sm">Copy.ai, Perplexity...</p>
+        <div class="mt-4 text-purple-400 text-sm font-medium">5 outils →</div>
       </a>
 
       <a href="/comparatif/compta-finance" class="glass p-6 rounded-2xl card-hover group">
         <div class="text-4xl mb-4 animate-float" style="animation-delay: 1.5s">💰</div>
-        <h3 class="font-bold text-lg mb-2 group-hover:text-gold transition">Compta & Finance</h3>
-        <p class="text-gray-500 text-sm">Pennylane, Qonto...</p>
+        <h3 class="font-bold text-lg mb-2 group-hover:text-gold transition">Compta</h3>
+        <p class="text-gray-500 text-sm">Qonto, Shine...</p>
         <div class="mt-4 text-purple-400 text-sm font-medium">5 outils →</div>
       </a>
 
     </div>
   </section>
 
-  <!-- Codes promo highlight -->
-  <section class="py-16 relative">
-    <div class="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-violet-900/20 to-amber-900/20"></div>
-    <div class="max-w-4xl mx-auto px-4 relative">
+  <!-- Promos VPN en avant -->
+  <section id="promos" class="py-16 relative">
+    <div class="absolute inset-0 bg-gradient-to-r from-red-900/20 via-purple-900/20 to-amber-900/20"></div>
+    <div class="max-w-5xl mx-auto px-4 relative">
       <h2 class="text-3xl font-bold mb-4 text-center">
-        🔥 <span class="text-gold">Promos</span> du moment
+        🔥 <span class="text-gold">Meilleures promos</span> du moment
       </h2>
-      <p class="text-gray-500 text-center mb-10">Offres exclusives négociées pour vous</p>
+      <p class="text-gray-500 text-center mb-10">Jusqu'à -83% sur les meilleurs VPN et logiciels</p>
 
+      <!-- Top 3 VPN promos -->
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+
+        <a href="/avis/cyberghost" class="glass p-6 rounded-2xl border border-gold/50 card-hover group relative overflow-hidden">
+          <span class="absolute top-0 right-0 bg-red-500 text-white text-sm px-4 py-1 rounded-bl-xl font-bold">-83%</span>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="https://www.google.com/s2/favicons?domain=cyberghostvpn.com&sz=32" alt="CyberGhost" class="w-10 h-10 rounded" />
+            <div>
+              <span class="text-xl font-bold group-hover:text-gold transition">CyberGhost</span>
+              <p class="text-gray-500 text-sm">VPN</p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <span class="line-through text-gray-500 text-sm">12,99€</span>
+            <span class="text-green-400 font-bold text-2xl ml-2">2,19€</span>
+            <span class="text-gray-400 text-sm">/mois</span>
+          </div>
+          <p class="text-gold text-sm font-medium">+ 2 mois offerts →</p>
+        </a>
+
+        <a href="/avis/surfshark" class="glass p-6 rounded-2xl border border-gold/50 card-hover group relative overflow-hidden">
+          <span class="absolute top-0 right-0 bg-red-500 text-white text-sm px-4 py-1 rounded-bl-xl font-bold">-82%</span>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="https://www.google.com/s2/favicons?domain=surfshark.com&sz=32" alt="Surfshark" class="w-10 h-10 rounded" />
+            <div>
+              <span class="text-xl font-bold group-hover:text-gold transition">Surfshark</span>
+              <p class="text-gray-500 text-sm">VPN illimité</p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <span class="line-through text-gray-500 text-sm">12,95€</span>
+            <span class="text-green-400 font-bold text-2xl ml-2">2,29€</span>
+            <span class="text-gray-400 text-sm">/mois</span>
+          </div>
+          <p class="text-gold text-sm font-medium">Appareils illimités →</p>
+        </a>
+
+        <a href="/avis/nordvpn" class="glass p-6 rounded-2xl border border-gold/50 card-hover group relative overflow-hidden">
+          <span class="absolute top-0 right-0 bg-red-500 text-white text-sm px-4 py-1 rounded-bl-xl font-bold">-70%</span>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="https://www.google.com/s2/favicons?domain=nordvpn.com&sz=32" alt="NordVPN" class="w-10 h-10 rounded" />
+            <div>
+              <span class="text-xl font-bold group-hover:text-gold transition">NordVPN</span>
+              <p class="text-gray-500 text-sm">VPN #1 mondial</p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <span class="line-through text-gray-500 text-sm">11,99€</span>
+            <span class="text-green-400 font-bold text-2xl ml-2">3,49€</span>
+            <span class="text-gray-400 text-sm">/mois</span>
+          </div>
+          <p class="text-gold text-sm font-medium">+ 3 mois offerts →</p>
+        </a>
+
+      </div>
+
+      <!-- Autres promos -->
       <div class="grid md:grid-cols-2 gap-6">
 
-        <div class="glass p-6 rounded-2xl border border-gold/30 card-hover">
-          <div class="flex justify-between items-start mb-4">
+        <a href="/avis/axonaut" class="glass p-5 rounded-2xl card-hover group flex items-center justify-between border border-green-500/30">
+          <div class="flex items-center gap-3">
+            <img src="https://www.google.com/s2/favicons?domain=axonaut.com&sz=32" alt="Axonaut" class="w-8 h-8 rounded" />
             <div>
-              <span class="text-xl font-bold">GetResponse</span>
-              <p class="text-gray-500 text-sm">Email marketing</p>
+              <span class="font-bold group-hover:text-gold transition">Axonaut</span>
+              <p class="text-gray-500 text-xs">Facturation + CRM</p>
             </div>
-            <span class="bg-gold text-gray-900 px-3 py-1 rounded-full text-sm font-bold">-30%</span>
           </div>
-          <p class="text-gray-400 text-sm mb-4">Sur tous les plans annuels</p>
-          <a href="/codes-promo" class="text-gold font-medium text-sm hover:underline">Obtenir le code →</a>
-        </div>
+          <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">-50%</span>
+        </a>
 
-        <div class="glass p-6 rounded-2xl border border-gold/30 card-hover">
-          <div class="flex justify-between items-start mb-4">
+        <a href="/avis/tiime" class="glass p-5 rounded-2xl card-hover group flex items-center justify-between border border-green-500/30">
+          <div class="flex items-center gap-3">
+            <img src="https://www.google.com/s2/favicons?domain=tiime.fr&sz=32" alt="Tiime" class="w-8 h-8 rounded" />
             <div>
-              <span class="text-xl font-bold">Qonto</span>
-              <p class="text-gray-500 text-sm">Banque pro</p>
+              <span class="font-bold group-hover:text-gold transition">Tiime</span>
+              <p class="text-gray-500 text-xs">Facturation gratuite</p>
             </div>
-            <span class="bg-gold text-gray-900 px-3 py-1 rounded-full text-sm font-bold">1 mois offert</span>
           </div>
-          <p class="text-gray-400 text-sm mb-4">Pour toute ouverture de compte</p>
-          <a href="/codes-promo" class="text-gold font-medium text-sm hover:underline">Obtenir l'offre →</a>
-        </div>
+          <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">GRATUIT</span>
+        </a>
+
+        <a href="/avis/getresponse" class="glass p-5 rounded-2xl card-hover group flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <img src="https://www.google.com/s2/favicons?domain=getresponse.com&sz=32" alt="GetResponse" class="w-8 h-8 rounded" />
+            <div>
+              <span class="font-bold group-hover:text-gold transition">GetResponse</span>
+              <p class="text-gray-500 text-xs">Email marketing</p>
+            </div>
+          </div>
+          <span class="bg-gold text-gray-900 px-3 py-1 rounded-full text-sm font-bold">-30%</span>
+        </a>
+
+        <a href="/avis/qonto" class="glass p-5 rounded-2xl card-hover group flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <img src="https://www.google.com/s2/favicons?domain=qonto.com&sz=32" alt="Qonto" class="w-8 h-8 rounded" />
+            <div>
+              <span class="font-bold group-hover:text-gold transition">Qonto</span>
+              <p class="text-gray-500 text-xs">Banque pro</p>
+            </div>
+          </div>
+          <span class="bg-gold text-gray-900 px-3 py-1 rounded-full text-sm font-bold">1 mois offert</span>
+        </a>
 
       </div>
 
       <div class="text-center mt-10">
-        <a href="/codes-promo" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition">
-          Voir toutes les promos <span>→</span>
+        <a href="/codes-promo" class="inline-block glass px-6 py-3 rounded-xl font-medium hover:bg-white/10 transition">
+          Voir toutes les promos →
         </a>
       </div>
     </div>

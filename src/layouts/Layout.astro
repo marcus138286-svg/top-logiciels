@@ -56,6 +56,11 @@ const siteUrl = "https://top-logiciels.fr";
       <div class="absolute top-1/2 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl"></div>
     </div>
 
+    <!-- Bannière temporaire -->
+    <div class="relative z-20 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 text-gray-900 py-3 px-4 text-center font-medium">
+      🚧 <span class="font-bold">Site en construction</span> — Nous finalisons nos partenariats. Les offres exclusives arrivent bientôt !
+    </div>
+
     <nav class="relative z-10 glass border-b border-white/10">
       <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <a href="/" class="text-2xl font-bold">
@@ -64,11 +69,12 @@ const siteUrl = "https://top-logiciels.fr";
 
         <!-- Desktop menu -->
         <div class="hidden md:flex gap-6 text-sm items-center">
+          <a href="/comparatif/facturation" class="text-green-400 hover:text-white transition font-medium">E-Facturation</a>
+          <a href="/comparatif/vpn" class="text-gray-400 hover:text-white transition">VPN</a>
           <a href="/comparatif/email-marketing" class="text-gray-400 hover:text-white transition">Email</a>
           <a href="/comparatif/crm" class="text-gray-400 hover:text-white transition" title="Gestion de la Relation Client">CRM</a>
           <a href="/comparatif/outils-ia" class="text-gray-400 hover:text-white transition">IA</a>
           <a href="/comparatif/compta-finance" class="text-gray-400 hover:text-white transition">Compta</a>
-          <a href="/avis" class="text-gray-400 hover:text-white transition">Avis</a>
           <a href="/blog" class="text-gray-400 hover:text-white transition">Blog</a>
           <a href="/codes-promo" class="bg-gold text-gray-900 px-4 py-1.5 rounded-full font-medium hover:opacity-90 transition">Promos</a>
         </div>
@@ -82,11 +88,12 @@ const siteUrl = "https://top-logiciels.fr";
       <!-- Mobile menu -->
       <div id="mobile-menu" class="hidden md:hidden border-t border-white/10">
         <div class="px-4 py-4 space-y-3">
+          <a href="/comparatif/facturation" class="block text-green-400 hover:text-white transition py-2 font-medium">🧾 E-Facturation 2026</a>
+          <a href="/comparatif/vpn" class="block text-gray-400 hover:text-white transition py-2">🛡️ VPN</a>
           <a href="/comparatif/email-marketing" class="block text-gray-400 hover:text-white transition py-2">📧 Email Marketing</a>
           <a href="/comparatif/crm" class="block text-gray-400 hover:text-white transition py-2">👥 CRM</a>
           <a href="/comparatif/outils-ia" class="block text-gray-400 hover:text-white transition py-2">🤖 Outils IA</a>
           <a href="/comparatif/compta-finance" class="block text-gray-400 hover:text-white transition py-2">💰 Compta & Finance</a>
-          <a href="/avis" class="block text-gray-400 hover:text-white transition py-2">📝 Tous les Avis</a>
           <a href="/blog" class="block text-gray-400 hover:text-white transition py-2">📚 Blog</a>
           <a href="/codes-promo" class="block bg-gold text-gray-900 px-4 py-2 rounded-xl font-medium text-center mt-4">🎁 Codes Promo</a>
         </div>

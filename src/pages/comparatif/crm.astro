@@ -11,7 +11,7 @@ const slugMap: Record<string, string> = {
 };
 ---
 
-<Layout title="Comparatif CRM 2026 - Logiciels Gestion Relation Client" description="Comparatif des meilleurs logiciels CRM (Gestion de la Relation Client) : HubSpot, Pipedrive. Prix, fonctionnalités et codes promo pour gérer vos clients.">
+<Layout title="Meilleur CRM Gratuit 2026 : HubSpot vs Pipedrive (Comparatif)" description="Quel CRM choisir pour gérer vos clients ? Comparatif HubSpot (gratuit) vs Pipedrive. Fonctionnalités, tarifs et 14 jours d'essai gratuit inclus.">
 
   <section class="max-w-5xl mx-auto px-4 py-12">
     <h1 class="text-3xl font-bold mb-2">👥 Comparatif <span class="gradient-text">CRM</span> 2026</h1>
@@ -33,28 +33,40 @@ const slugMap: Record<string, string> = {
           {category.map(tool => (
             <tr class="hover:bg-white/5 transition">
               <td class="px-4 py-4">
-                <div class="flex items-center gap-3">
+                <a href={`/avis/${slugMap[tool.name]}`} class="flex items-center gap-3 group">
                   <ToolLogo name={tool.name} image={tool.image} logo={tool.logo} size="md" />
                   <div>
-                    <div class="font-medium">{tool.name}</div>
+                    <div class="font-medium group-hover:text-gold transition">{tool.name}</div>
                     <div class="text-sm text-gray-500">{tool.shortDesc}</div>
                   </div>
-                </div>
+                </a>
               </td>
-              <td class="px-4 py-4 text-sm text-gray-300">{tool.price}</td>
+              <td class="px-4 py-4 text-sm">
+                {tool.originalPrice ? (
+                  <div>
+                    <span class="line-through text-gray-500">{tool.originalPrice}</span>
+                    <span class="text-green-400 font-bold ml-2">{tool.price}</span>
+                  </div>
+                ) : (
+                  <span class="text-gray-300">{tool.price}</span>
+                )}
+              </td>
               <td class="px-4 py-4 text-center">
                 <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded-lg font-medium text-sm">{tool.rating}/5</span>
               </td>
               <td class="px-4 py-4 text-center">
-                {tool.promoText ? (
-                  <span class="bg-gold text-gray-900 px-2 py-1 rounded-lg text-sm font-medium">{tool.promoText}</span>
-                ) : (
-                  <span class="text-gray-600">-</span>
-                )}
+                <div class="flex flex-col gap-1 items-center">
+                  {tool.discount && (
+                    <span class="bg-red-500 text-white px-2 py-1 rounded-lg text-sm font-bold">{tool.discount}</span>
+                  )}
+                  {tool.promoText && (
+                    <span class="bg-gold/20 text-gold px-2 py-1 rounded text-xs">{tool.promoText}</span>
+                  )}
+                </div>
               </td>
               <td class="px-4 py-4 text-right">
-                <a href={tool.affiliateUrl} target="_blank" rel="noopener" class="bg-purple-600 text-white px-4 py-2 rounded-xl text-sm hover:bg-purple-700 transition">
-                  Essayer →
+                <a href={tool.affiliateUrl} target="_blank" rel="noopener" class="bg-gold text-gray-900 px-5 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition whitespace-nowrap">
+                  Voir l'offre
                 </a>
               </td>
             </tr>
@@ -68,13 +80,13 @@ const slugMap: Record<string, string> = {
       {category.map(tool => (
         <div class="glass p-6 rounded-2xl card-hover">
           <div class="flex items-start justify-between mb-4">
-            <div class="flex items-center gap-3">
+            <a href={`/avis/${slugMap[tool.name]}`} class="flex items-center gap-3 group">
               <ToolLogo name={tool.name} image={tool.image} logo={tool.logo} size="lg" />
               <div>
-                <h3 class="text-xl font-bold">{tool.name}</h3>
+                <h3 class="text-xl font-bold group-hover:text-gold transition">{tool.name}</h3>
                 <p class="text-gray-400">{tool.description}</p>
               </div>
-            </div>
+            </a>
             <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full font-medium">{tool.rating}/5</span>
           </div>
 
@@ -94,10 +106,17 @@ const slugMap: Record<string, string> = {
           </div>
 
           <div class="flex items-center justify-between pt-4 border-t border-white/10">
-            <div>
-              <span class="text-gray-500">Prix : </span>
-              <span class="font-medium text-white">{tool.price}</span>
-              {tool.promoText && <span class="ml-2 text-gold text-sm">({tool.promoText})</span>}
+            <div class="flex items-center gap-3">
+              {tool.originalPrice ? (
+                <>
+                  <span class="line-through text-gray-500">{tool.originalPrice}</span>
+                  <span class="font-bold text-green-400 text-lg">{tool.price}</span>
+                  <span class="bg-red-500 text-white px-2 py-1 rounded text-sm font-bold">{tool.discount}</span>
+                </>
+              ) : (
+                <span class="font-medium text-white">{tool.price}</span>
+              )}
+              {tool.promoText && <span class="text-gold text-sm">+ {tool.promoText}</span>}
             </div>
             <div class="flex gap-3">
               {slugMap[tool.name] && (
@@ -106,7 +125,7 @@ const slugMap: Record<string, string> = {
                 </a>
               )}
               <a href={tool.affiliateUrl} target="_blank" rel="noopener" class="bg-gold text-gray-900 px-6 py-2 rounded-xl font-medium hover:opacity-90 transition">
-                Essayer →
+                Voir l'offre
               </a>
             </div>
           </div>

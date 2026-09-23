@@ -1,0 +1,291 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ToolLogo from '../../components/ToolLogo.astro';
+import tools from '../../data/tools.json';
+
+const category = tools["facturation"];
+
+const slugMap: Record<string, string> = {
+  "Pennylane": "pennylane",
+  "Axonaut": "axonaut",
+  "Sellsy": "sellsy",
+  "Tiime": "tiime",
+  "Evoliz": "evoliz"
+};
+---
+
+<Layout title="Facturation Électronique 2026 : Comparatif des Meilleurs Logiciels Conformes" description="Quel logiciel de facturation électronique choisir pour la réforme 2026 ? Comparatif Pennylane, Axonaut, Sellsy, Tiime. Plateformes agréées, prix.">
+
+  <section class="max-w-5xl mx-auto px-4 py-12">
+
+    <!-- Alerte réforme -->
+    <div class="glass p-4 rounded-xl border border-gold/50 mb-8 flex items-start gap-3">
+      <span class="text-2xl">⚠️</span>
+      <div>
+        <p class="font-bold text-gold">Réforme facturation électronique 2026</p>
+        <p class="text-sm text-gray-300">À partir de septembre 2026, toutes les entreprises françaises devront émettre des factures électroniques via une plateforme agréée. Tous les logiciels ci-dessous sont conformes.</p>
+      </div>
+    </div>
+
+    <h1 class="text-3xl font-bold mb-2">🧾 Comparatif <span class="gradient-text">Facturation Électronique</span> 2026</h1>
+    <p class="text-gray-400 mb-8">Les meilleurs logiciels conformes à la réforme e-facturation obligatoire</p>
+
+    <div class="overflow-x-auto mb-12">
+      <table class="w-full glass rounded-2xl overflow-hidden">
+        <thead class="border-b border-white/10">
+          <tr>
+            <th class="px-4 py-4 text-left text-gray-400 text-sm">Logiciel</th>
+            <th class="px-4 py-4 text-left text-gray-400 text-sm">Prix</th>
+            <th class="px-4 py-4 text-center text-gray-400 text-sm">Note</th>
+            <th class="px-4 py-4 text-center text-gray-400 text-sm">Cible</th>
+            <th class="px-4 py-4 text-right text-gray-400 text-sm">Action</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-white/10">
+          {category.map(tool => (
+            <tr class="hover:bg-white/5 transition">
+              <td class="px-4 py-4">
+                <a href={`/avis/${slugMap[tool.name]}`} class="flex items-center gap-3 group">
+                  <ToolLogo name={tool.name} image={tool.image} logo={tool.logo} size="md" />
+                  <div>
+                    <div class="font-medium group-hover:text-gold transition">{tool.name}</div>
+                    <div class="text-sm text-gray-500">{tool.shortDesc}</div>
+                  </div>
+                </a>
+              </td>
+              <td class="px-4 py-4 text-sm">
+                {tool.originalPrice ? (
+                  <div>
+                    <span class="line-through text-gray-500">{tool.originalPrice}</span>
+                    <span class="text-green-400 font-bold ml-2">{tool.price}</span>
+                  </div>
+                ) : (
+                  <span class="text-gray-300">{tool.price}</span>
+                )}
+              </td>
+              <td class="px-4 py-4 text-center">
+                <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded-lg font-medium text-sm">{tool.rating}/5</span>
+              </td>
+              <td class="px-4 py-4 text-center">
+                <span class="text-xs text-gray-400">
+                  {tool.name === "Tiime" && "Auto-entrepreneurs"}
+                  {tool.name === "Pennylane" && "TPE/PME + Comptable"}
+                  {tool.name === "Axonaut" && "TPE/PME tout-en-un"}
+                  {tool.name === "Sellsy" && "PME ambitieuses"}
+                  {tool.name === "Evoliz" && "TPE"}
+                </span>
+              </td>
+              <td class="px-4 py-4 text-right">
+                <a href={tool.affiliateUrl} target="_blank" rel="noopener" class="bg-gold text-gray-900 px-5 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition whitespace-nowrap">
+                  Voir l'offre
+                </a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Quel logiciel pour qui -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-6">🎯 Quel logiciel pour vous ?</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="glass p-5 rounded-xl border-l-4 border-green-500">
+          <h3 class="font-bold mb-2">👤 Auto-entrepreneur / Freelance</h3>
+          <p class="text-sm text-gray-400 mb-3">Vous facturez peu et voulez un outil simple et gratuit.</p>
+          <a href="/avis/tiime" class="text-gold hover:underline font-medium">→ Tiime (gratuit)</a>
+        </div>
+        <div class="glass p-5 rounded-xl border-l-4 border-blue-500">
+          <h3 class="font-bold mb-2">🏢 TPE qui veut tout centraliser</h3>
+          <p class="text-sm text-gray-400 mb-3">CRM, devis, factures, relances dans un seul outil.</p>
+          <a href="/avis/axonaut" class="text-gold hover:underline font-medium">→ Axonaut (34,99€/mois)</a>
+        </div>
+        <div class="glass p-5 rounded-xl border-l-4 border-purple-500">
+          <h3 class="font-bold mb-2">📊 TPE/PME avec expert-comptable</h3>
+          <p class="text-sm text-gray-400 mb-3">Collaboration fluide avec votre comptable, tout automatisé.</p>
+          <a href="/avis/pennylane" class="text-gold hover:underline font-medium">→ Pennylane (29€/mois)</a>
+        </div>
+        <div class="glass p-5 rounded-xl border-l-4 border-gold">
+          <h3 class="font-bold mb-2">🚀 PME en croissance</h3>
+          <p class="text-sm text-gray-400 mb-3">CRM avancé, multi-utilisateurs, pilotage complet.</p>
+          <a href="/avis/sellsy" class="text-gold hover:underline font-medium">→ Sellsy (39€/mois/user)</a>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="text-2xl font-bold mb-6">Analyse détaillée</h2>
+    <div class="space-y-6">
+      {category.map(tool => (
+        <div class="glass p-6 rounded-2xl card-hover">
+          <div class="flex items-start justify-between mb-4">
+            <a href={`/avis/${slugMap[tool.name]}`} class="flex items-center gap-3 group">
+              <ToolLogo name={tool.name} image={tool.image} logo={tool.logo} size="lg" />
+              <div>
+                <h3 class="text-xl font-bold group-hover:text-gold transition">{tool.name}</h3>
+                <p class="text-gray-400">{tool.description}</p>
+              </div>
+            </a>
+            <div class="flex flex-col items-end gap-2">
+              <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full font-medium">{tool.rating}/5</span>
+              <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs">✓ Plateforme agréée</span>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-4">
+            <div>
+              <h4 class="font-medium text-green-400 mb-2">✅ Avantages</h4>
+              <ul class="text-sm space-y-1 text-gray-300">
+                {tool.pros.map(pro => <li>• {pro}</li>)}
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-medium text-red-400 mb-2">❌ Inconvénients</h4>
+              <ul class="text-sm space-y-1 text-gray-300">
+                {tool.cons.map(con => <li>• {con}</li>)}
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-white/10">
+            <div class="flex items-center gap-3">
+              {tool.originalPrice ? (
+                <>
+                  <span class="line-through text-gray-500">{tool.originalPrice}</span>
+                  <span class="font-bold text-green-400 text-lg">{tool.price}</span>
+                  <span class="bg-red-500 text-white px-2 py-1 rounded text-sm font-bold">{tool.discount}</span>
+                </>
+              ) : (
+                <span class="font-medium text-white">{tool.price}</span>
+              )}
+              {tool.promoText && <span class="text-gold text-sm">+ {tool.promoText}</span>}
+            </div>
+            <div class="flex gap-3">
+              {slugMap[tool.name] && (
+                <a href={`/avis/${slugMap[tool.name]}`} class="border border-purple-500/50 text-purple-300 px-4 py-2 rounded-xl text-sm hover:bg-purple-500/20 transition">
+                  Lire l'avis
+                </a>
+              )}
+              <a href={tool.affiliateUrl} target="_blank" rel="noopener" class="bg-gold text-gray-900 px-6 py-2 rounded-lg font-medium hover:opacity-90 transition whitespace-nowrap">
+                Voir l'offre
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Comprendre la réforme -->
+    <section class="mt-16 glass p-8 rounded-2xl">
+      <h2 class="text-2xl font-bold mb-6">📜 Comprendre la réforme facturation électronique 2026</h2>
+
+      <div class="space-y-4 text-gray-300">
+        <div class="flex gap-4">
+          <span class="text-gold font-bold">2024</span>
+          <p>Grandes entreprises doivent pouvoir recevoir des factures électroniques</p>
+        </div>
+        <div class="flex gap-4">
+          <span class="text-gold font-bold">Sept. 2026</span>
+          <p>Toutes les entreprises (y compris TPE/PME) devront émettre ET recevoir des factures électroniques</p>
+        </div>
+      </div>
+
+      <div class="mt-6 p-4 bg-white/5 rounded-xl">
+        <h3 class="font-bold mb-2">Ce que vous devez faire :</h3>
+        <ul class="text-sm text-gray-400 space-y-2">
+          <li>✓ Choisir une <strong class="text-white">Plateforme de Dématérialisation Partenaire (PDP)</strong> agréée</li>
+          <li>✓ Vos factures doivent être au format <strong class="text-white">Factur-X, UBL ou CII</strong></li>
+          <li>✓ Transmission automatique à l'administration fiscale (e-reporting)</li>
+        </ul>
+      </div>
+
+      <p class="mt-4 text-sm text-gray-400">
+        <span class="text-gold">Bonne nouvelle :</span> Tous les logiciels de ce comparatif sont des plateformes agréées ou connectées à une plateforme agréée. Vous serez conforme automatiquement.
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mt-16">
+      <h2 class="text-2xl font-bold mb-6">❓ Questions Fréquentes</h2>
+      <div class="space-y-4">
+        <details class="glass rounded-xl group">
+          <summary class="px-6 py-4 cursor-pointer font-medium hover:text-gold transition flex justify-between items-center">
+            C'est quoi une plateforme agréée (PDP) ?
+            <span class="text-gray-500 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="px-6 pb-4 text-gray-300">
+            Une Plateforme de Dématérialisation Partenaire (PDP) est un logiciel agréé par l'État pour transmettre vos factures à l'administration. Pennylane, Axonaut, Sellsy et Tiime sont tous agréés ou connectés à une plateforme agréée.
+          </div>
+        </details>
+
+        <details class="glass rounded-xl group">
+          <summary class="px-6 py-4 cursor-pointer font-medium hover:text-gold transition flex justify-between items-center">
+            Je suis auto-entrepreneur, je suis concerné ?
+            <span class="text-gray-500 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="px-6 pb-4 text-gray-300">
+            Oui, à partir de septembre 2026. Même les auto-entrepreneurs devront émettre des factures électroniques. La bonne nouvelle : <a href="/avis/tiime" class="text-gold hover:underline">Tiime</a> est gratuit et conforme à la réforme.
+          </div>
+        </details>
+
+        <details class="glass rounded-xl group">
+          <summary class="px-6 py-4 cursor-pointer font-medium hover:text-gold transition flex justify-between items-center">
+            Axonaut vs Pennylane : lequel choisir ?
+            <span class="text-gray-500 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="px-6 pb-4 text-gray-300">
+            <a href="/avis/axonaut" class="text-gold hover:underline">Axonaut</a> est idéal si vous voulez tout centraliser (CRM + factures + gestion) sans comptable. <a href="/avis/pennylane" class="text-gold hover:underline">Pennylane</a> est parfait si vous travaillez avec un expert-comptable et voulez une compta automatisée.
+          </div>
+        </details>
+
+        <details class="glass rounded-xl group">
+          <summary class="px-6 py-4 cursor-pointer font-medium hover:text-gold transition flex justify-between items-center">
+            Quel est le meilleur logiciel gratuit ?
+            <span class="text-gray-500 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="px-6 pb-4 text-gray-300">
+            <a href="/avis/tiime" class="text-gold hover:underline">Tiime</a> est 100% gratuit et conforme à la réforme 2026. Avec 200 000 utilisateurs, c'est la référence gratuite en France. Parfait pour les auto-entrepreneurs et TPE qui facturent peu.
+          </div>
+        </details>
+      </div>
+    </section>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "C'est quoi une plateforme agréée (PDP) ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Une Plateforme de Dématérialisation Partenaire (PDP) est un logiciel agréé par l'État pour transmettre vos factures à l'administration. Pennylane, Axonaut, Sellsy et Tiime sont tous agréés ou connectés à une plateforme agréée."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Je suis auto-entrepreneur, je suis concerné par la réforme facturation 2026 ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, à partir de septembre 2026. Même les auto-entrepreneurs devront émettre des factures électroniques. Tiime est gratuit et conforme à la réforme."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Axonaut vs Pennylane : lequel choisir ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Axonaut est idéal si vous voulez tout centraliser (CRM + factures + gestion) sans comptable. Pennylane est parfait si vous travaillez avec un expert-comptable et voulez une compta automatisée."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quel est le meilleur logiciel de facturation gratuit ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tiime est 100% gratuit et conforme à la réforme 2026. Avec 200 000 utilisateurs, c'est la référence gratuite en France."
+        }
+      }
+    ]
+  })} />
+</Layout>
