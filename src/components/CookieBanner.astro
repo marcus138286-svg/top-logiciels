@@ -1,5 +1,5 @@
 ---
-// Bannière cookies RGPD - avec consentement pour Google Analytics
+// Bannière cookies RGPD - Google Consent Mode v2
 ---
 
 <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 p-4 hidden">
@@ -29,7 +29,7 @@
   const acceptBtn = document.getElementById('cookie-accept');
   const refuseBtn = document.getElementById('cookie-refuse');
 
-  // Vérifier le consentement
+  // Vérifier le consentement stocké
   const consent = localStorage.getItem('cookie-consent');
 
   if (consent === null) {
@@ -38,22 +38,27 @@
       banner?.classList.remove('hidden');
     }, 1500);
   } else if (consent === 'accepted') {
-    // Activer Google Analytics
-    enableGA();
+    // Activer le tracking
+    grantConsent();
   }
 
-  function enableGA() {
-    // Google Analytics est déjà chargé, on active juste le tracking
+  function grantConsent() {
     if (typeof gtag === 'function') {
       gtag('consent', 'update', {
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'ad_storage': 'granted',
         'analytics_storage': 'granted'
       });
     }
   }
 
-  function disableGA() {
+  function denyConsent() {
     if (typeof gtag === 'function') {
       gtag('consent', 'update', {
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'ad_storage': 'denied',
         'analytics_storage': 'denied'
       });
     }
@@ -61,13 +66,13 @@
 
   acceptBtn?.addEventListener('click', () => {
     localStorage.setItem('cookie-consent', 'accepted');
-    enableGA();
+    grantConsent();
     banner?.classList.add('hidden');
   });
 
   refuseBtn?.addEventListener('click', () => {
     localStorage.setItem('cookie-consent', 'refused');
-    disableGA();
+    denyConsent();
     banner?.classList.add('hidden');
   });
 </script>
