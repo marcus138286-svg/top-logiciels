@@ -20,11 +20,14 @@ const siteUrl = "https://top-logiciel.fr";
   <head>
     <meta charset="UTF-8" />
     <meta name='impact-site-verification' value='cdaa1d3e-dccf-41a9-9b89-88863d05ac12' />
-    <!-- Google Analytics -->
+    <!-- Google Analytics (RGPD: consent mode) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TPHH8EXJM"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied'
+      });
       gtag('js', new Date());
       gtag('config', 'G-9TPHH8EXJM');
     </script>
