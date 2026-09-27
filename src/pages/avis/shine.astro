@@ -3,56 +3,61 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="Avis Shine 2026 - Test Complet Banque Freelance" description="Notre avis complet sur Shine : la meilleure banque pour freelances ? Fonctionnalités, prix, avantages et inconvénients.">
-  <article class="max-w-3xl mx-auto px-4 py-12">
+  <article class="max-w-4xl mx-auto px-4 py-12">
 
     <div class="mb-8">
       <a href="/comparatif/compta-finance" class="text-purple-400 hover:text-purple-300 text-sm">← Comparatif Compta & Finance</a>
     </div>
 
+    <!-- Header -->
     <header class="mb-10">
       <div class="flex items-center gap-4 mb-4">
-        <span class="text-5xl">✨</span>
+        <img src="https://www.google.com/s2/favicons?domain=shine.fr&sz=64" alt="Shine" class="w-16 h-16 rounded-xl" />
         <div>
           <h1 class="text-3xl font-bold">Avis <span class="gradient-text">Shine</span> 2026</h1>
           <p class="text-gray-400">La banque pro pensée pour les indépendants</p>
         </div>
       </div>
-      <div class="flex items-center gap-4 mt-4">
-        <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-lg">⭐ 4.4/5</span>
-        <span class="bg-gold text-gray-900 px-3 py-1 rounded-lg font-medium">2 mois offerts</span>
+      <div class="flex items-center gap-3 mt-4">
+        <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-lg font-bold">⭐ 4.4/5</span>
+        <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-lg text-sm">100% Français</span>
+        <span class="bg-gray-700 text-gray-300 px-3 py-1 rounded-lg text-sm">Promo bientôt</span>
       </div>
     </header>
 
+    <!-- Résumé rapide -->
     <div class="glass p-6 rounded-2xl border border-gold/30 mb-8">
       <h2 class="font-bold text-lg mb-3">📋 En bref</h2>
       <p class="text-gray-300 mb-4">
-        Shine est une <span class="text-gold">néobanque 100% française</span> spécialement conçue pour les freelances et auto-entrepreneurs. Compte pro + assistant administratif.
+        Shine est une <span class="text-gold">néobanque 100% française</span> spécialement conçue pour les freelances et auto-entrepreneurs. Compte pro + assistant administratif + accompagnement création d'entreprise.
       </p>
-      <div class="flex flex-wrap gap-4">
+      <div class="flex flex-wrap gap-6">
         <div>
           <span class="text-gray-500 text-sm">Prix</span>
-          <p class="font-medium">À partir de 7,90€/mois</p>
+          <p class="font-bold text-xl">7,90€<span class="text-gray-400 text-sm font-normal">/mois</span></p>
         </div>
         <div>
-          <span class="text-gray-500 text-sm">Made in</span>
-          <p class="font-medium">France 🇫🇷</p>
-        </div>
-        <div>
-          <span class="text-gray-500 text-sm">Idéal pour</span>
+          <span class="text-gray-500 text-sm">Cible</span>
           <p class="font-medium">Freelances, auto-entrepreneurs</p>
+        </div>
+        <div>
+          <span class="text-gray-500 text-sm">Essai</span>
+          <p class="font-medium text-gold">2 mois offerts</p>
         </div>
       </div>
     </div>
 
+    <!-- Avantages / Inconvénients -->
     <div class="grid md:grid-cols-2 gap-6 mb-8">
       <div class="glass p-6 rounded-2xl">
         <h3 class="font-bold text-green-400 mb-4">✅ Avantages</h3>
         <ul class="space-y-2 text-gray-300 text-sm">
           <li>• Parfait pour les freelances</li>
           <li>• Conseils admin inclus</li>
-          <li>• Prix très accessible</li>
+          <li>• Prix très accessible (7,90€)</li>
           <li>• 100% français</li>
           <li>• Accompagnement création entreprise</li>
+          <li>• App mobile intuitive</li>
         </ul>
       </div>
       <div class="glass p-6 rounded-2xl">
@@ -60,28 +65,195 @@ import Layout from '../../layouts/Layout.astro';
         <ul class="space-y-2 text-gray-300 text-sm">
           <li>• Limité pour les grosses structures</li>
           <li>• Moins de fonctions que Qonto</li>
-          <li>• Pas de crédit</li>
+          <li>• Pas de crédit bancaire</li>
+          <li>• Plafonds de paiement limités</li>
         </ul>
       </div>
     </div>
 
+    <!-- VOIR PLUS - Section dépliable -->
+    <details class="glass rounded-2xl mb-8 group">
+      <summary class="px-6 py-4 cursor-pointer font-bold text-lg hover:text-gold transition flex justify-between items-center">
+        📖 Voir la fiche complète
+        <span class="text-gray-500 group-open:rotate-180 transition-transform text-xl">▼</span>
+      </summary>
+
+      <div class="px-6 pb-6 space-y-8 border-t border-white/10 pt-6">
+
+        <!-- Fiche technique -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">📋 Fiche technique</h3>
+          <div class="glass rounded-xl overflow-hidden">
+            <table class="w-full text-sm">
+              <tbody class="divide-y divide-white/10">
+                <tr>
+                  <td class="px-4 py-3 text-gray-400 w-1/3">Éditeur</td>
+                  <td class="px-4 py-3 font-medium">Shine (France - Paris)</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Type</td>
+                  <td class="px-4 py-3 font-medium">Néobanque pour professionnels</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Cible</td>
+                  <td class="px-4 py-3 font-medium">Freelances, auto-entrepreneurs, TPE</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">IBAN</td>
+                  <td class="px-4 py-3 font-medium text-green-400">✓ Français (FR76)</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Carte bancaire</td>
+                  <td class="px-4 py-3 font-medium">Mastercard Business incluse</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Apps mobiles</td>
+                  <td class="px-4 py-3 font-medium">iOS, Android</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Support</td>
+                  <td class="px-4 py-3 font-medium">Chat + Email (en français)</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Agréments</td>
+                  <td class="px-4 py-3 font-medium">ACPR / Banque de France</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Fonctionnalités -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">🚀 Fonctionnalités</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="glass p-4 rounded-xl">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-2xl">💳</span>
+                <h4 class="font-bold">Compte pro complet</h4>
+              </div>
+              <p class="text-gray-400 text-sm">IBAN français, carte Mastercard, virements, prélèvements. Tout ce qu'il faut pour recevoir vos paiements.</p>
+            </div>
+            <div class="glass p-4 rounded-xl">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-2xl">🧾</span>
+                <h4 class="font-bold">Facturation intégrée</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Créez vos devis et factures directement depuis l'app. Suivi des paiements automatique.</p>
+            </div>
+            <div class="glass p-4 rounded-xl">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-2xl">📊</span>
+                <h4 class="font-bold">Comptabilité simplifiée</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Catégorisation automatique des dépenses, export comptable, calcul des cotisations.</p>
+            </div>
+            <div class="glass p-4 rounded-xl">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-2xl">🤝</span>
+                <h4 class="font-bold">Accompagnement admin</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Des experts répondent à vos questions administratives. Idéal quand on débute.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tarifs -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">💰 Tarifs</h3>
+          <div class="glass rounded-xl overflow-hidden">
+            <table class="w-full text-sm">
+              <thead class="border-b border-white/10">
+                <tr>
+                  <th class="px-4 py-3 text-left text-gray-400">Offre</th>
+                  <th class="px-4 py-3 text-left text-gray-400">Prix</th>
+                  <th class="px-4 py-3 text-left text-gray-400">Inclus</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/10">
+                <tr>
+                  <td class="px-4 py-3 font-medium">Shine Start</td>
+                  <td class="px-4 py-3 text-gold font-bold">7,90€/mois</td>
+                  <td class="px-4 py-3 text-gray-300">Compte + carte + 20 virements</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-medium">Shine Plus</td>
+                  <td class="px-4 py-3 font-bold">14,90€/mois</td>
+                  <td class="px-4 py-3 text-gray-300">+ virements illimités + assurances</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-medium">Shine Pro</td>
+                  <td class="px-4 py-3 font-bold">29,90€/mois</td>
+                  <td class="px-4 py-3 text-gray-300">+ multi-utilisateurs + outils avancés</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Conformité 2026 -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">📜 Conformité e-facturation 2026</h3>
+          <div class="glass p-4 rounded-xl border border-green-500/30">
+            <div class="flex items-start gap-3">
+              <span class="text-green-400 text-2xl">✓</span>
+              <div>
+                <p class="font-medium text-green-400 mb-1">Shine sera conforme à la réforme 2026</p>
+                <p class="text-gray-400 text-sm">La facturation intégrée de Shine sera mise à jour pour supporter les formats Factur-X exigés par la réforme.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Alternatives -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">🔄 Alternatives</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <a href="/avis/qonto" class="glass p-4 rounded-xl hover:bg-white/5 transition">
+              <div class="flex items-center gap-3">
+                <img src="https://www.google.com/s2/favicons?domain=qonto.com&sz=32" alt="Qonto" class="w-8 h-8 rounded">
+                <div>
+                  <p class="font-medium">Qonto</p>
+                  <p class="text-sm text-gray-400">Plus de fonctions, dès 9€/mois</p>
+                </div>
+              </div>
+            </a>
+            <a href="/avis/axonaut" class="glass p-4 rounded-xl hover:bg-white/5 transition border border-gold/30">
+              <div class="flex items-center gap-3">
+                <img src="https://www.google.com/s2/favicons?domain=axonaut.com&sz=32" alt="Axonaut" class="w-8 h-8 rounded">
+                <div>
+                  <p class="font-medium">Axonaut <span class="text-gold text-xs">Partenaire</span></p>
+                  <p class="text-sm text-gray-400">CRM + Facturation tout-en-un</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </details>
+
+    <!-- Verdict -->
     <section class="mb-8">
       <h2 class="text-2xl font-bold mb-4">🏆 Notre verdict</h2>
       <div class="glass p-6 rounded-2xl">
         <p class="text-gray-300 mb-4">
-          <strong class="text-white">Excellent pour les freelances et auto-entrepreneurs</strong>. Le petit prix et l'accompagnement admin font la différence.
+          <strong class="text-white">Excellent choix pour les freelances et auto-entrepreneurs</strong> qui veulent une banque simple, pas chère, avec un accompagnement humain. Le petit prix (7,90€) et les conseils admin inclus font vraiment la différence.
         </p>
         <p class="text-gray-300">
-          <span class="text-gold">Alternative :</span> <a href="/avis/qonto" class="text-purple-400 hover:underline">Qonto</a> si vous êtes une structure plus grande.
+          <span class="text-gold">Si vous êtes une structure plus grande</span> ou avez besoin de fonctions avancées (multi-cartes, comptabilité poussée), regardez plutôt <a href="/avis/qonto" class="text-purple-400 hover:underline">Qonto</a> ou <a href="/avis/axonaut" class="text-gold hover:underline">Axonaut</a>.
         </p>
       </div>
     </section>
 
+    <!-- CTA -->
     <div class="glass p-6 rounded-2xl border border-gold/30 text-center">
       <p class="text-xl font-bold mb-2">🎁 2 mois offerts</p>
-      <a href="https://www.shine.fr/" target="_blank" rel="noopener" class="inline-block bg-gold text-gray-900 px-8 py-3 rounded-xl font-bold hover:opacity-90 transition mt-4">
+      <p class="text-gray-400 mb-4">Ouvrez votre compte pro en 10 minutes</p>
+      <a href="https://www.shine.fr/" target="_blank" rel="noopener" class="inline-block bg-gold text-gray-900 px-8 py-3 rounded-xl font-bold hover:opacity-90 transition">
         Ouvrir un compte Shine →
       </a>
+      <p class="text-xs text-gray-500 mt-3">Promo partenaire bientôt disponible</p>
     </div>
 
   </article>
