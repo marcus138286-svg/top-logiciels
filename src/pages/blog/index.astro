@@ -134,13 +134,36 @@ const articles = [
 <Layout title="Blog - Conseils Logiciels SaaS" description="Guides et conseils pour choisir et utiliser les meilleurs logiciels professionnels : CRM, email marketing, outils IA, comptabilité.">
   <section class="max-w-4xl mx-auto px-4 py-12">
     <h1 class="text-3xl font-bold mb-2">📚 <span class="gradient-text">Blog</span></h1>
-    <p class="text-gray-400 mb-10">Guides et conseils pour bien choisir vos outils</p>
+    <p class="text-gray-400 mb-6">Guides et conseils pour bien choisir vos outils</p>
 
-    <div class="space-y-6">
+    <!-- Barre de recherche -->
+    <div class="relative mb-8">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="🔍 Rechercher un article..."
+        class="w-full glass px-5 py-3 rounded-xl border border-white/10 focus:border-gold/50 focus:outline-none text-white placeholder-gray-500 transition"
+      />
+      <span id="search-count" class="absolute right-4 top-1/2 -translate-y-1/2 text-sm text-gray-500"></span>
+    </div>
+
+    <!-- Message aucun résultat -->
+    <div id="no-results" class="hidden glass p-8 rounded-2xl text-center mb-6">
+      <p class="text-2xl mb-2">🔍</p>
+      <p class="text-gray-400">Aucun article trouvé pour cette recherche</p>
+    </div>
+
+    <div id="articles-list" class="space-y-6">
       {articles.map(article => {
         const style = categoryStyles[article.category] || { bg: "bg-purple-500/20", text: "text-purple-300", emoji: "📄" };
         return (
-          <a href={`/blog/${article.slug}`} class="block glass p-6 rounded-2xl card-hover group">
+          <a
+            href={`/blog/${article.slug}`}
+            class="article-card block glass p-6 rounded-2xl card-hover group"
+            data-title={article.title.toLowerCase()}
+            data-description={article.description.toLowerCase()}
+            data-category={article.category.toLowerCase()}
+          >
             <div class="flex items-start justify-between gap-4">
               <div>
                 <div class="flex items-center gap-3 mb-2">
@@ -160,4 +183,46 @@ const articles = [
       })}
     </div>
   </section>
+
+  <script is:inline>
+    const searchInput = document.getElementById('search-input');
+    const articleCards = document.querySelectorAll('.article-card');
+    const noResults = document.getElementById('no-results');
+    const searchCount = document.getElementById('search-count');
+    const totalArticles = articleCards.length;
+
+    searchInput?.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      let visibleCount = 0;
+
+      articleCards.forEach(card => {
+        const title = card.dataset.title || '';
+        const description = card.dataset.description || '';
+        const category = card.dataset.category || '';
+
+        const matches = title.includes(query) || description.includes(query) || category.includes(query);
+
+        if (matches) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      // Afficher/masquer le message "aucun résultat"
+      if (visibleCount === 0 && query !== '') {
+        noResults?.classList.remove('hidden');
+      } else {
+        noResults?.classList.add('hidden');
+      }
+
+      // Afficher le compteur
+      if (query !== '') {
+        searchCount.textContent = `${visibleCount}/${totalArticles}`;
+      } else {
+        searchCount.textContent = '';
+      }
+    });
+  </script>
 </Layout>
