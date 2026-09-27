@@ -1,0 +1,240 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="E-Facturation 2026 : Ce Qui Change pour les Entreprises" description="Tout savoir sur la facturation électronique obligatoire en 2026 : calendrier, obligations, logiciels compatibles et comment se préparer.">
+  <article class="max-w-3xl mx-auto px-4 py-12">
+
+    <div class="mb-8">
+      <a href="/blog" class="text-purple-400 hover:text-purple-300 text-sm">← Retour au blog</a>
+    </div>
+
+    <header class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-green-500/20 text-green-300 px-2 py-1 rounded-lg text-xs">E-Facturation</span>
+        <span class="text-gray-500 text-sm">27 septembre 2026</span>
+        <span class="text-gray-600 text-sm">• 10 min de lecture</span>
+      </div>
+      <h1 class="text-3xl font-bold mb-4">E-Facturation 2026 : <span class="gradient-text">Ce Qui Change</span> pour les Entreprises</h1>
+      <p class="text-xl text-gray-400">La facture électronique devient obligatoire. Voici tout ce que vous devez savoir.</p>
+    </header>
+
+    <div class="prose prose-invert max-w-none space-y-8">
+
+      <div class="glass p-6 rounded-2xl border border-red-500/30">
+        <p class="text-gray-300 text-lg">
+          <span class="text-red-400 font-bold">Attention :</span> La facturation électronique est désormais <span class="text-gold font-bold">obligatoire</span> pour toutes les entreprises assujetties à la TVA.
+          Si vous n'êtes pas encore équipé, il est urgent d'agir.
+        </p>
+      </div>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4">📅 Le calendrier de l'obligation</h2>
+        <div class="glass p-6 rounded-xl">
+          <p class="text-gray-300 mb-4">
+            Après plusieurs reports, la réforme de la facturation électronique est entrée en vigueur selon ce calendrier :
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4 p-4 rounded-lg bg-green-500/10 border border-green-500/30">
+              <span class="text-green-400 font-bold">1er sept. 2026</span>
+              <div>
+                <p class="text-white font-medium">Grandes entreprises & ETI</p>
+                <p class="text-gray-400 text-sm">Obligation d'émettre et recevoir des factures électroniques</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 rounded-lg bg-gold/10 border border-gold/30">
+              <span class="text-gold font-bold">1er sept. 2027</span>
+              <div>
+                <p class="text-white font-medium">PME & Micro-entreprises</p>
+                <p class="text-gray-400 text-sm">Obligation d'émettre des factures électroniques</p>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm mt-4">
+            <strong class="text-white">Important :</strong> Toutes les entreprises doivent pouvoir <em>recevoir</em> des factures électroniques depuis septembre 2026.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4">🤔 Qui est concerné ?</h2>
+        <div class="glass p-6 rounded-xl">
+          <p class="text-gray-300 mb-4">Sont concernées <strong class="text-white">toutes les entreprises</strong> :</p>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-start gap-2">
+              <span class="text-green-400">✓</span>
+              <span>Assujetties à la TVA (même en franchise de base)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-400">✓</span>
+              <span>Établies en France</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-400">✓</span>
+              <span>Réalisant des opérations B2B (entre professionnels)</span>
+            </li>
+          </ul>
+          <div class="mt-4 p-4 rounded-lg bg-purple-500/10">
+            <p class="text-gray-300 text-sm">
+              <strong class="text-purple-400">Auto-entrepreneurs :</strong> Vous êtes concernés ! Même avec la franchise en base de TVA, vous devrez émettre des factures électroniques en 2027.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4">📄 C'est quoi exactement une facture électronique ?</h2>
+        <div class="glass p-6 rounded-xl">
+          <p class="text-gray-300 mb-4">
+            Attention, un PDF envoyé par email <strong class="text-red-400">n'est PAS</strong> une facture électronique au sens de la réforme !
+          </p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-lg bg-red-500/10 border border-red-500/30">
+              <h4 class="font-bold text-red-400 mb-2">❌ N'est PAS conforme</h4>
+              <ul class="text-sm text-gray-400 space-y-1">
+                <li>• PDF envoyé par email</li>
+                <li>• Facture Word/Excel</li>
+                <li>• Facture papier scannée</li>
+              </ul>
+            </div>
+            <div class="p-4 rounded-lg bg-green-500/10 border border-green-500/30">
+              <h4 class="font-bold text-green-400 mb-2">✓ Est conforme</h4>
+              <ul class="text-sm text-gray-400 space-y-1">
+                <li>• Format Factur-X (PDF + XML)</li>
+                <li>• Format UBL ou CII</li>
+                <li>• Transitant par une PDP</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4">🔄 PDP, PPF... Qu'est-ce que c'est ?</h2>
+        <div class="glass p-6 rounded-xl space-y-4">
+          <div class="p-4 rounded-lg bg-white/5">
+            <h4 class="font-bold text-gold mb-2">PPF - Portail Public de Facturation</h4>
+            <p class="text-gray-300 text-sm">
+              Plateforme gratuite de l'État pour émettre et recevoir des factures. Solution basique mais fonctionnelle.
+            </p>
+          </div>
+          <div class="p-4 rounded-lg bg-white/5">
+            <h4 class="font-bold text-purple-400 mb-2">PDP - Plateforme de Dématérialisation Partenaire</h4>
+            <p class="text-gray-300 text-sm">
+              Plateforme privée agréée par l'État. Offre plus de fonctionnalités : automatisation, intégration comptable, etc.
+            </p>
+          </div>
+          <p class="text-gray-400 text-sm">
+            <strong class="text-white">Notre conseil :</strong> Utilisez un logiciel de facturation qui intègre une PDP. C'est plus simple et plus automatisé.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4">💻 Les logiciels conformes en 2026</h2>
+        <div class="glass p-6 rounded-xl">
+          <p class="text-gray-300 mb-4">
+            Voici les logiciels de facturation <strong class="text-white">certifiés conformes</strong> à la réforme :
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between p-4 rounded-lg bg-gold/10 border border-gold/30">
+              <div>
+                <h4 class="font-bold text-gold">Axonaut</h4>
+                <p class="text-sm text-gray-400">CRM + Facturation tout-en-un</p>
+              </div>
+              <a href="/avis/axonaut" class="text-gold text-sm hover:underline">Voir l'offre →</a>
+            </div>
+            <div class="flex items-center justify-between p-4 rounded-lg bg-white/5">
+              <div>
+                <h4 class="font-bold">Pennylane</h4>
+                <p class="text-sm text-gray-400">Comptabilité + Facturation</p>
+              </div>
+              <a href="/avis/pennylane" class="text-purple-400 text-sm hover:underline">Voir l'offre →</a>
+            </div>
+            <div class="flex items-center justify-between p-4 rounded-lg bg-white/5">
+              <div>
+                <h4 class="font-bold">Tiime</h4>
+                <p class="text-sm text-gray-400">Facturation gratuite</p>
+              </div>
+              <a href="/avis/tiime" class="text-purple-400 text-sm hover:underline">Voir l'offre →</a>
+            </div>
+            <div class="flex items-center justify-between p-4 rounded-lg bg-white/5">
+              <div>
+                <h4 class="font-bold">Qonto</h4>
+                <p class="text-sm text-gray-400">Banque pro + Facturation</p>
+              </div>
+              <a href="/avis/qonto" class="text-purple-400 text-sm hover:underline">Voir l'offre →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4">⚠️ Les sanctions en cas de non-conformité</h2>
+        <div class="glass p-6 rounded-xl border border-red-500/30">
+          <p class="text-gray-300 mb-4">
+            Ne pas respecter l'obligation de facturation électronique expose à des sanctions :
+          </p>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-start gap-2">
+              <span class="text-red-400">•</span>
+              <span><strong class="text-white">15€ par facture</strong> non conforme (plafonné à 15 000€/an)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-400">•</span>
+              <span><strong class="text-white">250€</strong> par transmission non effectuée (e-reporting)</span>
+            </li>
+          </ul>
+          <p class="text-gray-400 text-sm mt-4">
+            Ces sanctions seront appliquées à partir de 2027 pour laisser le temps aux entreprises de s'adapter.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4">✅ Comment se mettre en conformité ?</h2>
+        <div class="glass p-6 rounded-xl">
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-gold/20 text-gold flex items-center justify-center font-bold">1</span>
+              <div>
+                <h4 class="font-bold text-white">Choisir un logiciel conforme</h4>
+                <p class="text-gray-400 text-sm">Optez pour un outil intégrant une PDP (voir notre comparatif)</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-gold/20 text-gold flex items-center justify-center font-bold">2</span>
+              <div>
+                <h4 class="font-bold text-white">Créer votre annuaire sur le PPF</h4>
+                <p class="text-gray-400 text-sm">Inscrivez-vous sur le Portail Public de Facturation</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-gold/20 text-gold flex items-center justify-center font-bold">3</span>
+              <div>
+                <h4 class="font-bold text-white">Mettre à jour vos process</h4>
+                <p class="text-gray-400 text-sm">Formez votre équipe et adaptez vos workflows</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-gold/20 text-gold flex items-center justify-center font-bold">4</span>
+              <div>
+                <h4 class="font-bold text-white">Tester avant l'échéance</h4>
+                <p class="text-gray-400 text-sm">Faites des essais pour éviter les surprises</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="glass p-6 rounded-2xl border border-gold/30 text-center">
+        <p class="text-lg font-bold mb-2">Besoin d'aide pour choisir votre logiciel ?</p>
+        <p class="text-gray-400 mb-4">Comparez les solutions de facturation conformes 2026</p>
+        <a href="/comparatif/facturation" class="inline-block bg-gold text-gray-900 px-6 py-3 rounded-xl font-medium hover:opacity-90 transition">
+          Voir le comparatif facturation →
+        </a>
+      </div>
+
+    </div>
+  </article>
+</Layout>
