@@ -50,7 +50,8 @@ const slugMap: Record<string, string> = {
                   <div>
                     <div class="font-medium group-hover:text-gold transition flex items-center gap-2">
                       {tool.name}
-                      {tool.isPartner && <span class="bg-gold text-gray-900 text-xs px-2 py-0.5 rounded-full font-bold">Partenaire</span>}
+                      {tool.isPartner && <span class="bg-gold text-gray-900 text-xs px-2 py-0.5 rounded-full font-bold">✓ Lien actif</span>}
+                      {!tool.isPartner && <span class="bg-gray-700 text-gray-400 text-xs px-2 py-0.5 rounded-full">Promo bientôt</span>}
                     </div>
                     <div class="text-sm text-gray-500">{tool.shortDesc}</div>
                   </div>
@@ -122,7 +123,12 @@ const slugMap: Record<string, string> = {
         <div class={`glass p-6 rounded-2xl card-hover ${tool.isPartner ? 'border-2 border-gold/50 relative' : ''}`}>
           {tool.isPartner && (
             <div class="absolute -top-3 left-6 bg-gold text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
-              ⭐ Partenaire recommandé
+              ⭐ Partenaire - Lien actif
+            </div>
+          )}
+          {!tool.isPartner && (
+            <div class="absolute -top-3 right-6 bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-xs">
+              Promo bientôt disponible
             </div>
           )}
           <div class="flex items-start justify-between mb-4">
