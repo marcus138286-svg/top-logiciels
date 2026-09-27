@@ -6,6 +6,7 @@ import tools from '../../data/tools.json';
 const category = tools["crm"];
 
 const slugMap: Record<string, string> = {
+  "Axonaut": "axonaut",
   "HubSpot CRM": "hubspot",
   "Pipedrive": "pipedrive"
 };
@@ -31,12 +32,15 @@ const slugMap: Record<string, string> = {
         </thead>
         <tbody class="divide-y divide-white/10">
           {category.map(tool => (
-            <tr class="hover:bg-white/5 transition">
+            <tr class={`hover:bg-white/5 transition ${tool.isPartner ? 'bg-gold/5 border-l-4 border-gold' : ''}`}>
               <td class="px-4 py-4">
                 <a href={`/avis/${slugMap[tool.name]}`} class="flex items-center gap-3 group">
                   <ToolLogo name={tool.name} image={tool.image} logo={tool.logo} size="md" />
                   <div>
-                    <div class="font-medium group-hover:text-gold transition">{tool.name}</div>
+                    <div class="font-medium group-hover:text-gold transition flex items-center gap-2">
+                      {tool.name}
+                      {tool.isPartner && <span class="bg-gold text-gray-900 text-xs px-2 py-0.5 rounded-full font-bold">Partenaire</span>}
+                    </div>
                     <div class="text-sm text-gray-500">{tool.shortDesc}</div>
                   </div>
                 </a>
@@ -78,7 +82,12 @@ const slugMap: Record<string, string> = {
     <h2 class="text-2xl font-bold mb-6">Analyse détaillée</h2>
     <div class="space-y-6">
       {category.map(tool => (
-        <div class="glass p-6 rounded-2xl card-hover">
+        <div class={`glass p-6 rounded-2xl card-hover ${tool.isPartner ? 'border-2 border-gold/50 relative' : ''}`}>
+          {tool.isPartner && (
+            <div class="absolute -top-3 left-6 bg-gold text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
+              ⭐ Partenaire recommandé
+            </div>
+          )}
           <div class="flex items-start justify-between mb-4">
             <a href={`/avis/${slugMap[tool.name]}`} class="flex items-center gap-3 group">
               <ToolLogo name={tool.name} image={tool.image} logo={tool.logo} size="lg" />

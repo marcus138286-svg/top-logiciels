@@ -57,6 +57,25 @@
   ],
   "crm": [
     {
+      "name": "Axonaut",
+      "slug": "axonaut",
+      "shortDesc": "CRM + Facturation + Gestion tout-en-un pour TPE/PME",
+      "description": "Solution française tout-en-un : CRM, devis, factures, compta",
+      "originalPrice": "69,99€/mois",
+      "price": "34,99€/mois",
+      "discount": "-50%",
+      "commission": "Jusqu'à 40% récurrent",
+      "pros": ["Tout-en-un français", "Conforme e-facturation 2026", "Interface simple", "Support réactif"],
+      "cons": ["Moins de fonctions CRM avancées que HubSpot"],
+      "rating": 4.5,
+      "promoCode": null,
+      "promoText": "15 jours d'essai gratuit",
+      "affiliateUrl": "https://axonaut.com/?a=B518CH1408",
+      "logo": "🎯",
+      "image": "https://www.google.com/s2/favicons?domain=axonaut.com&sz=128",
+      "isPartner": true
+    },
+    {
       "name": "HubSpot CRM",
       "slug": "hubspot",
       "shortDesc": "Gestion de la Relation Client : centralisez contacts et prospects",
@@ -279,6 +298,25 @@
   ],
   "facturation": [
     {
+      "name": "Axonaut",
+      "slug": "axonaut",
+      "shortDesc": "CRM + Facturation + Gestion tout-en-un pour TPE/PME",
+      "description": "Solution française tout-en-un sans prise de tête",
+      "originalPrice": "69,99€/mois",
+      "price": "34,99€/mois",
+      "discount": "-50%",
+      "commission": "Jusqu'à 40% récurrent",
+      "pros": ["Tout-en-un (CRM, devis, factures)", "Conforme e-facturation 2026", "Interface simple", "Support français réactif"],
+      "cons": ["Moins de fonctions comptables pures"],
+      "rating": 4.5,
+      "promoCode": null,
+      "promoText": "15 jours d'essai gratuit",
+      "affiliateUrl": "https://axonaut.com/?a=B518CH1408",
+      "logo": "🎯",
+      "image": "https://www.google.com/s2/favicons?domain=axonaut.com&sz=128",
+      "isPartner": true
+    },
+    {
       "name": "Pennylane",
       "slug": "pennylane",
       "shortDesc": "Facturation + comptabilité connectée à votre banque",
@@ -295,24 +333,6 @@
       "affiliateUrl": "https://www.pennylane.com/",
       "logo": "🇫🇷",
       "image": "https://www.google.com/s2/favicons?domain=pennylane.com&sz=128"
-    },
-    {
-      "name": "Axonaut",
-      "slug": "axonaut",
-      "shortDesc": "CRM + Facturation + Gestion tout-en-un pour TPE/PME",
-      "description": "Solution française tout-en-un sans prise de tête",
-      "originalPrice": "69,99€/mois",
-      "price": "34,99€/mois",
-      "discount": "-50%",
-      "commission": "Jusqu'à 40% récurrent",
-      "pros": ["Tout-en-un (CRM, devis, factures)", "Plateforme agréée 2026", "Interface simple", "Support réactif"],
-      "cons": ["Moins de fonctions comptables pures"],
-      "rating": 4.5,
-      "promoCode": null,
-      "promoText": "15 jours d'essai gratuit",
-      "affiliateUrl": "https://axonaut.com/?a=B518CH1408",
-      "logo": "🎯",
-      "image": "https://www.google.com/s2/favicons?domain=axonaut.com&sz=128"
     },
     {
       "name": "Sellsy",
