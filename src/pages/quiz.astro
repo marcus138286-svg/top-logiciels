@@ -1,0 +1,431 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Quel logiciel choisir ? Quiz interactif | Top Logiciel" description="Trouvez le logiciel idéal pour votre entreprise en 2 minutes. Quiz interactif : CRM, facturation, comptabilité, banque pro...">
+  <article class="max-w-3xl mx-auto px-4 py-12">
+
+    <!-- Header -->
+    <header class="text-center mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">
+        <span class="gradient-text">Quel logiciel</span> est fait pour vous ?
+      </h1>
+      <p class="text-xl text-gray-400">Répondez à 4 questions, on vous guide vers le bon choix</p>
+    </header>
+
+    <!-- Quiz Container -->
+    <div id="quiz-container" class="glass p-8 rounded-2xl">
+
+      <!-- Question 1: Type d'activité -->
+      <div id="question-1" class="quiz-step">
+        <div class="text-center mb-6">
+          <span class="text-sm text-purple-400 font-medium">Question 1/4</span>
+          <div class="w-full bg-white/10 rounded-full h-2 mt-2">
+            <div class="bg-purple-500 h-2 rounded-full" style="width: 25%"></div>
+          </div>
+        </div>
+        <h2 class="text-xl font-bold mb-6 text-center">Quel est votre statut ?</h2>
+        <div class="grid gap-4">
+          <button class="quiz-btn glass p-4 rounded-xl hover:bg-white/10 transition text-left flex items-center gap-4 border border-transparent hover:border-purple-500/50" data-answer="solo">
+            <span class="text-2xl">👤</span>
+            <div>
+              <p class="font-medium">Auto-entrepreneur / Freelance</p>
+              <p class="text-sm text-gray-400">Je travaille seul(e)</p>
+            </div>
+          </button>
+          <button class="quiz-btn glass p-4 rounded-xl hover:bg-white/10 transition text-left flex items-center gap-4 border border-transparent hover:border-purple-500/50" data-answer="tpe">
+            <span class="text-2xl">👥</span>
+            <div>
+              <p class="font-medium">TPE / Petite équipe</p>
+              <p class="text-sm text-gray-400">1 à 10 personnes</p>
+            </div>
+          </button>
+          <button class="quiz-btn glass p-4 rounded-xl hover:bg-white/10 transition text-left flex items-center gap-4 border border-transparent hover:border-purple-500/50" data-answer="pme">
+            <span class="text-2xl">🏢</span>
+            <div>
+              <p class="font-medium">PME / Équipe structurée</p>
+              <p class="text-sm text-gray-400">10+ personnes</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Question 2: Besoin principal -->
+      <div id="question-2" class="quiz-step hidden">
+        <div class="text-center mb-6">
+          <span class="text-sm text-purple-400 font-medium">Question 2/4</span>
+          <div class="w-full bg-white/10 rounded-full h-2 mt-2">
+            <div class="bg-purple-500 h-2 rounded-full" style="width: 50%"></div>
+          </div>
+        </div>
+        <h2 class="text-xl font-bold mb-6 text-center">Quel est votre besoin principal ?</h2>
+        <div class="grid gap-4">
+          <button class="quiz-btn glass p-4 rounded-xl hover:bg-white/10 transition text-left flex items-center gap-4 border border-transparent hover:border-purple-500/50" data-answer="facturation">
+            <span class="text-2xl">🧾</span>
+            <div>
+              <p class="font-medium">Facturation simple</p>
+              <p class="text-sm text-gray-400">Créer des devis et factures</p>
+            </div>
+          </button>
+          <button class="quiz-btn glass p-4 rounded-xl hover:bg-white/10 transition text-left flex items-center gap-4 border border-transparent hover:border-purple-500/50" data-answer="crm">
+            <span class="text-2xl">🎯</span>
+            <div>
+              <p class="font-medium">CRM + Facturation</p>
+              <p class="text-sm text-gray-400">Gérer mes clients et facturer</p>
+            </div>
+          </button>
+          <button class="quiz-btn glass p-4 rounded-xl hover:bg-white/10 transition text-left flex items-center gap-4 border border-transparent hover:border-purple-500/50" data-answer="compta">
+            <span class="text-2xl">📊</span>
+            <div>
+              <p class="font-medium">Comptabilité + Facturation</p>
+              <p class="text-sm text-gray-400">Automatiser ma compta</p>
+            </div>
+          </button>
+          <button class="quiz-btn glass p-4 rounded-xl hover:bg-white/10 transition text-left flex items-center gap-4 border border-transparent hover:border-purple-500/50" data-answer="banque">
+            <span class="text-2xl">🏦</span>
+            <div>
+              <p class="font-medium">Compte bancaire pro</p>
+              <p class="text-sm text-gray-400">Ouvrir un compte pour mon activité</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Question 3: Budget -->
+      <div id="question-3" class="quiz-step hidden">
+        <div class="text-center mb-6">
+          <span class="text-sm text-purple-400 font-medium">Question 3/4</span>
+          <div class="w-full bg-white/10 rounded-full h-2 mt-2">
+            <div class="bg-purple-500 h-2 rounded-full" style="width: 75%"></div>
+          </div>
+        </div>
+        <h2 class="text-xl font-bold mb-6 text-center">Quel est votre budget mensuel ?</h2>
+        <div class="grid gap-4">
+          <button class="quiz-btn glass p-4 rounded-xl hover:bg-white/10 transition text-left flex items-center gap-4 border border-transparent hover:border-purple-500/50" data-answer="gratuit">
+            <span class="text-2xl">🆓</span>
+            <div>
+              <p class="font-medium">Gratuit</p>
+              <p class="text-sm text-gray-400">Je ne veux pas payer</p>
+            </div>
+          </button>
+          <button class="quiz-btn glass p-4 rounded-xl hover:bg-white/10 transition text-left flex items-center gap-4 border border-transparent hover:border-purple-500/50" data-answer="petit">
+            <span class="text-2xl">💵</span>
+            <div>
+              <p class="font-medium">Moins de 30€/mois</p>
+              <p class="text-sm text-gray-400">Budget limité</p>
+            </div>
+          </button>
+          <button class="quiz-btn glass p-4 rounded-xl hover:bg-white/10 transition text-left flex items-center gap-4 border border-transparent hover:border-purple-500/50" data-answer="moyen">
+            <span class="text-2xl">💰</span>
+            <div>
+              <p class="font-medium">30€ à 100€/mois</p>
+              <p class="text-sm text-gray-400">Investissement raisonnable</p>
+            </div>
+          </button>
+          <button class="quiz-btn glass p-4 rounded-xl hover:bg-white/10 transition text-left flex items-center gap-4 border border-transparent hover:border-purple-500/50" data-answer="grand">
+            <span class="text-2xl">💎</span>
+            <div>
+              <p class="font-medium">Plus de 100€/mois</p>
+              <p class="text-sm text-gray-400">Pas de limite</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Question 4: Expert-comptable -->
+      <div id="question-4" class="quiz-step hidden">
+        <div class="text-center mb-6">
+          <span class="text-sm text-purple-400 font-medium">Question 4/4</span>
+          <div class="w-full bg-white/10 rounded-full h-2 mt-2">
+            <div class="bg-purple-500 h-2 rounded-full" style="width: 100%"></div>
+          </div>
+        </div>
+        <h2 class="text-xl font-bold mb-6 text-center">Avez-vous un expert-comptable ?</h2>
+        <div class="grid gap-4">
+          <button class="quiz-btn glass p-4 rounded-xl hover:bg-white/10 transition text-left flex items-center gap-4 border border-transparent hover:border-purple-500/50" data-answer="oui">
+            <span class="text-2xl">✅</span>
+            <div>
+              <p class="font-medium">Oui, j'ai un comptable</p>
+              <p class="text-sm text-gray-400">Je veux collaborer avec lui</p>
+            </div>
+          </button>
+          <button class="quiz-btn glass p-4 rounded-xl hover:bg-white/10 transition text-left flex items-center gap-4 border border-transparent hover:border-purple-500/50" data-answer="non">
+            <span class="text-2xl">❌</span>
+            <div>
+              <p class="font-medium">Non, je gère moi-même</p>
+              <p class="text-sm text-gray-400">Je fais ma compta seul(e)</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Résultats -->
+      <div id="results" class="quiz-step hidden">
+        <div class="text-center mb-6">
+          <span class="text-4xl mb-4 block">🎯</span>
+          <h2 class="text-2xl font-bold mb-2">Votre recommandation</h2>
+          <p class="text-gray-400">Basé sur vos réponses</p>
+        </div>
+
+        <!-- Recommandation principale -->
+        <div id="main-result" class="glass p-6 rounded-2xl border-2 border-gold/50 mb-6">
+          <!-- Contenu injecté par JS -->
+        </div>
+
+        <!-- Alternative -->
+        <div id="alt-result" class="glass p-4 rounded-xl mb-6">
+          <p class="text-sm text-gray-400 mb-3">Alternative à considérer :</p>
+          <!-- Contenu injecté par JS -->
+        </div>
+
+        <!-- Refaire le quiz -->
+        <div class="text-center">
+          <button id="restart-btn" class="text-purple-400 hover:text-purple-300 text-sm underline">
+            ← Refaire le quiz
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Note -->
+    <p class="text-center text-sm text-gray-500 mt-6">
+      Ce quiz est un guide. Tous les logiciels recommandés sont conformes à la réforme 2026.
+    </p>
+
+  </article>
+</Layout>
+
+<script>
+  const answers: Record<string, string> = {};
+  let currentStep = 1;
+
+  // Base de données des recommandations
+  const recommendations: Record<string, { name: string; slug: string; tagline: string; price: string; color: string; partner?: boolean }> = {
+    'tiime': {
+      name: 'Tiime',
+      slug: 'tiime',
+      tagline: '100% gratuit pour auto-entrepreneurs',
+      price: 'Gratuit',
+      color: 'emerald'
+    },
+    'axonaut': {
+      name: 'Axonaut',
+      slug: 'axonaut',
+      tagline: 'Tout-en-un : CRM + Facturation + Gestion',
+      price: '34,99€/mois',
+      color: 'gold',
+      partner: true
+    },
+    'pennylane': {
+      name: 'Pennylane',
+      slug: 'pennylane',
+      tagline: 'Compta automatisée avec expert-comptable',
+      price: '29€/mois',
+      color: 'purple'
+    },
+    'indy': {
+      name: 'Indy',
+      slug: 'indy',
+      tagline: 'Comptabilité automatique pour indépendants',
+      price: '12€/mois',
+      color: 'blue'
+    },
+    'sellsy': {
+      name: 'Sellsy',
+      slug: 'sellsy',
+      tagline: 'Suite complète pour PME exigeantes',
+      price: '39€/mois/user',
+      color: 'purple'
+    },
+    'hubspot': {
+      name: 'HubSpot CRM',
+      slug: 'hubspot',
+      tagline: 'CRM gratuit et puissant',
+      price: 'Gratuit',
+      color: 'orange'
+    },
+    'pipedrive': {
+      name: 'Pipedrive',
+      slug: 'pipedrive',
+      tagline: 'CRM simple pour commerciaux',
+      price: '14€/mois',
+      color: 'purple'
+    },
+    'qonto': {
+      name: 'Qonto',
+      slug: 'qonto',
+      tagline: 'La néobanque des équipes et PME',
+      price: '9€/mois',
+      color: 'purple'
+    },
+    'shine': {
+      name: 'Shine',
+      slug: 'shine',
+      tagline: 'Compte pro + facturation pour freelances',
+      price: '7,90€/mois',
+      color: 'gold'
+    }
+  };
+
+  function getRecommendation(): { main: string; alt: string } {
+    const { statut, besoin, budget, comptable } = answers;
+
+    // Logique de recommandation
+
+    // Auto-entrepreneur
+    if (statut === 'solo') {
+      if (besoin === 'banque') {
+        return { main: 'shine', alt: 'tiime' };
+      }
+      if (budget === 'gratuit') {
+        if (besoin === 'crm') {
+          return { main: 'hubspot', alt: 'tiime' };
+        }
+        return { main: 'tiime', alt: 'indy' };
+      }
+      if (besoin === 'compta') {
+        if (comptable === 'oui') {
+          return { main: 'pennylane', alt: 'indy' };
+        }
+        return { main: 'indy', alt: 'pennylane' };
+      }
+      if (besoin === 'crm') {
+        return { main: 'axonaut', alt: 'hubspot' };
+      }
+      return { main: 'indy', alt: 'tiime' };
+    }
+
+    // TPE
+    if (statut === 'tpe') {
+      if (besoin === 'banque') {
+        return { main: 'qonto', alt: 'shine' };
+      }
+      if (besoin === 'compta') {
+        if (comptable === 'oui') {
+          return { main: 'pennylane', alt: 'axonaut' };
+        }
+        return { main: 'axonaut', alt: 'pennylane' };
+      }
+      if (besoin === 'crm') {
+        if (budget === 'gratuit' || budget === 'petit') {
+          return { main: 'hubspot', alt: 'axonaut' };
+        }
+        return { main: 'axonaut', alt: 'pipedrive' };
+      }
+      // Facturation simple
+      if (budget === 'gratuit') {
+        return { main: 'tiime', alt: 'hubspot' };
+      }
+      return { main: 'axonaut', alt: 'pennylane' };
+    }
+
+    // PME
+    if (statut === 'pme') {
+      if (besoin === 'banque') {
+        return { main: 'qonto', alt: 'shine' };
+      }
+      if (besoin === 'crm') {
+        if (budget === 'grand') {
+          return { main: 'sellsy', alt: 'hubspot' };
+        }
+        return { main: 'hubspot', alt: 'sellsy' };
+      }
+      if (besoin === 'compta') {
+        return { main: 'pennylane', alt: 'sellsy' };
+      }
+      return { main: 'sellsy', alt: 'axonaut' };
+    }
+
+    // Défaut
+    return { main: 'axonaut', alt: 'pennylane' };
+  }
+
+  function showResults() {
+    const rec = getRecommendation();
+    const main = recommendations[rec.main];
+    const alt = recommendations[rec.alt];
+
+    const mainDiv = document.getElementById('main-result');
+    const altDiv = document.getElementById('alt-result');
+
+    if (mainDiv && main) {
+      const colorClass = main.color === 'gold' ? 'text-gold' :
+                         main.color === 'emerald' ? 'text-emerald-400' :
+                         main.color === 'orange' ? 'text-orange-400' :
+                         main.color === 'blue' ? 'text-blue-400' :
+                         'text-purple-400';
+
+      mainDiv.innerHTML = `
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://www.google.com/s2/favicons?domain=${main.slug === 'hubspot' ? 'hubspot.com' : main.slug + (main.slug === 'shine' ? '.fr' : '.com')}&sz=64"
+               alt="${main.name}" class="w-16 h-16 rounded-xl" />
+          <div>
+            <p class="font-bold text-xl ${colorClass}">${main.name}</p>
+            <p class="text-gray-400">${main.tagline}</p>
+            ${main.partner ? '<span class="text-xs bg-gold/20 text-gold px-2 py-0.5 rounded">Partenaire</span>' : ''}
+          </div>
+        </div>
+        <p class="text-2xl font-bold mb-4">${main.price}</p>
+        <a href="/avis/${main.slug}"
+           class="inline-block w-full text-center bg-gold text-gray-900 px-6 py-3 rounded-xl font-bold hover:opacity-90 transition">
+          Voir l'avis complet →
+        </a>
+      `;
+    }
+
+    if (altDiv && alt) {
+      altDiv.innerHTML = `
+        <a href="/avis/${alt.slug}" class="flex items-center gap-3 hover:bg-white/5 p-2 rounded-lg transition">
+          <img src="https://www.google.com/s2/favicons?domain=${alt.slug === 'hubspot' ? 'hubspot.com' : alt.slug + (alt.slug === 'shine' ? '.fr' : '.com')}&sz=32"
+               alt="${alt.name}" class="w-8 h-8 rounded" />
+          <div>
+            <p class="font-medium">${alt.name}</p>
+            <p class="text-sm text-gray-400">${alt.tagline}</p>
+          </div>
+        </a>
+      `;
+    }
+  }
+
+  function showStep(step: number) {
+    document.querySelectorAll('.quiz-step').forEach(el => el.classList.add('hidden'));
+    const stepEl = document.getElementById(step === 5 ? 'results' : `question-${step}`);
+    if (stepEl) {
+      stepEl.classList.remove('hidden');
+    }
+  }
+
+  function handleAnswer(btn: HTMLButtonElement) {
+    const answer = btn.dataset.answer;
+
+    if (currentStep === 1) answers.statut = answer || '';
+    if (currentStep === 2) answers.besoin = answer || '';
+    if (currentStep === 3) answers.budget = answer || '';
+    if (currentStep === 4) answers.comptable = answer || '';
+
+    currentStep++;
+
+    if (currentStep === 5) {
+      showResults();
+    }
+    showStep(currentStep);
+  }
+
+  // Event listeners
+  document.querySelectorAll('.quiz-btn').forEach(btn => {
+    btn.addEventListener('click', () => handleAnswer(btn as HTMLButtonElement));
+  });
+
+  document.getElementById('restart-btn')?.addEventListener('click', () => {
+    currentStep = 1;
+    Object.keys(answers).forEach(key => delete answers[key]);
+    showStep(1);
+  });
+</script>
+
+<style>
+  .quiz-btn:hover {
+    transform: translateX(4px);
+  }
+</style>
