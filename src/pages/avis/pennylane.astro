@@ -18,6 +18,11 @@ import Layout from '../../layouts/Layout.astro';
           <p class="text-gray-400">Le leader français de la compta-facturation moderne</p>
         </div>
       </div>
+      <div class="flex items-center gap-3 mt-4">
+        <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-lg font-bold">⭐ 4.7/5</span>
+        <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-lg text-sm">80 000+ entreprises</span>
+        <span class="bg-gray-700 text-gray-300 px-3 py-1 rounded-lg text-sm">Promo bientôt</span>
+      </div>
     </header>
 
     <!-- Badge conformité -->
@@ -31,172 +36,227 @@ import Layout from '../../layouts/Layout.astro';
 
     <!-- Résumé rapide -->
     <div class="glass p-6 rounded-2xl border border-gold/30 mb-8">
-      <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
-        <div class="flex items-center gap-3">
-          <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-lg font-bold">⭐ 4.7/5</span>
-          <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-lg text-sm">80 000+ entreprises</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="text-2xl font-bold text-green-400">À partir de 29€/mois</span>
-        </div>
-      </div>
-      <p class="text-gray-300">
+      <h2 class="font-bold text-lg mb-3">📋 En bref</h2>
+      <p class="text-gray-300 mb-4">
         Pennylane est <span class="text-gold font-medium">la référence française pour la comptabilité et facturation connectées</span>. Synchronisation bancaire, collaboration avec votre expert-comptable, et conformité e-facturation 2026.
       </p>
+      <div class="flex flex-wrap gap-6">
+        <div>
+          <span class="text-gray-500 text-sm">Prix</span>
+          <p class="font-bold text-xl">29€<span class="text-gray-400 text-sm font-normal">/mois</span></p>
+        </div>
+        <div>
+          <span class="text-gray-500 text-sm">Essai</span>
+          <p class="font-medium text-gold">1 mois offert</p>
+        </div>
+        <div>
+          <span class="text-gray-500 text-sm">Cible</span>
+          <p class="font-medium">TPE/PME avec comptable</p>
+        </div>
+      </div>
     </div>
 
-    <!-- Fiche technique -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-bold mb-4">📋 Fiche technique</h2>
-      <div class="glass rounded-2xl overflow-hidden">
-        <table class="w-full text-sm">
-          <tbody class="divide-y divide-white/10">
-            <tr>
-              <td class="px-4 py-3 text-gray-400 w-1/3">Éditeur</td>
-              <td class="px-4 py-3 font-medium">Pennylane (France - Paris)</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-3 text-gray-400">Utilisateurs</td>
-              <td class="px-4 py-3 font-medium">80 000+ entreprises, 2 000+ cabinets comptables</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-3 text-gray-400">Fonctionnalités</td>
-              <td class="px-4 py-3 font-medium">Facturation, Comptabilité, Banque, Trésorerie</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-3 text-gray-400">Formats facture</td>
-              <td class="px-4 py-3 font-medium text-green-400">Factur-X, PDF, UBL, CII</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-3 text-gray-400">Connexion bancaire</td>
-              <td class="px-4 py-3 text-green-400 font-medium">✓ Oui (300+ banques)</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-3 text-gray-400">Plateforme agréée</td>
-              <td class="px-4 py-3 text-green-400 font-medium">✓ Immatriculée DGFiP</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-3 text-gray-400">Apps mobiles</td>
-              <td class="px-4 py-3 font-medium">iOS, Android</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-3 text-gray-400">Support</td>
-              <td class="px-4 py-3 font-medium">Chat + Email + Téléphone</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- Avantages / Inconvénients -->
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="glass p-6 rounded-2xl">
+        <h3 class="font-bold text-green-400 mb-4">✅ Avantages</h3>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li>• Connexion bancaire automatique (300+ banques)</li>
+          <li>• Collaboration expert-comptable en temps réel</li>
+          <li>• Conforme réforme e-facturation 2026</li>
+          <li>• Interface moderne et fluide</li>
+          <li>• OCR intelligent pour factures</li>
+          <li>• Support français réactif</li>
+        </ul>
       </div>
-    </section>
+      <div class="glass p-6 rounded-2xl">
+        <h3 class="font-bold text-red-400 mb-4">❌ Inconvénients</h3>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li>• Nécessite un expert-comptable pour certaines fonctions</li>
+          <li>• Pas de CRM intégré</li>
+          <li>• Prix plus élevé que les solutions basiques</li>
+          <li>• Moins adapté aux auto-entrepreneurs simples</li>
+        </ul>
+      </div>
+    </div>
 
-    <!-- Fonctionnalités clés -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-bold mb-4">🚀 Fonctionnalités clés</h2>
-      <div class="grid md:grid-cols-2 gap-4">
-        <div class="glass p-4 rounded-xl">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="text-2xl">🏦</span>
-            <h3 class="font-bold">Connexion bancaire</h3>
-          </div>
-          <p class="text-sm text-gray-400">Synchronisation automatique avec 300+ banques. Rapprochement bancaire en un clic.</p>
-        </div>
-        <div class="glass p-4 rounded-xl">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="text-2xl">🤝</span>
-            <h3 class="font-bold">Collaboration comptable</h3>
-          </div>
-          <p class="text-sm text-gray-400">Travaillez en temps réel avec votre expert-comptable. Fini les échanges de documents.</p>
-        </div>
-        <div class="glass p-4 rounded-xl">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="text-2xl">🧾</span>
-            <h3 class="font-bold">Factur-X natif</h3>
-          </div>
-          <p class="text-sm text-gray-400">Factures au format Factur-X, conforme à la réforme 2026. Rien à configurer.</p>
-        </div>
-        <div class="glass p-4 rounded-xl">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="text-2xl">📸</span>
-            <h3 class="font-bold">OCR intelligent</h3>
-          </div>
-          <p class="text-sm text-gray-400">Photographiez vos factures fournisseurs, Pennylane les analyse automatiquement.</p>
-        </div>
-      </div>
-    </section>
+    <!-- VOIR PLUS - Section dépliable -->
+    <details class="glass rounded-2xl mb-8 group">
+      <summary class="px-6 py-4 cursor-pointer font-bold text-lg hover:text-gold transition flex justify-between items-center">
+        📖 Voir la fiche complète
+        <span class="text-gray-500 group-open:rotate-180 transition-transform text-xl">▼</span>
+      </summary>
 
-    <!-- Tarifs -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-bold mb-4">💰 Tarifs</h2>
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="glass p-4 rounded-xl text-center">
-          <p class="text-gray-400 text-sm mb-1">Facturation</p>
-          <p class="text-2xl font-bold">29€</p>
-          <p class="text-gray-500 text-xs">/mois HT</p>
-          <p class="text-gray-400 text-xs mt-2">Devis, factures, relances</p>
-        </div>
-        <div class="glass p-4 rounded-xl text-center border border-gold/50 relative">
-          <span class="absolute -top-2 left-1/2 -translate-x-1/2 bg-gold text-gray-900 px-2 py-0.5 rounded text-xs font-bold">Populaire</span>
-          <p class="text-gray-400 text-sm mb-1">Facturation + Compta</p>
-          <p class="text-2xl font-bold text-gold">69€</p>
-          <p class="text-gray-500 text-xs">/mois HT</p>
-          <p class="text-gray-400 text-xs mt-2">+ Comptabilité automatisée</p>
-        </div>
-        <div class="glass p-4 rounded-xl text-center">
-          <p class="text-gray-400 text-sm mb-1">Premium</p>
-          <p class="text-2xl font-bold">Sur devis</p>
-          <p class="text-gray-500 text-xs">&nbsp;</p>
-          <p class="text-gray-400 text-xs mt-2">Multi-sociétés, API, etc.</p>
-        </div>
-      </div>
-      <p class="text-sm text-gray-500 mt-4">💡 Les prix incluent l'accès à la plateforme agréée pour la réforme 2026.</p>
-    </section>
+      <div class="px-6 pb-6 space-y-8 border-t border-white/10 pt-6">
 
-    <!-- Pour qui -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-bold mb-4">⚖️ Pour qui ?</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="glass p-6 rounded-2xl">
-          <h3 class="font-bold text-green-400 mb-4">✅ Idéal pour</h3>
-          <ul class="space-y-2 text-gray-300 text-sm">
-            <li class="flex items-start gap-2">
-              <span class="text-green-400 mt-0.5">→</span>
-              <span>TPE/PME qui travaillent avec un expert-comptable</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-green-400 mt-0.5">→</span>
-              <span>Ceux qui veulent automatiser leur comptabilité</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-green-400 mt-0.5">→</span>
-              <span>Entreprises avec beaucoup de transactions bancaires</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-green-400 mt-0.5">→</span>
-              <span>Ceux qui veulent être conformes 2026 sans effort</span>
-            </li>
-          </ul>
-        </div>
-        <div class="glass p-6 rounded-2xl">
-          <h3 class="font-bold text-red-400 mb-4">❌ Moins adapté si</h3>
-          <ul class="space-y-2 text-gray-300 text-sm">
-            <li class="flex items-start gap-2">
-              <span class="text-red-400 mt-0.5">→</span>
-              <span>Vous n'avez pas d'expert-comptable (regardez Axonaut)</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-red-400 mt-0.5">→</span>
-              <span>Vous voulez un CRM intégré (regardez Sellsy)</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-red-400 mt-0.5">→</span>
-              <span>Vous cherchez une solution gratuite (regardez Tiime)</span>
-            </li>
-          </ul>
-        </div>
+        <!-- Fiche technique -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">📋 Fiche technique</h3>
+          <div class="glass rounded-xl overflow-hidden">
+            <table class="w-full text-sm">
+              <tbody class="divide-y divide-white/10">
+                <tr>
+                  <td class="px-4 py-3 text-gray-400 w-1/3">Éditeur</td>
+                  <td class="px-4 py-3 font-medium">Pennylane (France - Paris)</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Utilisateurs</td>
+                  <td class="px-4 py-3 font-medium">80 000+ entreprises, 2 000+ cabinets comptables</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Fonctionnalités</td>
+                  <td class="px-4 py-3 font-medium">Facturation, Comptabilité, Banque, Trésorerie</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Formats facture</td>
+                  <td class="px-4 py-3 font-medium text-green-400">Factur-X, PDF, UBL, CII</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Connexion bancaire</td>
+                  <td class="px-4 py-3 text-green-400 font-medium">✓ Oui (300+ banques)</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Plateforme agréée</td>
+                  <td class="px-4 py-3 text-green-400 font-medium">✓ Immatriculée DGFiP</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Apps mobiles</td>
+                  <td class="px-4 py-3 font-medium">iOS, Android</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Support</td>
+                  <td class="px-4 py-3 font-medium">Chat + Email + Téléphone</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Fonctionnalités clés -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">🚀 Fonctionnalités clés</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="glass p-4 rounded-xl">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-2xl">🏦</span>
+                <h4 class="font-bold">Connexion bancaire</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Synchronisation automatique avec 300+ banques. Rapprochement bancaire en un clic.</p>
+            </div>
+            <div class="glass p-4 rounded-xl">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-2xl">🤝</span>
+                <h4 class="font-bold">Collaboration comptable</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Travaillez en temps réel avec votre expert-comptable. Fini les échanges de documents.</p>
+            </div>
+            <div class="glass p-4 rounded-xl">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-2xl">🧾</span>
+                <h4 class="font-bold">Factur-X natif</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Factures au format Factur-X, conforme à la réforme 2026. Rien à configurer.</p>
+            </div>
+            <div class="glass p-4 rounded-xl">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-2xl">📸</span>
+                <h4 class="font-bold">OCR intelligent</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Photographiez vos factures fournisseurs, Pennylane les analyse automatiquement.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tarifs -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">💰 Tarifs</h3>
+          <div class="glass rounded-xl overflow-hidden">
+            <table class="w-full text-sm">
+              <thead class="border-b border-white/10">
+                <tr>
+                  <th class="px-4 py-3 text-left text-gray-400">Offre</th>
+                  <th class="px-4 py-3 text-left text-gray-400">Prix</th>
+                  <th class="px-4 py-3 text-left text-gray-400">Inclus</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/10">
+                <tr>
+                  <td class="px-4 py-3 font-medium">Facturation</td>
+                  <td class="px-4 py-3 text-gold font-bold">29€/mois</td>
+                  <td class="px-4 py-3 text-gray-300">Devis, factures, relances</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-medium">Facturation + Compta</td>
+                  <td class="px-4 py-3 font-bold">69€/mois</td>
+                  <td class="px-4 py-3 text-gray-300">+ Comptabilité automatisée</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-medium">Premium</td>
+                  <td class="px-4 py-3 font-bold">Sur devis</td>
+                  <td class="px-4 py-3 text-gray-300">Multi-sociétés, API, etc.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-sm text-gray-500 mt-4">💡 Les prix incluent l'accès à la plateforme agréée pour la réforme 2026.</p>
+        </section>
+
+        <!-- Pour qui -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">👥 Pour qui ?</h3>
+          <div class="glass p-4 rounded-xl">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <p class="font-medium text-green-400 mb-2">✓ Idéal pour</p>
+                <ul class="text-sm text-gray-300 space-y-1">
+                  <li>• TPE/PME qui travaillent avec un expert-comptable</li>
+                  <li>• Ceux qui veulent automatiser leur comptabilité</li>
+                  <li>• Entreprises avec beaucoup de transactions</li>
+                  <li>• Ceux qui veulent être conformes 2026 automatiquement</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-medium text-red-400 mb-2">✗ Moins adapté si</p>
+                <ul class="text-sm text-gray-300 space-y-1">
+                  <li>• Vous n'avez pas d'expert-comptable (regardez Axonaut)</li>
+                  <li>• Vous voulez un CRM intégré (regardez Sellsy)</li>
+                  <li>• Vous cherchez une solution gratuite (regardez Tiime)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Alternatives -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">🔄 Alternatives</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <a href="/avis/axonaut" class="glass p-4 rounded-xl hover:bg-white/5 transition border border-gold/30">
+              <div class="flex items-center gap-3">
+                <img src="https://www.google.com/s2/favicons?domain=axonaut.com&sz=32" alt="Axonaut" class="w-8 h-8 rounded">
+                <div>
+                  <p class="font-medium">Axonaut <span class="text-gold text-xs">Partenaire</span></p>
+                  <p class="text-sm text-gray-400">Tout-en-un sans comptable • 34,99€/mois</p>
+                </div>
+              </div>
+            </a>
+            <a href="/avis/indy" class="glass p-4 rounded-xl hover:bg-white/5 transition">
+              <div class="flex items-center gap-3">
+                <img src="https://www.google.com/s2/favicons?domain=indy.fr&sz=32" alt="Indy" class="w-8 h-8 rounded">
+                <div>
+                  <p class="font-medium">Indy</p>
+                  <p class="text-sm text-gray-400">Compta automatique • 12€/mois</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
       </div>
-    </section>
+    </details>
 
     <!-- Verdict -->
-    <section class="mb-10">
+    <section class="mb-8">
       <h2 class="text-2xl font-bold mb-4">🏆 Notre verdict</h2>
       <div class="glass p-6 rounded-2xl border border-purple-500/30">
         <div class="flex items-center gap-4 mb-4">
@@ -210,7 +270,7 @@ import Layout from '../../layouts/Layout.astro';
           Pennylane est <span class="text-white font-medium">la Rolls de la facturation-comptabilité française</span>. Interface moderne, connexion bancaire fluide, collaboration comptable en temps réel. C'est le choix évident pour les entreprises qui veulent automatiser leur gestion financière.
         </p>
         <p class="text-gray-300">
-          <span class="text-gold">Le plus :</span> Vous serez conforme à la réforme 2026 automatiquement, sans rien faire de plus.
+          <span class="text-gold">Le plus :</span> Vous serez conforme à la réforme 2026 automatiquement. Pour une solution tout-en-un sans comptable, regardez <a href="/avis/axonaut" class="text-gold hover:underline">Axonaut</a>.
         </p>
       </div>
     </section>
@@ -225,27 +285,6 @@ import Layout from '../../layouts/Layout.astro';
       </a>
       <p class="text-sm text-gray-500 mt-4">✓ Sans engagement • ✓ Conforme réforme 2026</p>
     </div>
-
-    <!-- Alternatives -->
-    <section class="mt-10">
-      <h2 class="text-xl font-bold mb-4">🔄 Alternatives à considérer</h2>
-      <div class="grid md:grid-cols-2 gap-4">
-        <a href="/avis/axonaut" class="glass p-4 rounded-xl flex items-center gap-4 hover:bg-white/5 transition">
-          <img src="https://www.google.com/s2/favicons?domain=axonaut.com&sz=32" alt="Axonaut" class="w-10 h-10 rounded" />
-          <div>
-            <p class="font-medium">Axonaut</p>
-            <p class="text-sm text-gray-400">Tout-en-un sans comptable • 34,99€/mois</p>
-          </div>
-        </a>
-        <a href="/avis/tiime" class="glass p-4 rounded-xl flex items-center gap-4 hover:bg-white/5 transition">
-          <img src="https://www.google.com/s2/favicons?domain=tiime.fr&sz=32" alt="Tiime" class="w-10 h-10 rounded" />
-          <div>
-            <p class="font-medium">Tiime</p>
-            <p class="text-sm text-gray-400">100% gratuit • Auto-entrepreneurs</p>
-          </div>
-        </a>
-      </div>
-    </section>
 
   </article>
 </Layout>

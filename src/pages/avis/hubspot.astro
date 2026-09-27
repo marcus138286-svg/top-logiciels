@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="Avis HubSpot CRM 2026 - Test Complet Gratuit" description="Notre avis complet sur HubSpot CRM : le meilleur CRM gratuit ? Fonctionnalités, prix, avantages et inconvénients.">
-  <article class="max-w-3xl mx-auto px-4 py-12">
+  <article class="max-w-4xl mx-auto px-4 py-12">
 
     <div class="mb-8">
       <a href="/comparatif/crm" class="text-purple-400 hover:text-purple-300 text-sm">← Comparatif CRM</a>
@@ -12,15 +12,16 @@ import Layout from '../../layouts/Layout.astro';
     <!-- Header -->
     <header class="mb-10">
       <div class="flex items-center gap-4 mb-4">
-        <span class="text-5xl">🧡</span>
+        <img src="https://www.google.com/s2/favicons?domain=hubspot.com&sz=64" alt="HubSpot" class="w-16 h-16 rounded-xl" />
         <div>
           <h1 class="text-3xl font-bold">Avis <span class="gradient-text">HubSpot CRM</span> 2026</h1>
           <p class="text-gray-400">Le CRM gratuit le plus complet du marché</p>
         </div>
       </div>
-      <div class="flex items-center gap-4 mt-4">
-        <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-lg">⭐ 4.7/5</span>
-        <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-lg font-medium">CRM gratuit à vie</span>
+      <div class="flex items-center gap-3 mt-4">
+        <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-lg font-bold">⭐ 4.7/5</span>
+        <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-lg text-sm">CRM gratuit à vie</span>
+        <span class="bg-gray-700 text-gray-300 px-3 py-1 rounded-lg text-sm">Promo bientôt</span>
       </div>
     </header>
 
@@ -30,17 +31,17 @@ import Layout from '../../layouts/Layout.astro';
       <p class="text-gray-300 mb-4">
         HubSpot CRM est le <span class="text-gold">leader mondial du CRM gratuit</span>. Idéal pour centraliser vos contacts, suivre vos deals et automatiser vos ventes. Version gratuite très généreuse.
       </p>
-      <div class="flex flex-wrap gap-4">
+      <div class="flex flex-wrap gap-6">
         <div>
           <span class="text-gray-500 text-sm">Prix</span>
-          <p class="font-medium">Gratuit (premium dès 45€/mois)</p>
+          <p class="font-bold text-xl text-green-400">Gratuit</p>
         </div>
         <div>
           <span class="text-gray-500 text-sm">Contacts</span>
           <p class="font-medium">1 million gratuits</p>
         </div>
         <div>
-          <span class="text-gray-500 text-sm">Idéal pour</span>
+          <span class="text-gray-500 text-sm">Cible</span>
           <p class="font-medium">Startups, PME, équipes sales</p>
         </div>
       </div>
@@ -70,76 +71,187 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </div>
 
-    <!-- Ce qui est gratuit -->
-    <section class="mb-8">
-      <h2 class="text-2xl font-bold mb-4">🆓 Ce qui est vraiment gratuit</h2>
-      <div class="glass p-6 rounded-2xl">
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="flex items-start gap-3">
-            <span class="text-green-400">✓</span>
-            <div>
-              <p class="font-medium">Contacts illimités</p>
-              <p class="text-sm text-gray-400">Jusqu'à 1 million de contacts</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="text-green-400">✓</span>
-            <div>
-              <p class="font-medium">Pipeline de ventes</p>
-              <p class="text-sm text-gray-400">Suivi visuel des deals</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="text-green-400">✓</span>
-            <div>
-              <p class="font-medium">Emails trackés</p>
-              <p class="text-sm text-gray-400">Notifications d'ouverture</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="text-green-400">✓</span>
-            <div>
-              <p class="font-medium">Tâches & rappels</p>
-              <p class="text-sm text-gray-400">Ne plus oublier de relancer</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="text-green-400">✓</span>
-            <div>
-              <p class="font-medium">Formulaires</p>
-              <p class="text-sm text-gray-400">Capture de leads sur votre site</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="text-green-400">✓</span>
-            <div>
-              <p class="font-medium">Chat en direct</p>
-              <p class="text-sm text-gray-400">Chatbot basique inclus</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- VOIR PLUS - Section dépliable -->
+    <details class="glass rounded-2xl mb-8 group">
+      <summary class="px-6 py-4 cursor-pointer font-bold text-lg hover:text-gold transition flex justify-between items-center">
+        📖 Voir la fiche complète
+        <span class="text-gray-500 group-open:rotate-180 transition-transform text-xl">▼</span>
+      </summary>
 
-    <!-- Pour qui -->
-    <section class="mb-8">
-      <h2 class="text-2xl font-bold mb-4">👥 Pour qui ?</h2>
-      <div class="glass p-6 rounded-2xl">
-        <div class="space-y-3">
-          <p class="text-gray-300">
-            <span class="text-gold">✓ Parfait pour :</span> Startups, freelances, PME qui veulent un CRM gratuit et évolutif
-          </p>
-          <p class="text-gray-300">
-            <span class="text-gold">✓ Excellent si :</span> Vous voulez tout centraliser (contacts, emails, deals, support)
-          </p>
-          <p class="text-gray-300">
-            <span class="text-red-400">✗ Moins adapté si :</span> Vous avez un budget serré et prévoyez de passer en premium rapidement
-          </p>
-        </div>
-      </div>
-    </section>
+      <div class="px-6 pb-6 space-y-8 border-t border-white/10 pt-6">
 
-    <!-- Notre verdict -->
+        <!-- Fiche technique -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">📋 Fiche technique</h3>
+          <div class="glass rounded-xl overflow-hidden">
+            <table class="w-full text-sm">
+              <tbody class="divide-y divide-white/10">
+                <tr>
+                  <td class="px-4 py-3 text-gray-400 w-1/3">Éditeur</td>
+                  <td class="px-4 py-3 font-medium">HubSpot (États-Unis)</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Type</td>
+                  <td class="px-4 py-3 font-medium">CRM + Marketing + Ventes + Service</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Utilisateurs</td>
+                  <td class="px-4 py-3 font-medium">200 000+ entreprises dans le monde</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Version gratuite</td>
+                  <td class="px-4 py-3 font-medium text-green-400">✓ Oui, à vie</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Contacts gratuits</td>
+                  <td class="px-4 py-3 font-medium">1 000 000</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Apps mobiles</td>
+                  <td class="px-4 py-3 font-medium">iOS, Android</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Intégrations</td>
+                  <td class="px-4 py-3 font-medium">1 500+ (Gmail, Outlook, Slack, Zoom...)</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-gray-400">Support</td>
+                  <td class="px-4 py-3 font-medium">Chat, Email, Base de connaissances (FR)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Ce qui est gratuit -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">🆓 Ce qui est vraiment gratuit</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="glass p-4 rounded-xl">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-green-400 text-xl">✓</span>
+                <h4 class="font-bold">Contacts illimités</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Jusqu'à 1 million de contacts et d'entreprises sans payer.</p>
+            </div>
+            <div class="glass p-4 rounded-xl">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-green-400 text-xl">✓</span>
+                <h4 class="font-bold">Pipeline de ventes</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Suivi visuel de vos deals avec étapes personnalisables.</p>
+            </div>
+            <div class="glass p-4 rounded-xl">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-green-400 text-xl">✓</span>
+                <h4 class="font-bold">Emails trackés</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Notifications quand vos emails sont ouverts ou cliqués.</p>
+            </div>
+            <div class="glass p-4 rounded-xl">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-green-400 text-xl">✓</span>
+                <h4 class="font-bold">Formulaires & Chat</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Capturez des leads sur votre site avec formulaires et chatbot.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tarifs -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">💰 Tarifs</h3>
+          <div class="glass rounded-xl overflow-hidden">
+            <table class="w-full text-sm">
+              <thead class="border-b border-white/10">
+                <tr>
+                  <th class="px-4 py-3 text-left text-gray-400">Offre</th>
+                  <th class="px-4 py-3 text-left text-gray-400">Prix</th>
+                  <th class="px-4 py-3 text-left text-gray-400">Inclus</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/10">
+                <tr>
+                  <td class="px-4 py-3 font-medium">Gratuit</td>
+                  <td class="px-4 py-3 text-green-400 font-bold">0€</td>
+                  <td class="px-4 py-3 text-gray-300">CRM complet, 1M contacts, pipeline</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-medium">Starter</td>
+                  <td class="px-4 py-3 text-gold font-bold">45€/mois</td>
+                  <td class="px-4 py-3 text-gray-300">+ Automatisations basiques, support email</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-medium">Professional</td>
+                  <td class="px-4 py-3 font-bold">800€/mois</td>
+                  <td class="px-4 py-3 text-gray-300">+ Automatisations avancées, reporting</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-medium">Enterprise</td>
+                  <td class="px-4 py-3 font-bold">3 600€/mois</td>
+                  <td class="px-4 py-3 text-gray-300">+ Custom objects, équipes, prédictif</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-sm text-gray-500 mt-4">💡 La version gratuite suffit pour 90% des petites entreprises.</p>
+        </section>
+
+        <!-- Pour qui -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">👥 Pour qui ?</h3>
+          <div class="glass p-4 rounded-xl">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <p class="font-medium text-green-400 mb-2">✓ Parfait pour</p>
+                <ul class="text-sm text-gray-300 space-y-1">
+                  <li>• Startups et PME qui débutent</li>
+                  <li>• Équipes commerciales de 1 à 50 personnes</li>
+                  <li>• Ceux qui veulent un CRM gratuit de qualité</li>
+                  <li>• Entreprises qui veulent tout centraliser</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-medium text-red-400 mb-2">✗ Moins adapté si</p>
+                <ul class="text-sm text-gray-300 space-y-1">
+                  <li>• Vous avez un budget serré et prévoyez le premium</li>
+                  <li>• Vous cherchez un outil simple (regardez Pipedrive)</li>
+                  <li>• Vous avez besoin de CRM + Facturation (regardez Axonaut)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Alternatives -->
+        <section>
+          <h3 class="text-xl font-bold mb-4">🔄 Alternatives</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <a href="/avis/pipedrive" class="glass p-4 rounded-xl hover:bg-white/5 transition">
+              <div class="flex items-center gap-3">
+                <img src="https://www.google.com/s2/favicons?domain=pipedrive.com&sz=32" alt="Pipedrive" class="w-8 h-8 rounded">
+                <div>
+                  <p class="font-medium">Pipedrive</p>
+                  <p class="text-sm text-gray-400">Plus simple, 100% ventes</p>
+                </div>
+              </div>
+            </a>
+            <a href="/avis/axonaut" class="glass p-4 rounded-xl hover:bg-white/5 transition border border-gold/30">
+              <div class="flex items-center gap-3">
+                <img src="https://www.google.com/s2/favicons?domain=axonaut.com&sz=32" alt="Axonaut" class="w-8 h-8 rounded">
+                <div>
+                  <p class="font-medium">Axonaut <span class="text-gold text-xs">Partenaire</span></p>
+                  <p class="text-sm text-gray-400">CRM + Facturation français</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </details>
+
+    <!-- Verdict -->
     <section class="mb-8">
       <h2 class="text-2xl font-bold mb-4">🏆 Notre verdict</h2>
       <div class="glass p-6 rounded-2xl">
@@ -147,7 +259,7 @@ import Layout from '../../layouts/Layout.astro';
           HubSpot est le <strong class="text-white">meilleur CRM gratuit du marché</strong>. La version gratuite est suffisante pour la plupart des petites structures. L'interface est un modèle du genre.
         </p>
         <p class="text-gray-300">
-          <span class="text-gold">Notre conseil :</span> Commencez gratuit, upgradez seulement si vous avez vraiment besoin des fonctions premium.
+          <span class="text-gold">Notre conseil :</span> Commencez gratuit, upgradez seulement si vous avez vraiment besoin des fonctions premium. Pour une solution française avec facturation, regardez <a href="/avis/axonaut" class="text-gold hover:underline">Axonaut</a>.
         </p>
       </div>
     </section>
@@ -155,11 +267,11 @@ import Layout from '../../layouts/Layout.astro';
     <!-- CTA -->
     <div class="glass p-6 rounded-2xl border border-gold/30 text-center">
       <p class="text-xl font-bold mb-2">🆓 Créer un compte gratuit</p>
-      <p class="text-gray-300 mb-4">Pas de carte bancaire requise, gratuit à vie</p>
-      <a href="https://www.hubspot.com/" target="_blank" rel="noopener" class="inline-block bg-gold text-gray-900 px-8 py-3 rounded-xl font-bold hover:opacity-90 transition">
+      <p class="text-gray-400 mb-4">Pas de carte bancaire requise, gratuit à vie</p>
+      <a href="https://www.hubspot.com/products/crm" target="_blank" rel="noopener" class="inline-block bg-gold text-gray-900 px-8 py-3 rounded-xl font-bold hover:opacity-90 transition">
         Démarrer avec HubSpot →
       </a>
-      <p class="text-sm text-gray-500 mt-3">Création de compte en 2 minutes</p>
+      <p class="text-xs text-gray-500 mt-3">Création de compte en 2 minutes</p>
     </div>
 
   </article>
