@@ -1,0 +1,91 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Comparatifs VS : Face à face des meilleurs logiciels" description="Tous nos comparatifs face à face : Axonaut vs Pennylane, HubSpot vs Pipedrive, Qonto vs Shine. Trouvez le meilleur outil pour vous.">
+  <section class="max-w-4xl mx-auto px-4 py-12">
+
+    <header class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">
+        <span class="gradient-text">⚔️ Comparatifs VS</span>
+      </h1>
+      <p class="text-xl text-gray-400">Face à face des meilleurs logiciels</p>
+    </header>
+
+    <!-- Quiz CTA -->
+    <a href="/quiz" class="block glass p-6 rounded-2xl border border-purple-500/30 mb-10 hover:bg-white/5 transition group">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <span class="text-4xl">🎯</span>
+          <div>
+            <p class="font-bold text-lg group-hover:text-gold transition">Pas sûr de votre choix ?</p>
+            <p class="text-gray-400">Répondez à 4 questions, on vous guide vers le bon logiciel</p>
+          </div>
+        </div>
+        <span class="text-purple-400 group-hover:text-gold transition text-xl">→</span>
+      </div>
+    </a>
+
+    <!-- Liste des VS -->
+    <div class="space-y-6">
+
+      <!-- Facturation -->
+      <div>
+        <h2 class="text-lg font-bold text-gray-400 mb-4">🧾 Facturation & Comptabilité</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <a href="/comparatif/axonaut-vs-pennylane" class="glass p-5 rounded-xl hover:bg-white/10 transition group border border-gold/30">
+            <div class="flex items-center gap-3 mb-3">
+              <img src="https://www.google.com/s2/favicons?domain=axonaut.com&sz=32" alt="Axonaut" class="w-8 h-8 rounded" />
+              <span class="text-gray-400 text-xl">⚔️</span>
+              <img src="https://www.google.com/s2/favicons?domain=pennylane.com&sz=32" alt="Pennylane" class="w-8 h-8 rounded" />
+            </div>
+            <p class="font-bold group-hover:text-gold transition">Axonaut vs Pennylane</p>
+            <p class="text-sm text-gray-400">Tout-en-un vs Compta automatisée</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- CRM -->
+      <div>
+        <h2 class="text-lg font-bold text-gray-400 mb-4">👥 CRM</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <a href="/comparatif/hubspot-vs-pipedrive" class="glass p-5 rounded-xl hover:bg-white/10 transition group border border-purple-500/30">
+            <div class="flex items-center gap-3 mb-3">
+              <img src="https://www.google.com/s2/favicons?domain=hubspot.com&sz=32" alt="HubSpot" class="w-8 h-8 rounded" />
+              <span class="text-gray-400 text-xl">⚔️</span>
+              <img src="https://www.google.com/s2/favicons?domain=pipedrive.com&sz=32" alt="Pipedrive" class="w-8 h-8 rounded" />
+            </div>
+            <p class="font-bold group-hover:text-gold transition">HubSpot vs Pipedrive</p>
+            <p class="text-sm text-gray-400">Gratuit complet vs Simple et visuel</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Banque Pro -->
+      <div>
+        <h2 class="text-lg font-bold text-gray-400 mb-4">🏦 Banque Pro</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <a href="/comparatif/qonto-vs-shine" class="glass p-5 rounded-xl hover:bg-white/10 transition group border border-purple-500/30">
+            <div class="flex items-center gap-3 mb-3">
+              <img src="https://www.google.com/s2/favicons?domain=qonto.com&sz=32" alt="Qonto" class="w-8 h-8 rounded" />
+              <span class="text-gray-400 text-xl">⚔️</span>
+              <img src="https://www.google.com/s2/favicons?domain=shine.fr&sz=32" alt="Shine" class="w-8 h-8 rounded" />
+            </div>
+            <p class="font-bold group-hover:text-gold transition">Qonto vs Shine</p>
+            <p class="text-sm text-gray-400">PME/Équipes vs Freelances</p>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Note -->
+    <div class="mt-12 glass p-6 rounded-2xl text-center">
+      <p class="text-gray-400">
+        Tu veux un comparatif qui n'existe pas encore ?<br>
+        <span class="text-gold">Dis-le nous</span> et on l'ajoute !
+      </p>
+    </div>
+
+  </section>
+</Layout>
